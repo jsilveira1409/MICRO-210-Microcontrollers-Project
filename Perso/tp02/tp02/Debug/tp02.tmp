@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega128"</DEVICE>
+ <WORKING_DIR>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\tp02\tp02\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\tp02\tp02\01.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\tp02\tp02\Debug\tp02.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>tp02.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>tp02.map</FILE>
+  <FILE>tp02.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\tp02\tp02\01.asm</FILE><LINE>4</LINE></reset>
+  <loop><FILE>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\tp02\tp02\01.asm</FILE><LINE>7</LINE></loop>
+ </LABELS>
+</ASSEMBLER_INFO>
