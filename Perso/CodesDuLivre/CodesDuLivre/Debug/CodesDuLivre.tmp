@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega128"</DEVICE>
+ <WORKING_DIR>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\CodesDuLivre\CodesDuLivre\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\CodesDuLivre\CodesDuLivre\pulseout1b.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\CodesDuLivre\CodesDuLivre\Debug\CodesDuLivre.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>CodesDuLivre.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>CodesDuLivre.map</FILE>
+  <FILE>CodesDuLivre.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\CodesDuLivre\CodesDuLivre\pulseout1b.asm</FILE><LINE>1</LINE></reset>
+  <main><FILE>D:\OneDrive - epfl.ch\BA4\Microcontrolleurs\Perso\CodesDuLivre\CodesDuLivre\pulseout1b.asm</FILE><LINE>4</LINE></main>
+ </LABELS>
+</ASSEMBLER_INFO>
