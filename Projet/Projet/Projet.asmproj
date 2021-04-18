@@ -15,7 +15,7 @@
     <Name>Projet</Name>
     <RootNamespace>Projet</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
-    <EntryFile>$(MSBuildProjectDirectory)\menu1.asm</EntryFile>
+    <EntryFile>$(MSBuildProjectDirectory)\main.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
@@ -78,6 +78,9 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="TEST.asm">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="lib\cordic.asm">
       <SubType>Code</SubType>
     </Compile>
@@ -124,6 +127,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="menu1.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sensors1.asm">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
