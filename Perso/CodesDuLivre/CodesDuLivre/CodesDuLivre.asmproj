@@ -15,7 +15,7 @@
     <Name>CodesDuLivre</Name>
     <RootNamespace>CodesDuLivre</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
-    <EntryFile>$(MSBuildProjectDirectory)\pulseout1b.asm</EntryFile>
+    <EntryFile>$(MSBuildProjectDirectory)\intb0.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
@@ -113,6 +113,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="inout2.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="int0c.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="intb0.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ir1.asm">

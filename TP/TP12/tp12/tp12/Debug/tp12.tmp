@@ -1,0 +1,30 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega128"</DEVICE>
+ <WORKING_DIR>D:\Code\MCUs BA4\TP\TP12\tp12\tp12\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Code\MCUs BA4\TP\TP12\tp12\tp12\lcd2-2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc</FILE>
+  <FILE>D:\Code\MCUs BA4\TP\TP12\tp12\tp12\macros.asm</FILE>
+  <FILE>D:\Code\MCUs BA4\TP\TP12\tp12\tp12\definitions.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Code\MCUs BA4\TP\TP12\tp12\tp12\Debug\tp12.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>tp12.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>tp12.map</FILE>
+  <FILE>tp12.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>D:\Code\MCUs BA4\TP\TP12\tp12\tp12\lcd2-2.asm</FILE><LINE>6</LINE></reset>
+  <intro><FILE>D:\Code\MCUs BA4\TP\TP12\tp12\tp12\lcd2-2.asm</FILE><LINE>11</LINE></intro>
+ </LABELS>
+</ASSEMBLER_INFO>

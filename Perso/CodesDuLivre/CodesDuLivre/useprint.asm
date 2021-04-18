@@ -19,7 +19,7 @@ main:
 		ldi		r16,0x90
 		rcall	LCD_home
 		rcall	LCD_clear
-		PRINTF	LCD, r16,0
-		"
+		PRINTF	LCD_putc
+.db		"hello", 0
 		WAIT_MS	2000
 		rjmp	main

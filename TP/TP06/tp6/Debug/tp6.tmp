@@ -1,0 +1,38 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega128"</DEVICE>
+ <WORKING_DIR>D:\Code\MCUs BA4\TP\TP06\tp6\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc</FILE>
+  <FILE>D:\Code\MCUs BA4\TP\TP06\tp6\macros.asm</FILE>
+  <FILE>D:\Code\MCUs BA4\TP\TP06\tp6\definitions.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Code\MCUs BA4\TP\TP06\tp6\Debug\tp6.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>tp6.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>tp6.map</FILE>
+  <FILE>tp6.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>31</LINE></reset>
+  <int_0><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>19</LINE></int_0>
+  <int_1><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>21</LINE></int_1>
+  <int_2><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>22</LINE></int_2>
+  <int_3><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>23</LINE></int_3>
+  <int_4><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>24</LINE></int_4>
+  <int_5><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>26</LINE></int_5>
+  <int_6><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>27</LINE></int_6>
+  <int_7><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>28</LINE></int_7>
+  <main><FILE>D:\Code\MCUs BA4\TP\TP06\tp6\int0b.asm</FILE><LINE>38</LINE></main>
+ </LABELS>
+</ASSEMBLER_INFO>
