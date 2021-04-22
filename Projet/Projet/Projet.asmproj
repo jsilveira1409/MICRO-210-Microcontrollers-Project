@@ -15,7 +15,7 @@
     <Name>Projet</Name>
     <RootNamespace>Projet</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
-    <EntryFile>$(MSBuildProjectDirectory)\LDR.asm</EntryFile>
+    <EntryFile>$(MSBuildProjectDirectory)\main.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
@@ -78,10 +78,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="LDR.asm">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Temperature.asm">
+    <Compile Include="Sensors.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TEST.asm">
@@ -135,7 +132,7 @@
     <Compile Include="menu1.asm">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="sensors1.asm">
+    <Compile Include="TEST2.asm">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -7,14 +7,18 @@
   <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
   <DIR></DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>D:\Code\MCUs BA4\Projet\Projet\LDR.asm</SOURCE_FILE>
+ <SOURCE_FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc</FILE>
-  <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/definitions.asm</FILE>
   <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/macros.asm</FILE>
-  <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE>
+  <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/definitions.asm</FILE>
   <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm</FILE>
+  <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE>
+  <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE>
+  <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE>
+  <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm</FILE>
   <FILE>D:\Code\MCUs BA4\Projet\Projet\lib/eeprom.asm</FILE>
+  <FILE>D:\Code\MCUs BA4\Projet\Projet\Sensors.asm</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
   <FILE>D:\Code\MCUs BA4\Projet\Projet\Debug\Projet.obj</FILE>
@@ -27,29 +31,12 @@
   <FILE>Projet.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <reset><FILE>D:\Code\MCUs BA4\Projet\Projet\LDR.asm</FILE><LINE>21</LINE></reset>
-  <ADCCaddr_sra><FILE>D:\Code\MCUs BA4\Projet\Projet\LDR.asm</FILE><LINE>15</LINE></ADCCaddr_sra>
+  <reset><FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</FILE><LINE>19</LINE></reset>
+  <overflow0><FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</FILE><LINE>14</LINE></overflow0>
+  <wire1_init><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>49</LINE></wire1_init>
   <lcd_init><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>47</LINE></lcd_init>
-  <main><FILE>D:\Code\MCUs BA4\Projet\Projet\LDR.asm</FILE><LINE>35</LINE></main>
-  <LCD_wr_ir><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>10</LINE></LCD_wr_ir>
-  <lcd_4us><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>18</LINE></lcd_4us>
-  <lcd_2us><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>20</LINE></lcd_2us>
-  <LCD><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>24</LINE></LCD>
-  <LCD_putc><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>25</LINE></LCD_putc>
-  <LCD_cr><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>63</LINE></LCD_cr>
-  <LCD_lf><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>73</LINE></LCD_lf>
-  <LCD_wr_dr><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>28</LINE></LCD_wr_dr>
-  <LCD_clear><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>36</LINE></LCD_clear>
-  <LCD_home><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>37</LINE></LCD_home>
-  <LCD_cursor_left><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>38</LINE></LCD_cursor_left>
-  <LCD_cursor_right><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>39</LINE></LCD_cursor_right>
-  <LCD_display_left><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>40</LINE></LCD_display_left>
-  <LCD_display_right><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>41</LINE></LCD_display_right>
-  <LCD_blink_on><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>42</LINE></LCD_blink_on>
-  <LCD_blink_off><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>43</LINE></LCD_blink_off>
-  <LCD_cursor_on><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>44</LINE></LCD_cursor_on>
-  <LCD_cursor_off><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>45</LINE></LCD_cursor_off>
-  <LCD_pos><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>57</LINE></LCD_pos>
+  <encoder_init><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>13</LINE></encoder_init>
+  <main><FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</FILE><LINE>43</LINE></main>
   <_printf><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm</FILE><LINE>138</LINE></_printf>
   <_printf_read><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm</FILE><LINE>143</LINE></_printf_read>
   <_printf_end><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm</FILE><LINE>153</LINE></_printf_end>
@@ -87,9 +74,63 @@
   <_mul41><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm</FILE><LINE>434</LINE></_mul41>
   <__m41><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm</FILE><LINE>436</LINE></__m41>
   <__d41><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm</FILE><LINE>452</LINE></__d41>
+  <LCD_wr_ir><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>10</LINE></LCD_wr_ir>
+  <lcd_4us><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>18</LINE></lcd_4us>
+  <lcd_2us><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>20</LINE></lcd_2us>
+  <LCD><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>24</LINE></LCD>
+  <LCD_putc><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>25</LINE></LCD_putc>
+  <LCD_cr><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>63</LINE></LCD_cr>
+  <LCD_lf><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>73</LINE></LCD_lf>
+  <LCD_wr_dr><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>28</LINE></LCD_wr_dr>
+  <LCD_clear><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>36</LINE></LCD_clear>
+  <LCD_home><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>37</LINE></LCD_home>
+  <LCD_cursor_left><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>38</LINE></LCD_cursor_left>
+  <LCD_cursor_right><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>39</LINE></LCD_cursor_right>
+  <LCD_display_left><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>40</LINE></LCD_display_left>
+  <LCD_display_right><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>41</LINE></LCD_display_right>
+  <LCD_blink_on><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>42</LINE></LCD_blink_on>
+  <LCD_blink_off><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>43</LINE></LCD_blink_off>
+  <LCD_cursor_on><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>44</LINE></LCD_cursor_on>
+  <LCD_cursor_off><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>45</LINE></LCD_cursor_off>
+  <LCD_pos><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>57</LINE></LCD_pos>
+  <enc_old><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>8</LINE></enc_old>
+  <encoder><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>22</LINE></encoder>
+  <encoder_button><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>80</LINE></encoder_button>
+  <i_down><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>64</LINE></i_down>
+  <i_up><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>48</LINE></i_up>
+  <a_rise><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>56</LINE></a_rise>
+  <a_fall><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>51</LINE></a_fall>
+  <i_up_done><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>60</LINE></i_up_done>
+  <a_rise2><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>72</LINE></a_rise2>
+  <a_fall2><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>67</LINE></a_fall2>
+  <i_down_done><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>76</LINE></i_down_done>
+  <i_rise><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>86</LINE></i_rise>
+  <i_fall><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>83</LINE></i_fall>
+  <wire1_wait><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>39</LINE></wire1_wait>
+  <wire1_reset><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>54</LINE></wire1_reset>
+  <wire1_write0><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>55</LINE></wire1_write0>
+  <wire1_write1><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>56</LINE></wire1_write1>
+  <wire1_read1><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>57</LINE></wire1_read1>
+  <wire1_write><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>59</LINE></wire1_write>
+  <wire1_read><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>73</LINE></wire1_read>
+  <wire1_crc><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>83</LINE></wire1_crc>
+  <crc1><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/wire1.asm</FILE><LINE>86</LINE></crc1>
+  <menu><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm</FILE><LINE>4</LINE></menu>
+  <menu_print><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm</FILE><LINE>20</LINE></menu_print>
+  <menu_find><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm</FILE><LINE>11</LINE></menu_find>
+  <menu_done><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm</FILE><LINE>30</LINE></menu_done>
+  <menui><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm</FILE><LINE>39</LINE></menui>
   <eeprom_store><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/eeprom.asm</FILE><LINE>4</LINE></eeprom_store>
   <eeprom_cli><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/eeprom.asm</FILE><LINE>17</LINE></eeprom_cli>
   <eeprom_load><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/eeprom.asm</FILE><LINE>24</LINE></eeprom_load>
   <record><FILE>D:\Code\MCUs BA4\Projet\Projet\lib/eeprom.asm</FILE><LINE>36</LINE></record>
+  <temperature><FILE>D:\Code\MCUs BA4\Projet\Projet\Sensors.asm</FILE><LINE>6</LINE></temperature>
+  <light><FILE>D:\Code\MCUs BA4\Projet\Projet\Sensors.asm</FILE><LINE>21</LINE></light>
+  <humidity><FILE>D:\Code\MCUs BA4\Projet\Projet\Sensors.asm</FILE><LINE>30</LINE></humidity>
+  <mesurements_choice><FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</FILE><LINE>54</LINE></mesurements_choice>
+  <getTemp><FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</FILE><LINE>68</LINE></getTemp>
+  <getHum><FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</FILE><LINE>76</LINE></getHum>
+  <getLight><FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</FILE><LINE>86</LINE></getLight>
+  <come_back><FILE>D:\Code\MCUs BA4\Projet\Projet\main.asm</FILE><LINE>95</LINE></come_back>
  </LABELS>
 </ASSEMBLER_INFO>
