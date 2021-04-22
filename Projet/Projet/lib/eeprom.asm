@@ -32,3 +32,15 @@ eeprom_load:
 	sbi	EECR,EERE		; set EEPROM Read Enable
 	in	a0,EEDR			; read data register of EEPROM
 	ret
+
+record:
+	mov			w,a0					; garder la valeur a0 avant de la perdre dans eeprom_store
+	mov			a0, a1					; transfer pour que eeprom_store prenne le MSB de la temperature
+	rcall		eeprom_store			; stockage du LSB de la temperature
+	adiw		xl,1					; incrementation de l'adresse de la eeprom
+	mov			a0, w
+	rcall		eeprom_store			; stockage du MSB de la temperature
+	adiw		xl,1					; incrementation de l'adresse de la eeprom
+	WAIT_MS		200 ;POSE PROBLEME DANS LA IRS???????????
+	ret
+

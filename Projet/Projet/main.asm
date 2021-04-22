@@ -1,13 +1,30 @@
 .include "lib/macros.asm"
 .include "lib/definitions.asm"
 
+.org 0
+		jmp			reset
+
+.org	OVF0addr
+		inc		r17
+		out		PORTB, r17
+		reti
+
 
 reset:
 		LDSP		RAMEND
+		outi		DDRB, 0xff
+		outi		PORTB, 0x00
+		rcall		wire1_init
+		rcall		lcd_init
+		OUTI		TIMSK, (1<<TOIE0)
+		OUTI		ASSR,  (1<<AS0)
+		OUTI		TCCR0,7
+		
 		rcall		wire1_init
 		rcall		lcd_init
 		rcall		encoder_init
 		ldi			a0, 0
+		
 		jmp		intro
 
 .include "lib/printf.asm"
@@ -19,16 +36,24 @@ reset:
 intro :
 		PRINTF	LCD
 .db	"Hello world", 0
-		WAIT_MS		1500
+		WAIT_MS		2000
+		rcall		lcd_clear
+		PRINTF	LCD
+.db	"Getting Ready....", 0
+		WAIT_MS		2000
+		rcall		lcd_clear
+		sei
 		rjmp loop
+
+
 loop:
 	rcall			main_menu
 	rjmp			loop
-
 	
+
 main_menu:
 		rcall		encoder
-		brts		mes_choice			
+		brts		mesurements_choice			
 		CYCLIC		a0,0,2
 		PRINTF		LCD
 .db		CR, CR, FHEX,a,0
@@ -37,14 +62,14 @@ main_menu:
 		WAIT_MS		1
 		rjmp		main_menu
 
-mes_choice:				; switch case selon le choix du menu (-> a0) pour l'affichage de la mesure
+mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affichage de la mesure
 		ldi			w, 0x0000		;Temperature code
 		cp			a0,w
-		breq		temperature		
 		ldi			w, 0x0001		;Humidity code
 		cp			a0,w
-		breq		humidity
-		rjmp		mes_choice
+		ldi			w, 0x0002
+		cp			a0,w
+		rjmp		mesurements_choice
 
 temperature:
 	rcall		wire1_reset
@@ -83,6 +108,7 @@ light:
 
 come_back:
 	ldi			a0, 0
+	rcall		lcd_clear
 	rjmp		loop
 
 	
