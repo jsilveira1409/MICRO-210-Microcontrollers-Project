@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 13:13:52 2021
+AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 13:17:21 2021
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(1): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/macros.asm'
@@ -4233,7 +4233,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 0002cf 1294
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(51): warning: .cseg .db misalignment - padding zero byte
 0002d0 0000                      .db		CR, CR, FHEX,a,0
-0002d1 df0d                      		rcall			menui
+0002d1 def4                      		rcall			menu
 0002d2 6554
 0002d3 706d
 0002d4 7265

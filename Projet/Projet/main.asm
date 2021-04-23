@@ -49,7 +49,7 @@ main:
 		CYCLIC			a0,0,2
 		PRINTF			LCD
 .db		CR, CR, FHEX,a,0
-		rcall			menui
+		rcall			menu
 .db		"Temperature|Humidity   |Light      ",0		
 		WAIT_MS			1
 		rcall			encoder
