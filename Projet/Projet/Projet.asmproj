@@ -78,7 +78,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Sensors.asm">
+    <Compile Include="libPerso\Sensors.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TEST.asm">
@@ -129,7 +129,7 @@
     <Compile Include="main.asm">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="menu1.asm">
+    <Compile Include="TEST3.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TEST2.asm">
@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib" />
+    <Folder Include="libPerso" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Assembler.targets" />
 </Project>

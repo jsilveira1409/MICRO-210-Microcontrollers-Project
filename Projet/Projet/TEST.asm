@@ -16,16 +16,8 @@ overflow0:
 		in			_sreg, SREG
 		inc			b3
 		out			PORTC, b3
-		rcall		temperature
-		rcall		record
-		rcall		light
-		rcall		record
-		ldi			a0, 0xFE
-		ldi			a1, 0xCA
-		rcall		record
 		out			SREG, _sreg
 		reti
-		
 
 ; ==========reset / initialization================
 reset:
@@ -38,8 +30,8 @@ reset:
 		OUTI		ADCSR,(1<<ADEN) + (1<<ADIE) + 6 ;init du CAN pour LDR
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
-		rcall		wire1_init
-		;rcall		lcd_init						; CAUSE DES PROBLEMES AVEC LES INTERRUPTIONS
+		;rcall		wire1_init
+		rcall		lcd_init						; CAUSE DES PROBLEMES AVEC LES INTERRUPTIONS
 		ldi			r16, 0xff
 		out			DDRC, r16						;port A en output --> LEDs
 		ldi			b3, 0
@@ -50,7 +42,7 @@ reset:
 .include "lib/wire1.asm"	
 .include "lib/printf.asm"
 .include "lib/eeprom.asm"
-.include "Sensors.asm"
+.include "libPerso/Sensors.asm"
 
 
 ; ======================main ==============================

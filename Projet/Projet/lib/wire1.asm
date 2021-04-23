@@ -58,8 +58,8 @@ wire1_read1:	WIRE1	1,14,45
 	
 wire1_write:
 	push	a1
-	ldi	a1,8
-	ror	a0
+	ldi		a1,8
+	ror		a0
 
 	brcc	PC+3				; if C=1 then wire1, else wire0
 	rcall	wire1_write1
@@ -67,17 +67,17 @@ wire1_write:
 	rcall	wire1_write0
 
 	DJNZ	a1,wire1_write+2	; dec and jump if not zero
-	pop	a1	
+	pop		a1	
 	ret
 
 wire1_read:
 	push	a1
-	ldi	a1,8
-	ror	a0
+	ldi		a1,8
+	ror		a0
 	rcall	wire1_read1			; returns result in T
-	bld	a0,7					; move T to MSb
+	bld		a0,7					; move T to MSb
 	DJNZ	a1,wire1_read+2		; dec and jump if not zero
-	pop	a1	
+	pop		a1	
 	ret
 	
 wire1_crc:

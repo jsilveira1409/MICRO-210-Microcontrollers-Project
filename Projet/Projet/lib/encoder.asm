@@ -1,4 +1,4 @@
-; file	encoder.asm   target ATmega128L-4MHz-STK300
+ ; file	encoder.asm   target ATmega128L-4MHz-STK300
 ; purpose library angular encoder operation
 
 ; === definitions ===
@@ -49,14 +49,14 @@ i_up:
 	sbrc	_w,ENCOD_A
 	rjmp	a_rise
 a_fall:
-	inc	a0					; if B=1 then increment
+	inc		b1					; if B=1 then increment
 	sbrs	_w,ENCOD_B
-	subi	a0,2			; if B=0 then decrement
+	subi	b1,2			; if B=0 then decrement
 	rjmp	i_up_done
 a_rise:
-	inc	a0					; if B=0 then increment
+	inc		b1					; if B=0 then increment
 	sbrc	_w,ENCOD_B
-	subi	a0,2			; if B=1 then decrement
+	subi	b1,2			; if B=1 then decrement
 i_up_done:
 	clz						; clear Z
 	ret

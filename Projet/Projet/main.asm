@@ -13,22 +13,27 @@
 	
 overflow0:
 		in			_sreg, SREG
+		inc			b3
+		out			PORTC, b3
 		out			SREG, _sreg
 		reti
 ; ================== init / reset ===============================
 reset:
 		LDSP		RAMEND
+		ldi			r17, 0xff
+		out			DDRC,r17
 		rcall		wire1_init
 		rcall		lcd_init
 		rcall		encoder_init
-		;OUTI		TIMSK, (1<<TOIE0)			;init du timer
-		;OUTI		ASSR,  (1<<AS0)
-		;OUTI		TCCR0,4
-		OUTI		ADCSR,(1<<ADEN) + (1<<ADIE) + 6 ;init du CAN pour LDR
+		OUTI		TIMSK, (1<<TOIE0)			;init du timer
+		OUTI		ASSR,  (1<<AS0)
+		OUTI		TCCR0,6
+		OUTI		ADCSR,(1<<ADEN) + (1<<ADIE) + 6 ;init du ADC pour LDR
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
-		ldi			a0, 0		
-		;sei									; set global interrupts
+		ldi			a0, 0
+		ldi			b3, 0		
+		sei									; set global interrupts
 		rjmp			main
 
 .include "lib/printf.asm"
@@ -37,7 +42,7 @@ reset:
 .include "lib/wire1.asm"	
 .include "lib/menu.asm"	
 .include "lib/eeprom.asm"
-.include "Sensors.asm"
+.include "libPerso/Sensors.asm"
 
 
 main:
