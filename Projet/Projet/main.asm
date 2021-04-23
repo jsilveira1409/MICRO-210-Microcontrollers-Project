@@ -12,14 +12,14 @@
 ; =========interrupt service routine ==========
 	
 overflow0:
-		in			_sreg, SREG
-		out			SREG, _sreg
+		in			_sreg, SREG					; save context
+		out			SREG, _sreg					; restore context
 		reti
 ; ================== init / reset ===============================
 reset:
-		LDSP		RAMEND
-		wdr										;init du watchdog
-		ldi			r16, 1<<WDE+0b100
+		LDSP		RAMEND						; load stack pointer (SP)
+		wdr										; reset watchdog timer
+		ldi			r16, 1<<WDE+0b100			; enable watchdog
 		out			WDTCR, r16
 		
 		rcall		lcd_init

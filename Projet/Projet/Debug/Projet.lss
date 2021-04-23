@@ -1,26 +1,26 @@
 
-AVRASM ver. 2.2.6  D:\Code\MCUs BA4\Projet\Projet\main.asm Fri Apr 23 11:22:08 2021
+AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 13:13:52 2021
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(1): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/macros.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(2): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/definitions.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(38): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(39): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(40): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(41): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(42): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/eeprom.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(45): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_sensors.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(46): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_wire1.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(1): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/macros.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(2): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/definitions.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(38): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(39): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(40): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/encoder.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(41): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(42): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/eeprom.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(45): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(1): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/macros.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(2): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/definitions.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(38): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(39): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(40): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/encoder.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(41): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(42): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/eeprom.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(45): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_sensors.asm'
-D:\Code\MCUs BA4\Projet\Projet\main.asm(46): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_wire1.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(1): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/macros.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(2): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/definitions.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(38): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(39): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(40): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/encoder.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(41): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(42): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/eeprom.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(45): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
                                  
                                  .include "lib/macros.asm"
                                  
@@ -3099,17 +3099,17 @@ D:\Code\MCUs BA4\Projet\Projet\main.asm(46): Including file 'D:\Code\MCUs BA4\Pr
                                  ; =========interrupt service routine ==========
                                  	
                                  overflow0:
-000021 b61f                      		in			_sreg, SREG
-000022 be1f                      		out			SREG, _sreg
+000021 b61f                      		in			_sreg, SREG					; save context
+000022 be1f                      		out			SREG, _sreg					; restore context
 000023 9518                      		reti
                                  ; ================== init / reset ===============================
                                  reset:
 000024 ef0f
 000025 bf0d
 000026 e100
-000027 bf0e                      		LDSP		RAMEND
-000028 95a8                      		wdr										;init du watchdog
-000029 e800                      		ldi			r16, 1<<WDE+0b100
+000027 bf0e                      		LDSP		RAMEND						; load stack pointer (SP)
+000028 95a8                      		wdr										; reset watchdog timer
+000029 e800                      		ldi			r16, 1<<WDE+0b100			; enable watchdog
 00002a bd01                      		out			WDTCR, r16
                                  		
 00002b d147                      		rcall		lcd_init
@@ -4231,7 +4231,7 @@ D:\Code\MCUs BA4\Projet\Projet\main.asm(46): Including file 'D:\Code\MCUs BA4\Pr
 0002cd dd67                      		PRINTF			LCD
 0002ce 0d0d
 0002cf 1294
-D:\Code\MCUs BA4\Projet\Projet\main.asm(51): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(51): warning: .cseg .db misalignment - padding zero byte
 0002d0 0000                      .db		CR, CR, FHEX,a,0
 0002d1 df0d                      		rcall			menui
 0002d2 6554
