@@ -13,9 +13,12 @@ temperature:		;PORT B
 		CA			wire1_write, skipROM
 		CA			wire1_write, readScratchpad
 		rcall		wire1_read							;read temperature LSB
-		mov			b2,b0
+		;mov			b0,a0
+		mov			b2,a0
+		;mov			b2,b0
 		rcall		wire1_read							;read temperature MSB
-		mov			b1, b0
+		mov			b1, a0
+		;mov			b1, b0
 		mov			b0, b2
 		ret
 

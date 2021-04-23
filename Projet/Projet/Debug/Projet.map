@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 14:51:38 2021
+AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 17:31:52 2021
 
 
 EQU  SIGNATURE_000 0000001e
@@ -942,8 +942,8 @@ CSEG reset        00000024
 CSEG overflow0    00000021
 CSEG LCD_init     0000016f
 CSEG encoder_init 0000018d
-CSEG wire1_init   00000271
-CSEG main         000002bf
+CSEG wire1_init   000001ec
+CSEG main         0000028f
 EQU  FDEC         000000c0
 EQU  FDEC2        000000d0
 EQU  FDEC3        000000e0
@@ -1044,43 +1044,38 @@ CSEG menu_print   000001cc
 CSEG menu_find    000001c5
 CSEG menu_done    000001d5
 CSEG menui        000001db
-CSEG eeprom_store 000001e4
-CSEG eeprom_cli   000001ed
-CSEG eeprom_load  000001f2
-CSEG record       000001f9
-CSEG WAIT_MS@WAIT_MS@4229 00000203
-CSEG temperature  00000214
-CSEG wire1_reset  00000274
-EQU  skipROM      000000cc
-CSEG wire1_write  000002a0
-EQU  convertT     00000044
-CSEG WAIT_MS@WAIT_MS@4276 0000021c
-EQU  readScratchpad 000000be
-CSEG wire1_read   000002ab
-CSEG light        00000237
-CSEG WAIT_MS@WAIT_MS@4328 0000023f
-CSEG humidity     00000250
-CSEG WAIT_MS@WAIT_MS@4364 00000258
 EQU  DQ_port      00000018
 EQU  DQ_pin       00000005
 EQU  DS18B20      00000028
 EQU  readROM      00000033
 EQU  matchROM     00000055
+EQU  skipROM      000000cc
 EQU  searchROM    000000f0
 EQU  alarmSearch  000000ec
 EQU  writeScratchpad 0000004e
+EQU  readScratchpad 000000be
 EQU  copyScratchpad 00000048
+EQU  convertT     00000044
 EQU  recallE2     000000b8
 EQU  readPowerSupply 000000b4
-CSEG wire1_wait   00000269
-CSEG wire1_write0 0000027f
-CSEG wire1_write1 0000028a
-CSEG wire1_read1  00000295
-CSEG wire1_crc    000002b4
-CSEG crc1         000002b6
-CSEG WAIT_MS@WAIT_MS@4568 000002e3
-CSEG mesurements_choice 000002f6
-CSEG getTemp      00000301
-CSEG getHum       00000311
-CSEG getLight     00000321
-CSEG come_back    00000333
+CSEG wire1_wait   000001e4
+CSEG wire1_reset  000001ef
+CSEG wire1_write0 000001fa
+CSEG wire1_write1 00000205
+CSEG wire1_read1  00000210
+CSEG wire1_write  0000021b
+CSEG wire1_read   00000226
+CSEG wire1_crc    0000022f
+CSEG crc1         00000231
+CSEG temperature  0000023a
+CSEG WAIT_MS@WAIT_MS@4364 00000242
+CSEG light        0000025d
+CSEG WAIT_MS@WAIT_MS@4419 00000265
+CSEG humidity     00000276
+CSEG WAIT_MS@WAIT_MS@4455 0000027e
+CSEG WAIT_MS@WAIT_MS@4505 000002b3
+CSEG mesurements_choice 000002c6
+CSEG getTemp      000002d1
+CSEG getHum       000002e2
+CSEG getLight     000002f3
+CSEG come_back    00000305

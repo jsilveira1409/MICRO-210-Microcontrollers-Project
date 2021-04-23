@@ -1,26 +1,24 @@
 
-AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 14:51:38 2021
+AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 17:31:52 2021
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(1): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/macros.asm'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(2): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/definitions.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(38): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(39): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(40): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/encoder.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(41): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(42): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/eeprom.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(45): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(39): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(40): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(41): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/encoder.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(42): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(44): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/wire1.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(1): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/macros.asm'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(2): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/definitions.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(38): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(39): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(40): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/encoder.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(41): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(42): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/eeprom.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(45): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(39): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(40): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(41): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/encoder.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(42): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(44): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/wire1.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
                                  
                                  .include "lib/macros.asm"
                                  
@@ -3109,12 +3107,12 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 000026 e100
 000027 bf0e                      		LDSP		RAMEND						; load stack pointer (SP)
                                  		;wdr										; reset watchdog timer
-                                 		;ldi			r16, 1<<WDE+0b100			; enable watchdog
+                                 		;ldi			r16, 1<<WDE+0b000			; enable watchdog
                                  		;out			WDTCR, r16
                                  		
 000028 d146                      		rcall		LCD_init
 000029 d163                      		rcall		encoder_init
-00002a d246                      		rcall		wire1_init
+00002a d1c1                      		rcall		wire1_init
                                  		;OUTI		TIMSK, (1<<TOIE0)			;init du timer
                                  		;OUTI		ASSR,  (1<<AS0)
                                  		;OUTI		TCCR0,6
@@ -3123,9 +3121,10 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 00002d e000
 00002e b907                      		OUTI		ADMUX, 0						;pin 0 -> LDR
                                  		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
+                                 		;ldi			a1, 0
 00002f e020                      		ldi			a0, 0
                                  		;sei									; set global interrupts
-000030 c28e                      		rjmp			main
+000030 c25e                      		rjmp			main
                                  
                                  .include "lib/printf.asm"
                                  
@@ -3914,173 +3913,8 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 0001e0 9631                      	adiw	zl,1			; increment pointer once more
 0001e1 95f6
 0001e2 95e7                      	DIV2Z					; transform byte->word counter
-                                 .include "lib/eeprom.asm"
-0001e3 9409                      
-                                 ; purpose library, internal EEPROM
-                                 
-                                 eeprom_store:
-                                 ; in:	xh:xl 	EEPROM address
-                                 ;	a0	EEPROM data byte to store
-                                 
-0001e4 99e1                      	sbic	EECR,EEWE	; skip if EEWE=0 (wait it EEWE=1)
-0001e5 cffe                      	rjmp	PC-1		; jump back to previous address
-0001e6 bbae                      	out	EEARL,xl		; load EEPROM address low	
-0001e7 bbbf                      	out	EEARH,xh		; load EEPROM address high
-0001e8 bb2d                      	out	EEDR,a0			; set EEPROM data register
-0001e9 f01f                      	brie	eeprom_cli	; if I=1 then temporarily disable interrupts
-0001ea 9ae2                      	sbi	EECR,EEMWE		; set EEPROM Master Write Enable
-0001eb 9ae1                      	sbi	EECR,EEWE		; set EEPROM Write Enable
-0001ec 9508                      	ret	
-                                 eeprom_cli:
-0001ed 94f8                      	cli					; disable interrupts
-0001ee 9ae2                      	sbi	EECR,EEMWE		; set EEPROM Master Write Enable
-0001ef 9ae1                      	sbi	EECR,EEWE		; set EEPROM Write Enable
-0001f0 9478                      	sei					; enable interrupts
-0001f1 9508                      	ret
-                                 
-                                 eeprom_load:
-                                 ; in:	xh:xl 	EEPROM address
-                                 ; out:	a0	EEPROM data byte to load
-                                 
-0001f2 99e1                      	sbic	EECR,EEWE	; skip if EEWE=0 (wait it EEWE=1)
-0001f3 cffe                      	rjmp	PC-1		; jump back to previous address
-0001f4 bbae                      	out	EEARL,xl	
-0001f5 bbbf                      	out	EEARH,xh
-0001f6 9ae0                      	sbi	EECR,EERE		; set EEPROM Read Enable
-0001f7 b32d                      	in	a0,EEDR			; read data register of EEPROM
-0001f8 9508                      	ret
-                                 
-                                 record:
-0001f9 2f02                      	mov			w,a0					; garder la valeur a0 avant de la perdre dans eeprom_store
-0001fa 2f23                      	mov			a0, a1					; transfer pour que eeprom_store prenne le MSB de la temperature
-0001fb dfe8                      	rcall		eeprom_store			; stockage du LSB de la temperature
-0001fc 9611                      	adiw		xl,1					; incrementation de l'adresse de la eeprom
-0001fd 2f20                      	mov			a0, w
-0001fe dfe5                      	rcall		eeprom_store			; stockage du MSB de la temperature
-0001ff 9611                      	adiw		xl,1					; incrementation de l'adresse de la eeprom
-000200 ec08
-000201 2e30
-000202 e001
-000203 930f
-000204 923f
-000205 e300
-000206 2e30
-000207 e006
-000208 943a
-000209 f7f1
-00020a 943a
-00020b 950a
-00020c f7d9
-00020d 903f
-00020e 910f
-00020f 943a
-000210 f791
-000211 950a
-000212 f781                      	WAIT_MS		200 ;POSE PROBLEME DANS LA IRS???????????
-000213 9508                      	ret
-                                 
-                                 ;.include "lib/wire1.asm"
-                                 
-                                 .include "libPerso/per_sensors.asm"
-                                 
-                                 
-                                 ; ==========================macros =====================================
-                                 	
-                                 ; =======================subroutine=========================
-                                 temperature:		;PORT B
-                                 		
-000214 d05f                      		rcall		wire1_reset							;reset pulse
-000215 ec2c
-000216 d089                      		CA			wire1_write, skipROM				;skip ROM identification
-000217 e424
-000218 d087                      		CA			wire1_write, convertT				;initaite temperature convertion
-000219 e00a
-00021a 2e30
-00021b e001
-00021c 930f
-00021d 923f
-00021e e300
-00021f 2e30
-000220 e006
-000221 943a
-000222 f7f1
-000223 943a
-000224 950a
-000225 f7d9
-000226 903f
-000227 910f
-000228 943a
-000229 f791
-00022a 950a
-00022b f781                      		WAIT_MS		10					
-00022c d047                      		rcall		wire1_reset
-00022d ec2c
-00022e d071                      		CA			wire1_write, skipROM
-00022f eb2e
-000230 d06f                      		CA			wire1_write, readScratchpad
-000231 d079                      		rcall		wire1_read							;read temperature LSB
-000232 2f86                      		mov			b2,b0
-000233 d077                      		rcall		wire1_read							;read temperature MSB
-000234 2f76                      		mov			b1, b0
-000235 2f68                      		mov			b0, b2
-000236 9508                      		ret
-                                 
-                                 light:										;PORT F, pin 0	
-                                 		;clr			r23						; stocke l'info dans a1-a0
-000237 9a36                      		sbi			ADCSR,ADSC
-000238 9936
-000239 cffe                      		WP1			ADCSR,ADSC
-00023a b164                      		in			b0,ADCL
-00023b b175                      		in			b1,ADCH
-00023c ec08
-00023d 2e30
-00023e e001
-00023f 930f
-000240 923f
-000241 e300
-000242 2e30
-000243 e006
-000244 943a
-000245 f7f1
-000246 943a
-000247 950a
-000248 f7d9
-000249 903f
-00024a 910f
-00024b 943a
-00024c f791
-00024d 950a
-00024e f781                      		WAIT_MS		200
-00024f 9508                      		ret
-                                 
-                                 humidity:										;PORT F, pin 1
-                                 		;clr			r23						; stocke l'info dans a1-a0
-000250 9a36                      		sbi			ADCSR,ADSC
-000251 9936
-000252 cffe                      		WP1			ADCSR,ADSC
-000253 b164                      		in			b0,ADCL
-000254 b175                      		in			b1,ADCH
-000255 ec08
-000256 2e30
-000257 e001
-000258 930f
-000259 923f
-00025a e300
-00025b 2e30
-00025c e006
-00025d 943a
-00025e f7f1
-00025f 943a
-000260 950a
-000261 f7d9
-000262 903f
-000263 910f
-000264 943a
-000265 f791
-000266 950a
-000267 f781                      		WAIT_MS		200
-000268 9508                      		ret
-                                 .include "libPerso/per_wire1.asm"
+0001e3 9409                      ;.include "lib/eeprom.asm"
+                                 .include "lib/wire1.asm"
                                  
                                  ; purpose Dallas 1-wire(R) interface library
                                  
@@ -4120,236 +3954,352 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
                                  	.endmacro	
                                  
                                  wire1_wait:
-000269 950a                      	dec	w					; loop time 2usec
-00026a 0000                      	nop
-00026b 0000                      	nop
-00026c 0000                      	nop
-00026d 0000                      	nop
-00026e 0000                      	nop
-00026f f7c9                      	brne	wire1_wait
-000270 9508                      	ret
+0001e4 950a                      	dec	w					; loop time 2usec
+0001e5 0000                      	nop
+0001e6 0000                      	nop
+0001e7 0000                      	nop
+0001e8 0000                      	nop
+0001e9 0000                      	nop
+0001ea f7c9                      	brne	wire1_wait
+0001eb 9508                      	ret
                                  
                                  wire1_init:
-000271 98c5                      	cbi	DQ_port,  DQ_pin	; PORT=0 low (for pull-down)
-000272 98bd                      	cbi	DQ_port-1,DQ_pin	; DDR=0 (input hi Z)
-000273 9508                      	ret
+0001ec 98c5                      	cbi	DQ_port,  DQ_pin	; PORT=0 low (for pull-down)
+0001ed 98bd                      	cbi	DQ_port-1,DQ_pin	; DDR=0 (input hi Z)
+0001ee 9508                      	ret
                                  	
-000274 9abd
-000275 ef00
-000276 dff2
-000277 98bd
-000278 e203
-000279 dfef
-00027a b306
-00027b fb05
-00027c ec0d
-00027d dfeb
-00027e 9508                      wire1_reset:	WIRE1	480,70,410
-00027f 9abd
-000280 e10c
-000281 dfe7
-000282 98bd
-000283 e002
-000284 dfe4
-000285 b306
-000286 fb05
-000287 e001
-000288 dfe0
-000289 9508                      wire1_write0:	WIRE1	56,4,1
-00028a 9abd
-00028b e001
-00028c dfdc
-00028d 98bd
-00028e e10e
-00028f dfd9
-000290 b306
-000291 fb05
-000292 e001
-000293 dfd5
-000294 9508                      wire1_write1:	WIRE1	1,59,1
-000295 9abd
-000296 e001
-000297 dfd1
-000298 98bd
-000299 e007
-00029a dfce
-00029b b306
-00029c fb05
-00029d e107
-00029e dfca
-00029f 9508                      wire1_read1:	WIRE1	1,14,45
+0001ef 9abd
+0001f0 ef00
+0001f1 dff2
+0001f2 98bd
+0001f3 e203
+0001f4 dfef
+0001f5 b306
+0001f6 fb05
+0001f7 ec0d
+0001f8 dfeb
+0001f9 9508                      wire1_reset:	WIRE1	480,70,410
+0001fa 9abd
+0001fb e10c
+0001fc dfe7
+0001fd 98bd
+0001fe e002
+0001ff dfe4
+000200 b306
+000201 fb05
+000202 e001
+000203 dfe0
+000204 9508                      wire1_write0:	WIRE1	56,4,1
+000205 9abd
+000206 e001
+000207 dfdc
+000208 98bd
+000209 e10e
+00020a dfd9
+00020b b306
+00020c fb05
+00020d e001
+00020e dfd5
+00020f 9508                      wire1_write1:	WIRE1	1,59,1
+000210 9abd
+000211 e001
+000212 dfd1
+000213 98bd
+000214 e007
+000215 dfce
+000216 b306
+000217 fb05
+000218 e107
+000219 dfca
+00021a 9508                      wire1_read1:	WIRE1	1,14,45
                                  	
                                  wire1_write:
-0002a0 937f                      	push	b1
-0002a1 e078                      	ldi		b1,8
-0002a2 9567                      	ror		b0
+00021b 933f                      	push	a1
+00021c e038                      	ldi		a1,8
+00021d 9527                      	ror		a0
                                  
-0002a3 f410                      	brcc	PC+3				; if C=1 then wire1, else wire0
-0002a4 dfe5                      	rcall	wire1_write1
-0002a5 c001                      	rjmp	PC+2
-0002a6 dfd8                      	rcall	wire1_write0
+00021e f410                      	brcc	PC+3				; if C=1 then wire1, else wire0
+00021f dfe5                      	rcall	wire1_write1
+000220 c001                      	rjmp	PC+2
+000221 dfd8                      	rcall	wire1_write0
                                  
-0002a7 957a
-0002a8 f7c9                      	DJNZ	b1,wire1_write+2	; dec and jump if not zero
-0002a9 917f                      	pop		b1	
-0002aa 9508                      	ret
+000222 953a
+000223 f7c9                      	DJNZ	a1,wire1_write+2	; dec and jump if not zero
+000224 913f                      	pop		a1	
+000225 9508                      	ret
                                  
                                  wire1_read:
-0002ab 937f                      	push	b1
-0002ac e078                      	ldi		b1,8
-0002ad 9567                      	ror		b0
-0002ae dfe6                      	rcall	wire1_read1			; returns result in T
-0002af f967                      	bld		b0,7					; move T to MSb
-0002b0 957a
-0002b1 f7d9                      	DJNZ	b1,wire1_read+2		; dec and jump if not zero
-0002b2 917f                      	pop		b1	
-0002b3 9508                      	ret
+000226 933f                      	push	a1
+000227 e038                      	ldi		a1,8
+000228 9527                      	ror		a0
+000229 dfe6                      	rcall	wire1_read1			; returns result in T
+00022a f927                      	bld		a0,7					; move T to MSb
+00022b 953a
+00022c f7d9                      	DJNZ	a1,wire1_read+2		; dec and jump if not zero
+00022d 913f                      	pop		a1	
+00022e 9508                      	ret
                                  	
                                  wire1_crc:
-0002b4 e109                      	ldi	w,0b00011001
-0002b5 e088                      	ldi	b2,8
-0002b6 9567                      crc1:	ror	b0
-0002b7 f408                      	brcc	PC+2
-0002b8 2770                      	eor	b1,w
-0002b9 fb70                      	bst	b1,0
-0002ba 9577                      	ror	b1
-0002bb f977                      	bld	b1,7
-0002bc 958a
-0002bd f7c1                      	DJNZ	b2,crc1
-0002be 9508                      
-                                 main:	
-0002bf 3f2f
-0002c0 f409
-0002c1 e022
-0002c2 3023
-0002c3 f409
-0002c4 e020                      		CYCLIC			a0,0,2
-0002c5 e40f
-0002c6 2e40
-0002c7 e001
-0002c8 2e50
-0002c9 dd67                      		PRINTF			LCD
-0002ca 0d0d
-0002cb 1294
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(51): warning: .cseg .db misalignment - padding zero byte
-0002cc 0000                      .db		CR, CR, FHEX,a,0
-0002cd df0d                      		rcall			menui
-0002ce 6554
-0002cf 706d
-0002d0 7265
-0002d1 7461
-0002d2 7275
-0002d3 7c65
-0002d4 7548
-0002d5 696d
-0002d6 6964
-0002d7 7974
-0002d8 2020
-0002d9 7c20
-0002da 694c
-0002db 6867
-0002dc 2074
-0002dd 2020
-0002de 2020
-0002df 0020                      .db		"Temperature|Humidity   |Light      ",0		
-0002e0 e001
-0002e1 2e30
-0002e2 e001
-0002e3 930f
-0002e4 923f
-0002e5 e300
-0002e6 2e30
-0002e7 e006
-0002e8 943a
-0002e9 f7f1
-0002ea 943a
-0002eb 950a
-0002ec f7d9
-0002ed 903f
-0002ee 910f
-0002ef 943a
-0002f0 f791
-0002f1 950a
-0002f2 f781                      		WAIT_MS			1
-0002f3 dea0                      		rcall			encoder
-0002f4 f00e                      		brts			mesurements_choice			
-0002f5 cfc9                      		rjmp			main
+00022f e109                      	ldi	w,0b00011001
+000230 e048                      	ldi	a2,8
+000231 9527                      crc1:	ror	a0
+000232 f408                      	brcc	PC+2
+000233 2730                      	eor	a1,w
+000234 fb30                      	bst	a1,0
+000235 9537                      	ror	a1
+000236 f937                      	bld	a1,7
+000237 954a
+000238 f7c1                      	DJNZ	a2,crc1
+000239 9508                      
+                                 .include "libPerso/per_sensors.asm"
                                  
+                                 
+                                 ; ==========================macros =====================================
+                                 	
+                                 ; =======================subroutine=========================
+                                 temperature:		;PORT B
+                                 		
+00023a dfb4                      		rcall		wire1_reset							;reset pulse
+00023b ec2c
+00023c dfde                      		CA			wire1_write, skipROM				;skip ROM identification
+00023d e424
+00023e dfdc                      		CA			wire1_write, convertT				;initaite temperature convertion
+00023f e00a
+000240 2e30
+000241 e001
+000242 930f
+000243 923f
+000244 e300
+000245 2e30
+000246 e006
+000247 943a
+000248 f7f1
+000249 943a
+00024a 950a
+00024b f7d9
+00024c 903f
+00024d 910f
+00024e 943a
+00024f f791
+000250 950a
+000251 f781                      		WAIT_MS		10					
+000252 df9c                      		rcall		wire1_reset
+000253 ec2c
+000254 dfc6                      		CA			wire1_write, skipROM
+000255 eb2e
+000256 dfc4                      		CA			wire1_write, readScratchpad
+000257 dfce                      		rcall		wire1_read							;read temperature LSB
+                                 		;mov			b0,a0
+000258 2f82                      		mov			b2,a0
+                                 		;mov			b2,b0
+000259 dfcc                      		rcall		wire1_read							;read temperature MSB
+00025a 2f72                      		mov			b1, a0
+                                 		;mov			b1, b0
+00025b 2f68                      		mov			b0, b2
+00025c 9508                      		ret
+                                 
+                                 light:										;PORT F, pin 0	
+                                 		;clr			r23						; stocke l'info dans a1-a0
+00025d 9a36                      		sbi			ADCSR,ADSC
+00025e 9936
+00025f cffe                      		WP1			ADCSR,ADSC
+000260 b164                      		in			b0,ADCL
+000261 b175                      		in			b1,ADCH
+000262 ec08
+000263 2e30
+000264 e001
+000265 930f
+000266 923f
+000267 e300
+000268 2e30
+000269 e006
+00026a 943a
+00026b f7f1
+00026c 943a
+00026d 950a
+00026e f7d9
+00026f 903f
+000270 910f
+000271 943a
+000272 f791
+000273 950a
+000274 f781                      		WAIT_MS		200
+000275 9508                      		ret
+                                 
+                                 humidity:										;PORT F, pin 1
+                                 		;clr			r23						; stocke l'info dans a1-a0
+000276 9a36                      		sbi			ADCSR,ADSC
+000277 9936
+000278 cffe                      		WP1			ADCSR,ADSC
+000279 b164                      		in			b0,ADCL
+00027a b175                      		in			b1,ADCH
+00027b ec08
+00027c 2e30
+00027d e001
+00027e 930f
+00027f 923f
+000280 e300
+000281 2e30
+000282 e006
+000283 943a
+000284 f7f1
+000285 943a
+000286 950a
+000287 f7d9
+000288 903f
+000289 910f
+00028a 943a
+00028b f791
+00028c 950a
+00028d f781                      		WAIT_MS		200
+00028e 9508                      		ret
+                                 ;.include "libPerso/per_wire1.asm"
+                                 
+                                 main:	
+                                 		;wdr
+                                 		;CYCLIC			a1,0,2
+00028f 3f2f
+000290 f409
+000291 e022
+000292 3023
+000293 f409
+000294 e020                      		CYCLIC			a0,0,2
+000295 e40f
+000296 2e40
+000297 e001
+000298 2e50
+000299 dd97                      		PRINTF			LCD
+00029a 0d0d
+00029b 1294
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(54): warning: .cseg .db misalignment - padding zero byte
+00029c 0000                      .db		CR, CR, FHEX,a,0
+00029d df3d                      		rcall			menui
+00029e 6554
+00029f 706d
+0002a0 7265
+0002a1 7461
+0002a2 7275
+0002a3 7c65
+0002a4 7548
+0002a5 696d
+0002a6 6964
+0002a7 7974
+0002a8 2020
+0002a9 7c20
+0002aa 694c
+0002ab 6867
+0002ac 2074
+0002ad 2020
+0002ae 2020
+0002af 0020                      .db		"Temperature|Humidity   |Light      ",0		
+0002b0 e001
+0002b1 2e30
+0002b2 e001
+0002b3 930f
+0002b4 923f
+0002b5 e300
+0002b6 2e30
+0002b7 e006
+0002b8 943a
+0002b9 f7f1
+0002ba 943a
+0002bb 950a
+0002bc f7d9
+0002bd 903f
+0002be 910f
+0002bf 943a
+0002c0 f791
+0002c1 950a
+0002c2 f781                      		WAIT_MS			1
+0002c3 ded0                      		rcall			encoder
+0002c4 f00e                      		brts			mesurements_choice			
+0002c5 cfc9                      		rjmp			main
+                                 
+                                 ;mesurements_choice:				; switch case selon le choix du menu (-> a1) pour l'affichage de la mesure
                                  mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affichage de la mesure
-0002f6 de64                      		rcall		LCD_clear
-0002f7 e000                      		ldi			w, 0x0000		;Temperature code
-0002f8 1720                      		cp			a0,w
-0002f9 f039                      		breq		getTemp
-0002fa e001                      		ldi			w, 0x0001		;Humidity code
-0002fb 1720                      		cp			a0,w
-0002fc f0a1                      		breq		getHum
-0002fd e002                      		ldi			w, 0x0002
-0002fe 1720                      		cp			a0,w
-0002ff f109                      		breq		getLight
-000300 cff5                      		rjmp		mesurements_choice
+0002c6 de94                      		rcall		LCD_clear
+0002c7 e000                      		ldi			w, 0x0000		;Temperature code
+                                 		;cp			a1,w
+0002c8 1720                      		cp			a0,w
+0002c9 f039                      		breq		getTemp
+0002ca e001                      		ldi			w, 0x0001		;Humidity code
+                                 		;cp			a1,w
+0002cb 1720                      		cp			a0,w
+0002cc f0a9                      		breq		getHum
+0002cd e002                      		ldi			w, 0x0002
+                                 		;cp			a1,w
+0002ce 1720                      		cp			a0,w
+0002cf f119                      		breq		getLight
+0002d0 cff5                      		rjmp		mesurements_choice
                                  
                                  
                                  getTemp:
-000301 df12                      	rcall		temperature
-000302 de5a                      	rcall		lcd_home
-000303 e40f
-000304 2e40
-000305 e001
-000306 2e50
-000307 dd29                      	PRINTF		LCD
-000308 6574
-000309 206d
-00030a 168b
-00030b 4204
-00030c 4320
-00030d 000d                      .db	"tem ",FFRAC2+FSIGN,b,4,$42," C",CR,0
-00030e de85                      	rcall		encoder
-00030f f11e                      	brts		come_back
-000310 cff0                      	rjmp		getTemp
+                                 	;wdr
+0002d1 df68                      	rcall		temperature
+0002d2 de8a                      	rcall		LCD_home
+0002d3 e40f
+0002d4 2e40
+0002d5 e001
+0002d6 2e50
+0002d7 dd59                      	PRINTF		LCD
+                                 ;.db	"tem ",FFRAC2+FSIGN,a,4,$42," C",CR,0
+0002d8 6574
+0002d9 206d
+0002da 2020
+0002db 168b
+0002dc 4204
+0002dd 4320
+0002de 000d                      .db	"tem   ",FFRAC2+FSIGN,b,4,$42," C",CR,0
+0002df deb4                      	rcall		encoder
+0002e0 f126                      	brts		come_back
+0002e1 cfef                      	rjmp		getTemp
                                  
                                  getHum:
-000311 df3e                      	rcall		humidity
-000312 de4a                      	rcall		lcd_home
-000313 e40f
-000314 2e40
-000315 e001
-000316 2e50
-000317 dd19                      	PRINTF		LCD
-000318 7568
-000319 206d
-00031a 168b
-00031b 4204
-00031c 2520
-00031d 000d                      .db	"hum ",FFRAC2+FSIGN,b,4,$42," %",CR,0
-00031e de75                      	rcall		encoder
-00031f f09e                      	brts		come_back
-000320 cff0                      	rjmp		getHum
+0002e2 df93                      	rcall		humidity
+0002e3 de79                      	rcall		LCD_home
+0002e4 e40f
+0002e5 2e40
+0002e6 e001
+0002e7 2e50
+0002e8 dd48                      	PRINTF		LCD
+0002e9 7568
+0002ea 206d
+0002eb 2020
+0002ec 168b
+0002ed 4204
+0002ee 2520
+0002ef 000d                      .db	"hum   ",FFRAC2+FSIGN,b,4,$42," %",CR,0
+0002f0 dea3                      	rcall		encoder
+0002f1 f09e                      	brts		come_back
+0002f2 cfef                      	rjmp		getHum
                                  
                                  getLight:
-000321 df15                      	rcall		light
-000322 e40f
-000323 2e40
-000324 e001
-000325 2e50
-000326 dd0a                      	PRINTF		LCD
-000327 696c
-000328 6867
-000329 2074
-00032a 8b20
-00032b 0416
-00032c 2042
-00032d 6d6c
-00032e 2020
-00032f 000d                      .db	"light  ",FFRAC2+FSIGN,b,4,$42," lm  ",CR,0
-000330 de63                      	rcall		encoder
-000331 f00e                      	brts		come_back
-000332 cfee                      	rjmp		getLight
+0002f3 df69                      	rcall		light
+0002f4 de68                      	rcall		LCD_home ;change
+0002f5 e40f
+0002f6 2e40
+0002f7 e001
+0002f8 2e50
+0002f9 dd37                      	PRINTF		LCD
+0002fa 696c
+0002fb 6867
+0002fc 2074
+0002fd 168b
+0002fe 4204
+0002ff 6c20
+000300 0d6d
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(104): warning: .cseg .db misalignment - padding zero byte
+000301 0000                      .db	"light ",FFRAC2+FSIGN,b,4,$42," lm",CR,0
+000302 de91                      	rcall		encoder
+000303 f00e                      	brts		come_back
+000304 cfee                      	rjmp		getLight
                                  
                                  
                                  come_back:
-000333 e020                      	ldi			a0, 0
-000334 de26                      	rcall		lcd_clear
-000335 cf89                      	rjmp		main
+                                 	;ldi			a1, 0
+000305 e020                      	ldi			a0, 0
+000306 de54                      	rcall		lcd_clear
+000307 cf87                      	rjmp		main
                                  
                                  	
                                  	
@@ -4372,41 +4322,41 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega128" register use summary:
-x  :   6 y  :   0 z  :   0 r0 :  10 r1 :   2 r2 :   5 r3 :  37 r4 :   5 
+x  :   6 y  :   0 z  :   0 r0 :  10 r1 :   2 r2 :   5 r3 :  30 r4 :   5 
 r5 :   5 r6 :   0 r7 :   0 r8 :   5 r9 :   5 r10:   5 r11:   6 r12:  11 
-r13:   0 r14:   0 r15:   0 r16: 182 r17:  13 r18:  53 r19:  16 r20:  15 
-r21:  15 r22:  22 r23:  40 r24:  11 r25:  15 r26:   8 r27:   6 r28:   0 
+r13:   0 r14:   0 r15:   0 r16: 170 r17:  13 r18:  54 r19:  27 r20:  17 
+r21:  15 r22:  16 r23:  28 r24:   9 r25:  15 r26:   4 r27:   4 r28:   0 
 r29:   0 r30:  18 r31:   9 
 Registers used: 26 out of 35 (74.3%)
 
 "ATmega128" instruction use summary:
-.lds  :   0 .sts  :   0 adc   :   0 add   :   2 adiw  :  11 and   :   0 
+.lds  :   0 .sts  :   0 adc   :   0 add   :   2 adiw  :   9 and   :   0 
 andi  :   9 asr   :   2 bclr  :   0 bld   :   2 brbc  :   0 brbs  :   0 
 brcc  :   3 brcs  :   0 break :   0 breq  :  22 brge  :   0 brhc  :   0 
-brhs  :   0 brid  :   0 brie  :   1 brlo  :   1 brlt  :   0 brmi  :   1 
-brne  :  37 brpl  :   1 brsh  :   1 brtc  :   5 brts  :   4 brvc  :   0 
+brhs  :   0 brid  :   0 brie  :   0 brlo  :   1 brlt  :   0 brmi  :   1 
+brne  :  33 brpl  :   1 brsh  :   1 brtc  :   5 brts  :   4 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   6 call  :   0 cbi   :   6 cbr   :   0 
-clc   :   1 clh   :   0 cli   :   1 cln   :   0 clr   :  10 cls   :   0 
+clc   :   1 clh   :   0 cli   :   0 cln   :   0 clr   :  10 cls   :   0 
 clt   :   2 clv   :   0 clz   :   3 com   :   8 cp    :   5 cpc   :   3 
-cpi   :  15 cpse  :   0 dec   :  36 elpm  :   0 eor   :   2 fmul  :   0 
-fmuls :   0 fmulsu:   0 icall :   1 ijmp  :   2 in    :  14 inc   :   6 
-jmp   :   1 ld    :   6 ldd   :   0 ldi   :  93 lds   :   4 lpm   :  21 
-lsl   :   2 lsr   :   4 mov   :  45 movw  :   0 mul   :   0 muls  :   0 
-mulsu :   0 neg   :   0 nop   :   6 or    :   0 ori   :   3 out   :  13 
-pop   :  38 push  :  35 rcall :  68 ret   :  36 reti  :   1 rjmp  :  55 
-rol   :  11 ror   :  18 sbc   :   3 sbci  :   0 sbi   :  11 sbic  :   4 
+cpi   :  15 cpse  :   0 dec   :  31 elpm  :   0 eor   :   2 fmul  :   0 
+fmuls :   0 fmulsu:   0 icall :   1 ijmp  :   2 in    :  13 inc   :   6 
+jmp   :   1 ld    :   6 ldd   :   0 ldi   :  89 lds   :   4 lpm   :  21 
+lsl   :   2 lsr   :   4 mov   :  40 movw  :   0 mul   :   0 muls  :   0 
+mulsu :   0 neg   :   0 nop   :   6 or    :   0 ori   :   3 out   :   8 
+pop   :  36 push  :  33 rcall :  67 ret   :  32 reti  :   1 rjmp  :  53 
+rol   :  11 ror   :  18 sbc   :   3 sbci  :   0 sbi   :   6 sbic  :   2 
 sbis  :   0 sbiw  :   0 sbr   :   1 sbrc  :  17 sbrs  :   4 sec   :   0 
-seh   :   0 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   2 
+seh   :   0 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   2 
 sev   :   0 sez   :   1 sleep :   0 spm   :   0 st    :   0 std   :   0 
 sts   :   4 sub   :   3 subi  :   7 swap  :   4 tst   :  10 wdr   :   0 
 
-Instructions used: 65 out of 114 (57.0%)
+Instructions used: 62 out of 114 (54.4%)
 
 "ATmega128" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x00066c   1500     84   1584  131072   1.2%
+[.cseg] 0x000000 0x000610   1406     86   1492  131072   1.1%
 [.dseg] 0x000100 0x000101      0      1      1    4096   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    4096   0.0%
 
-Assembly complete, 0 errors, 1 warnings
+Assembly complete, 0 errors, 2 warnings
