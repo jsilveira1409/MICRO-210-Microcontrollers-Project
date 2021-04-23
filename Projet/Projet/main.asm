@@ -31,7 +31,7 @@ reset:
 		OUTI		ADCSR,(1<<ADEN) + (1<<ADIE) + 6 ;init du ADC pour LDR
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
-		;ldi			a1, 0
+		;ldi			c0, 0
 		ldi			a0, 0
 		;sei									; set global interrupts
 		rjmp			main
@@ -44,11 +44,11 @@ reset:
 .include "lib/wire1.asm"
 
 .include "libPerso/per_sensors.asm"
-;.include "libPerso/per_wire1.asm"
+;.include "libPerso/per_wire1.asm" ;change
 
 main:	
 		;wdr
-		;CYCLIC			a1,0,2
+		;CYCLIC			c0,0,2
 		CYCLIC			a0,0,2
 		PRINTF			LCD
 .db		CR, CR, FHEX,a,0
@@ -59,31 +59,34 @@ main:
 		brts			mesurements_choice			
 		rjmp			main
 
-;mesurements_choice:				; switch case selon le choix du menu (-> a1) pour l'affichage de la mesure
+;mesurements_choice:				; switch case selon le choix du menu (-> c0) pour l'affichage de la mesure
 mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affichage de la mesure
+		;push		a0			;change 
 		rcall		LCD_clear
 		ldi			w, 0x0000		;Temperature code
-		;cp			a1,w
+		;cp			b0,w
 		cp			a0,w
 		breq		getTemp
 		ldi			w, 0x0001		;Humidity code
-		;cp			a1,w
+		;cp			b0,w
 		cp			a0,w
 		breq		getHum
 		ldi			w, 0x0002
-		;cp			a1,w
+		;cp			b0,w
 		cp			a0,w
 		breq		getLight
+		;pop			a0			;change
 		rjmp		mesurements_choice
 
 
 getTemp:
 	;wdr
+	;mov			b0, a0  ;change
 	rcall		temperature
 	rcall		LCD_home
 	PRINTF		LCD
 ;.db	"tem ",FFRAC2+FSIGN,a,4,$42," C",CR,0
-.db	"tem   ",FFRAC2+FSIGN,b,4,$42," C",CR,0
+.db	"temp  ",FFRAC2+FSIGN,b,4,$42," C",CR,0
 	rcall		encoder
 	brts		come_back
 	rjmp		getTemp
@@ -108,8 +111,9 @@ getLight:
 
 
 come_back:
-	;ldi			a1, 0
+	;ldi			c0, 0
 	ldi			a0, 0
+	;mov			a0, b0 ;change
 	rcall		lcd_clear
 	rjmp		main
 

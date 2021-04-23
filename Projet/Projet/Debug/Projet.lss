@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 17:31:52 2021
+AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Fri Apr 23 19:30:50 2021
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(1): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/macros.asm'
@@ -3121,7 +3121,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 00002d e000
 00002e b907                      		OUTI		ADMUX, 0						;pin 0 -> LDR
                                  		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
-                                 		;ldi			a1, 0
+                                 		;ldi			c0, 0
 00002f e020                      		ldi			a0, 0
                                  		;sei									; set global interrupts
 000030 c25e                      		rjmp			main
@@ -3871,9 +3871,12 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
                                  
                                  menu:
                                  ; in	a0	menu item (0..n)
+                                 ; in	->c0	menu item (0..n)
                                  ; 		z	pointer to menu string "item0|item1..item_n"
                                  
+                                 	;push	c0				; safeguard c0
 0001c2 932f                      	push	a0				; safeguard a0
+                                 	;tst		c0					; if c0=0 then print first item
 0001c3 2322                      	tst		a0					; if a0=0 then print first item
 0001c4 f039                      	breq	menu_print		
                                  menu_find:
@@ -3882,14 +3885,18 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 0001c7 9631                      	adiw	zl,1
 0001c8 370c                      	cpi	w,'|'
 0001c9 f7d9                      	brne	PC-4			; inner loop finds the '|'
+                                 	;dec	c0
 0001ca 952a                      	dec	a0		
 0001cb f7c9                      	brne	PC-6			; outer loop counts down to zero
                                  
                                  menu_print:
 0001cc 95c8                      	lpm						; print the item	
+                                 	;mov	c0,r0
 0001cd 2d20                      	mov	a0,r0
+                                 	;cpi	c0,'|'
 0001ce 372c                      	cpi	a0,'|'
 0001cf f029                      	breq	menu_done		; if char='|' then end of item
+                                 	;cpi	c0,0
 0001d0 3020                      	cpi	a0,0
 0001d1 f019                      	breq	menu_done		; if char=0 (NUL) then end of string
 0001d2 9631                      	adiw	zl,1
@@ -3900,6 +3907,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 0001d6 9631                      	adiw	zl,1
 0001d7 2000                      	tst	r0
 0001d8 f7e1                      	brne	menu_done		; advance pointer z beyond end of string
+                                 	;pop	c0					; restore register c0
 0001d9 912f                      	pop	a0					; restore register a0
 0001da 9508                      	ret
                                  
@@ -4089,12 +4097,15 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 000255 eb2e
 000256 dfc4                      		CA			wire1_write, readScratchpad
 000257 dfce                      		rcall		wire1_read							;read temperature LSB
-                                 		;mov			b0,a0
-000258 2f82                      		mov			b2,a0
+                                 		;;mov			b0,a0
                                  		;mov			b2,b0
+000258 2f82                      		mov			b2,a0
+                                 		;;mov			b2,b0
 000259 dfcc                      		rcall		wire1_read							;read temperature MSB
+                                 		;mov		b1,b0
 00025a 2f72                      		mov			b1, a0
-                                 		;mov			b1, b0
+                                 		;;mov			b1, b0
+                                 		;mov		b0, b2
 00025b 2f68                      		mov			b0, b2
 00025c 9508                      		ret
                                  
@@ -4153,11 +4164,11 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 00028c 950a
 00028d f781                      		WAIT_MS		200
 00028e 9508                      		ret
-                                 ;.include "libPerso/per_wire1.asm"
+                                 ;.include "libPerso/per_wire1.asm" ;change
                                  
                                  main:	
                                  		;wdr
-                                 		;CYCLIC			a1,0,2
+                                 		;CYCLIC			c0,0,2
 00028f 3f2f
 000290 f409
 000291 e022
@@ -4215,26 +4226,29 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(54): warning: .c
 0002c4 f00e                      		brts			mesurements_choice			
 0002c5 cfc9                      		rjmp			main
                                  
-                                 ;mesurements_choice:				; switch case selon le choix du menu (-> a1) pour l'affichage de la mesure
+                                 ;mesurements_choice:				; switch case selon le choix du menu (-> c0) pour l'affichage de la mesure
                                  mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affichage de la mesure
+                                 		;push		a0			;change 
 0002c6 de94                      		rcall		LCD_clear
 0002c7 e000                      		ldi			w, 0x0000		;Temperature code
-                                 		;cp			a1,w
+                                 		;cp			b0,w
 0002c8 1720                      		cp			a0,w
 0002c9 f039                      		breq		getTemp
 0002ca e001                      		ldi			w, 0x0001		;Humidity code
-                                 		;cp			a1,w
+                                 		;cp			b0,w
 0002cb 1720                      		cp			a0,w
 0002cc f0a9                      		breq		getHum
 0002cd e002                      		ldi			w, 0x0002
-                                 		;cp			a1,w
+                                 		;cp			b0,w
 0002ce 1720                      		cp			a0,w
 0002cf f119                      		breq		getLight
+                                 		;pop			a0			;change
 0002d0 cff5                      		rjmp		mesurements_choice
                                  
                                  
                                  getTemp:
                                  	;wdr
+                                 	;mov			b0, a0  ;change
 0002d1 df68                      	rcall		temperature
 0002d2 de8a                      	rcall		LCD_home
 0002d3 e40f
@@ -4244,12 +4258,12 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(54): warning: .c
 0002d7 dd59                      	PRINTF		LCD
                                  ;.db	"tem ",FFRAC2+FSIGN,a,4,$42," C",CR,0
 0002d8 6574
-0002d9 206d
+0002d9 706d
 0002da 2020
 0002db 168b
 0002dc 4204
 0002dd 4320
-0002de 000d                      .db	"tem   ",FFRAC2+FSIGN,b,4,$42," C",CR,0
+0002de 000d                      .db	"temp  ",FFRAC2+FSIGN,b,4,$42," C",CR,0
 0002df deb4                      	rcall		encoder
 0002e0 f126                      	brts		come_back
 0002e1 cfef                      	rjmp		getTemp
@@ -4288,7 +4302,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(54): warning: .c
 0002fe 4204
 0002ff 6c20
 000300 0d6d
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(104): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(107): warning: .cseg .db misalignment - padding zero byte
 000301 0000                      .db	"light ",FFRAC2+FSIGN,b,4,$42," lm",CR,0
 000302 de91                      	rcall		encoder
 000303 f00e                      	brts		come_back
@@ -4296,8 +4310,9 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(104): warning: .
                                  
                                  
                                  come_back:
-                                 	;ldi			a1, 0
+                                 	;ldi			c0, 0
 000305 e020                      	ldi			a0, 0
+                                 	;mov			a0, b0 ;change
 000306 de54                      	rcall		lcd_clear
 000307 cf87                      	rjmp		main
                                  
