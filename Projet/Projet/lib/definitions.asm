@@ -58,7 +58,7 @@
 .equ	BS	=0x08	; back space
 
 ; === STK-300 ===
-.equ	LED	= PORTB	; LEDs on STK-300
+.equ	LED	= PORTC	; LEDs on STK-300				;CHANGE, de base cetait B
 .equ	BUTTON	= PIND	; buttons on the STK-300
 
 ; === module M2 (encoder/speaker/IR remote) ===

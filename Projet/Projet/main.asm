@@ -13,8 +13,6 @@
 	
 overflow0:
 		in			_sreg, SREG
-		inc			b3
-		out			PORTC, b3
 		out			SREG, _sreg
 		reti
 ; ================== init / reset ===============================
@@ -25,15 +23,14 @@ reset:
 		rcall		wire1_init
 		rcall		lcd_init
 		rcall		encoder_init
-		OUTI		TIMSK, (1<<TOIE0)			;init du timer
-		OUTI		ASSR,  (1<<AS0)
-		OUTI		TCCR0,6
+		;OUTI		TIMSK, (1<<TOIE0)			;init du timer
+		;OUTI		ASSR,  (1<<AS0)
+		;OUTI		TCCR0,6
 		OUTI		ADCSR,(1<<ADEN) + (1<<ADIE) + 6 ;init du ADC pour LDR
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
 		ldi			a0, 0
-		ldi			b3, 0		
-		sei									; set global interrupts
+		;sei									; set global interrupts
 		rjmp			main
 
 .include "lib/printf.asm"

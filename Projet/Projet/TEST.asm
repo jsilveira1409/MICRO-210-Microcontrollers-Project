@@ -24,14 +24,15 @@ reset:
 		LDSP		RAMEND
 		ldi			xl, low(0)					;memoire eeprom adresse init
 		ldi			xh, high(0)
-		OUTI		TIMSK, (1<<TOIE0)			; timer
-		OUTI		ASSR,  (1<<AS0)
-		OUTI		TCCR0, 3
-		OUTI		ADCSR,(1<<ADEN) + (1<<ADIE) + 6 ;init du CAN pour LDR
-		OUTI		ADMUX, 0						;pin 0 -> LDR
+		;OUTI		TIMSK, (1<<TOIE0)			; timer
+		;OUTI		ASSR,  (1<<AS0)
+		;OUTI		TCCR0, 3
+		;OUTI		ADCSR,(1<<ADEN) + (1<<ADIE) + 6 ;init du CAN pour LDR
+		;OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
 		;rcall		wire1_init
 		rcall		lcd_init						; CAUSE DES PROBLEMES AVEC LES INTERRUPTIONS
+		rcall		encoder_init
 		ldi			r16, 0xff
 		out			DDRC, r16						;port A en output --> LEDs
 		ldi			b3, 0
@@ -39,15 +40,23 @@ reset:
 		rjmp		main
 
 .include "lib/lcd.asm"
-.include "lib/wire1.asm"	
+.include "lib/wire1.asm"
+.include "libPerso/per_encoder.asm"	
 .include "lib/printf.asm"
 .include "lib/eeprom.asm"
-.include "libPerso/Sensors.asm"
+.include "lib/menu.asm"
+.include "libPerso/per_sensors.asm"
 
 
 ; ======================main ==============================
 main:
-	nop
-	rjmp		main
+		CYCLIC			b3,0,2
+		PRINTF			LCD
+.db		CR, CR, FHEX,b,0
+		rcall			menui
+.db		"Temperature|Humidity   |Light      ",0		
+		WAIT_MS			1
+		rcall			encoder
+		rjmp		main
 	
 ; =======================subroutine=========================	

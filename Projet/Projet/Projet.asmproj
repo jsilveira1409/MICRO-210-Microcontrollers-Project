@@ -15,7 +15,7 @@
     <Name>Projet</Name>
     <RootNamespace>Projet</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
-    <EntryFile>$(MSBuildProjectDirectory)\main.asm</EntryFile>
+    <EntryFile>$(MSBuildProjectDirectory)\TEST.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
@@ -78,7 +78,10 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="libPerso\Sensors.asm">
+    <Compile Include="libPerso\per_encoder.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="libPerso\per_sensors.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TEST.asm">
