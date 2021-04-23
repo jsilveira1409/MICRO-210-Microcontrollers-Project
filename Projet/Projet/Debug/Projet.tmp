@@ -33,7 +33,7 @@
  <LABELS>
   <reset><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm</FILE><LINE>19</LINE></reset>
   <overflow0><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm</FILE><LINE>14</LINE></overflow0>
-  <lcd_init><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>47</LINE></lcd_init>
+  <LCD_init><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>47</LINE></LCD_init>
   <encoder_init><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/encoder.asm</FILE><LINE>13</LINE></encoder_init>
   <wire1_init><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm</FILE><LINE>49</LINE></wire1_init>
   <main><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm</FILE><LINE>48</LINE></main>

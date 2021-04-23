@@ -18,11 +18,11 @@ overflow0:
 ; ================== init / reset ===============================
 reset:
 		LDSP		RAMEND						; load stack pointer (SP)
-		wdr										; reset watchdog timer
-		ldi			r16, 1<<WDE+0b100			; enable watchdog
-		out			WDTCR, r16
+		;wdr										; reset watchdog timer
+		;ldi			r16, 1<<WDE+0b100			; enable watchdog
+		;out			WDTCR, r16
 		
-		rcall		lcd_init
+		rcall		LCD_init
 		rcall		encoder_init
 		rcall		wire1_init
 		;OUTI		TIMSK, (1<<TOIE0)			;init du timer
@@ -32,7 +32,7 @@ reset:
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
 		ldi			a0, 0
-		sei									; set global interrupts
+		;sei									; set global interrupts
 		rjmp			main
 
 .include "lib/printf.asm"
