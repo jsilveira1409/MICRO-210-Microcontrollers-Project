@@ -6,7 +6,7 @@ menu:
 ; 		z	pointer to menu string "item0|item1..item_n"
 
 	push	a0				; safeguard a0
-	tst	a0					; if a0=0 then print first item
+	tst		a0					; if a0=0 then print first item
 	breq	menu_print		
 menu_find:
 	lpm

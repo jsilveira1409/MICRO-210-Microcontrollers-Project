@@ -18,11 +18,13 @@ overflow0:
 ; ================== init / reset ===============================
 reset:
 		LDSP		RAMEND
-		ldi			r17, 0xff
-		out			DDRC,r17
-		rcall		wire1_init
+		wdr										;init du watchdog
+		ldi			r16, 1<<WDE+0b100
+		out			WDTCR, r16
+		
 		rcall		lcd_init
 		rcall		encoder_init
+		rcall		wire1_init
 		;OUTI		TIMSK, (1<<TOIE0)			;init du timer
 		;OUTI		ASSR,  (1<<AS0)
 		;OUTI		TCCR0,6
@@ -30,19 +32,20 @@ reset:
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
 		ldi			a0, 0
-		;sei									; set global interrupts
+		sei									; set global interrupts
 		rjmp			main
 
 .include "lib/printf.asm"
 .include "lib/lcd.asm"
 .include "lib/encoder.asm"
-.include "lib/wire1.asm"	
 .include "lib/menu.asm"	
 .include "lib/eeprom.asm"
-.include "libPerso/Sensors.asm"
+;.include "lib/wire1.asm"
 
+.include "libPerso/per_sensors.asm"
+.include "libPerso/per_wire1.asm"
 
-main:
+main:	
 		CYCLIC			a0,0,2
 		PRINTF			LCD
 .db		CR, CR, FHEX,a,0
@@ -69,18 +72,18 @@ mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affic
 
 getTemp:
 	rcall		temperature
+	rcall		lcd_home
 	PRINTF		LCD
-.db	"temp ",FFRAC2+FSIGN,a,4,$42," C",CR,0
+.db	"tem ",FFRAC2+FSIGN,b,4,$42," C",CR,0
 	rcall		encoder
 	brts		come_back
 	rjmp		getTemp
 
 getHum:
-	;rcall		humidity
+	rcall		humidity
 	rcall		lcd_home
 	PRINTF		LCD
-;.db	"hum ",FFRAC2+FSIGN,a,4,$42," %",CR,0
-.db		"va te pendre",0
+.db	"hum ",FFRAC2+FSIGN,b,4,$42," %",CR,0
 	rcall		encoder
 	brts		come_back
 	rjmp		getHum
@@ -88,7 +91,7 @@ getHum:
 getLight:
 	rcall		light
 	PRINTF		LCD
-.db	"light  ",FFRAC2+FSIGN,a,4,$42," lm  ",CR,0
+.db	"light  ",FFRAC2+FSIGN,b,4,$42," lm  ",CR,0
 	rcall		encoder
 	brts		come_back
 	rjmp		getLight
