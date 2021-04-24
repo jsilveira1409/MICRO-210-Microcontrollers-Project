@@ -46,7 +46,7 @@ encoder:
 	sbrs	_w,ENCOD_I		; is the button up or down ?
 	rjmp	i_down
 i_up:	
-	sbrc	_w,ENCOD_A
+	sbrc	_w,ENCOD_A		;skip if bit ENCOD_A is clear in register _w
 	rjmp	a_rise
 a_fall:
 	inc	a0					; if B=1 then increment

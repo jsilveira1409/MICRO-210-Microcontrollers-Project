@@ -51,9 +51,9 @@ main:
 		;CYCLIC			c0,0,2
 		CYCLIC			a0,0,2
 		PRINTF			LCD
-.db		CR, CR, FHEX,a,0
+.db		CR, CR, FHEX,a,0							;deux retours à la ligne ? ->a indique l'adresse mémoire
 		rcall			menui
-.db		"Temperature|Humidity   |Light      ",0		
+.db		"Temperature|Humidity   |Light      ",0		;au début du programme ?	
 		WAIT_MS			1
 		rcall			encoder
 		brts			mesurements_choice			
