@@ -71,12 +71,12 @@ mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affic
 		;cp			b0,w
 		cp			a0,w
 		breq		getHum
-		ldi			w, 0x0002
+		ldi			w, 0x0002		;light code
 		;cp			b0,w
 		cp			a0,w
 		breq		getLight
 		;pop			a0			;change
-		rjmp		mesurements_choice
+		rjmp		mesurements_choice ;boucle infinie si a0 != 0,1,2 
 
 
 getTemp:
