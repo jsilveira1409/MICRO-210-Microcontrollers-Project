@@ -53,7 +53,7 @@ main:
 		PRINTF			LCD
 .db		CR, CR, FHEX,a,0							;deux retours à la ligne ? ->a indique l'adresse mémoire
 		rcall			menui
-.db		"Temperature|Humidity   |Light      ",0		;au début du programme ?	
+.db		"Temperature|Humidity   |Light      ",0		;au début du programme ? strmenu : .db "Temperature ..."	
 		WAIT_MS			1
 		rcall			encoder
 		brts			mesurements_choice			

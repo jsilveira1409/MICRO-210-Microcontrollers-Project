@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Sat Apr 24 15:02:04 2021
+AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm Sat Apr 24 16:11:48 2021
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(1): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/macros.asm'
@@ -3817,7 +3817,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 0001a5 ff16                      	sbrs	_w,ENCOD_I		; is the button up or down ?
 0001a6 c00b                      	rjmp	i_down
                                  i_up:	
-0001a7 fd14                      	sbrc	_w,ENCOD_A
+0001a7 fd14                      	sbrc	_w,ENCOD_A		;skip if bit ENCOD_A is clear in register _w
 0001a8 c004                      	rjmp	a_rise
                                  a_fall:
 0001a9 9523                      	inc	a0					; if B=1 then increment
@@ -3858,10 +3858,10 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(46): Including f
 0001c1 9508                      	ret
                                  
                                  .macro	CYCLIC	;reg,lo,hi
-                                 	cpi	@0,@1-1
+                                 	cpi	@0,@1-1 ;si la valeur de reg est -1 -> ldi reg, hi
                                  	brne	PC+2
                                  	ldi	@0,@2
-                                 	cpi	@0,@2+1
+                                 	cpi	@0,@2+1 ;si la valeur de reg est 3 -> ldi reg, lo
                                  	brne	PC+2
                                  	ldi	@0,@1
                                  .endmacro
@@ -4202,7 +4202,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\main.asm(54): warning: .c
 0002ac 2074
 0002ad 2020
 0002ae 2020
-0002af 0020                      .db		"Temperature|Humidity   |Light      ",0		;au début du programme ?	
+0002af 0020                      .db		"Temperature|Humidity   |Light      ",0		;au début du programme ? strmenu : .db "Temperature ..."	
 0002b0 e001
 0002b1 2e30
 0002b2 e001
