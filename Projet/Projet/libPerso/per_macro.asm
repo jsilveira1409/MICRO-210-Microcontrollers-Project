@@ -1814,7 +1814,7 @@ end:
 	.endmacro
 .macro	CA
 	; subroutine,a
-	ldi	a0, @1
+	ldi	b0, @1                     //CHANGED HERE a0 -> b0
 	rcall	@0
 	.endmacro
 .macro	CAB	; subroutine,a,b
@@ -1838,3 +1838,4 @@ end:
 	rjmp	@0
 	.endmacro
 .list
+

@@ -47,8 +47,8 @@ wire1_wait:
 	ret
 
 wire1_init:
-	cbi	DQ_port,  DQ_pin	; PORT=0 low (for pull-down)
-	cbi	DQ_port-1,DQ_pin	; DDR=0 (input hi Z)
+	cbi		DQ_port,  DQ_pin	; PORT=0 low (for pull-down)
+	cbi		DQ_port-1,DQ_pin	; DDR=0 (input hi Z)
 	ret
 	
 wire1_reset:	WIRE1	480,70,410
@@ -81,13 +81,13 @@ wire1_read:
 	ret
 	
 wire1_crc:
-	ldi	w,0b00011001
-	ldi	b2,8
-crc1:	ror	b0
+	ldi		w,0b00011001
+	ldi		b2,8
+crc1:		ror	b0
 	brcc	PC+2
-	eor	b1,w
-	bst	b1,0
-	ror	b1
-	bld	b1,7
+	eor		b1,w
+	bst		b1,0
+	ror		b1
+	bld		b1,7
 	DJNZ	b2,crc1
 	ret

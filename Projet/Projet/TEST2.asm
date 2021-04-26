@@ -3,21 +3,16 @@
 
 reset:
 		LDSP		RAMEND
-		OUTI		DDRB, 0xff
-		rcall		LCD_init
-		OUTI		ADCSR, (1<<ADEN)+6
-		OUTI		ADMUX, 3
+		rcall		lcd_init
 		jmp			main
+
 
 .include "lib/lcd.asm"
 .include "lib/printf.asm"
 
 main:
-		sbi		ADCSR,ADSC
-		WP1		ADCSR,ADSC
-		in		a0, ADCL
-		in		a1, ADCH
-		PRINTF		LCD
-.db	CR, CR, "ADC=",FDEC2,a,"     ",0
-		WAIT_US		100000
-		rjmp main
+	rcall		lcd_home
+	PRINTF		LCD
+	.db "vincente t bo ", 0
+	WAIT_MS 500
+	rjmp main

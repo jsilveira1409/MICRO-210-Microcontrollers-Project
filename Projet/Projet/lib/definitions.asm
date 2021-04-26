@@ -80,7 +80,7 @@
 .equ	I2CMT_DATA_ACK = 0x28   ; data write, ack
 .equ	I2CMT_DATA_NOACK = 0x30 ; data write, no ack
 				; master receiver status codes, Table 89
-.equ	I2CMR_SLA_ACK	= 0x40	; slave address ack
+.equ	I2CMR_SLA_ACK	= 0x40	; slave address acK
 .equ	I2CMR_SLA_NACK	= 0x48	; slave address no ack
 .equ	I2CMR_DATA_ACK = 0x50	; master data ack
 .equ	I2CMR_DATA_NACK= 0x58	; master data no ack
