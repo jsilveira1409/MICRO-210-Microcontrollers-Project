@@ -30,7 +30,7 @@ light:										;PORT F, pin 0
 		WP1			ADCSR,ADSC
 		in			b0,ADCL
 		in			b1,ADCH
-		WAIT_MS		50
+		WAIT_MS		100
 		ret
 
 humidity:										;PORT F, pin 1
@@ -38,5 +38,5 @@ humidity:										;PORT F, pin 1
 		WP1			ADCSR, ADSC
 		in			b0,ADCL
 		in			b1,ADCH
-		WAIT_MS		50
+		WAIT_MS		100
 		ret

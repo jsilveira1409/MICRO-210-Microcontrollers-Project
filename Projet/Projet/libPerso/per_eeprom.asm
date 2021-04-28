@@ -7,12 +7,12 @@ eeprom_store:
 
 	sbic	EECR,EEWE	; skip if EEWE=0 (wait it EEWE=1)
 	rjmp	PC-1		; jump back to previous address
-	out	EEARL,xl		; load EEPROM address low	
-	out	EEARH,xh		; load EEPROM address high
-	out	EEDR,a0			; set EEPROM data register
+	out		EEARL,xl		; load EEPROM address low	
+	out		EEARH,xh		; load EEPROM address high
+	out		EEDR,b0			; set EEPROM data register
 	brie	eeprom_cli	; if I=1 then temporarily disable interrupts
-	sbi	EECR,EEMWE		; set EEPROM Master Write Enable
-	sbi	EECR,EEWE		; set EEPROM Write Enable
+	sbi		EECR,EEMWE		; set EEPROM Master Write Enable
+	sbi		EECR,EEWE		; set EEPROM Write Enable
 	ret	
 eeprom_cli:
 	cli					; disable interrupts
@@ -30,6 +30,16 @@ eeprom_load:
 	out	EEARL,xl	
 	out	EEARH,xh
 	sbi	EECR,EERE		; set EEPROM Read Enable
-	in	a0,EEDR			; read data register of EEPROM
+	in	b0,EEDR			; read data register of EEPROM
+	ret
+
+record:
+	mov			w,b0					; garder la valeur a0 avant de la perdre dans eeprom_store
+	mov			b0, b1					; transfer pour que eeprom_store prenne le MSB de la temperature
+	rcall		eeprom_store			; stockage du LSB de la temperature
+	adiw		xl,1					; incrementation de l'adresse de la eeprom
+	mov			b0, w
+	rcall		eeprom_store			; stockage du MSB de la temperature
+	adiw		xl,1					; incrementation de l'adresse de la eeprom
 	ret
 

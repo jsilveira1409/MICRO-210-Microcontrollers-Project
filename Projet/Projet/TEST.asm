@@ -3,10 +3,7 @@
 
 ; ======================= memory management ======================================
 .dseg
-.org	0x800
-		dataTemp : .byte 120
-		dataLight : .byte 120
-		dataHum : .byte 120
+		dataTemp : .byte 100
 .cseg
 ; ========================interrupt vector tables =================================
 .org 0
@@ -21,9 +18,18 @@
 .org	0x31
 overflow0:
 		in		_sreg, SREG
-		st		x+, a0
-		st		x+, a1
-		rcall	temperature		
+		ldi		a2, 0xCA
+		ldi		a3, 0xFE
+		st		y+, a2
+		st		y+, a3
+
+		ld		a2, -y
+		mov		b0, a2		
+		ld		a2, -y
+		mov		b1, a2
+		adiw	y, 2
+		rcall	record
+		/*rcall	temperature		
 		st		x+, a0
 		st		x+, a1
 		rcall	humidity	
@@ -31,7 +37,7 @@ overflow0:
 		st		y+, a1
 		rcall	light
 		st		z+, a0
-		st		z+, a1
+		st		z+, a1*/
 		out		SREG, _sreg
 		reti
 
@@ -44,7 +50,7 @@ reset:
 		;out			WDTCR, r16
 		OUTI		TIMSK, (1<<TOIE0)			;init du timer
 		OUTI		ASSR,  (1<<AS0)
-		OUTI		TCCR0,7
+		OUTI		TCCR0,3
 		OUTI		ADCSR,(1<<ADEN) + 6 ;init du ADC pour LDR
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
@@ -54,28 +60,23 @@ reset:
 		rcall		wire1_init
 		
 		ldi			a0, 0
-		ldi			xl, low(dataTemp)
-		ldi			xh, high(dataTemp)
-		ldi			yl, low(dataLight)
-		ldi			yl, high(dataLight)
-		ldi			zl, low(dataHum)
-		ldi			zl, high(dataHum)	
+		ldi			xl, low(0)			;init des pointeurs pour les bases de données
+		ldi			xh, high(0)
+		ldi			yl, low(dataTemp)
+		ldi			yl, high(dataTemp)	
 		rcall		LCD_clear
-		
 		sei									; set global interrupts
 		rjmp			main
 
 .include "lib/printf.asm"
 .include "lib/lcd.asm"
-;.include "lib/encoder.asm"
 .include "lib/menu.asm"	
-;.include "lib/eeprom.asm"
-;.include "lib/wire1.asm"
+.include "libPerso/per_eeprom.asm"
 
 
 
 .include "libPerso/per_encoder.asm"
-.include "libPerso/per_wire1.asm" ;change
+.include "libPerso/per_wire1.asm"		
 .include "libPerso/per_sensors.asm"
 
 main:	
@@ -146,10 +147,10 @@ come_back:
 	;ldi			c0, 0
 	ldi			a0, 0
 	;mov			a0, b0 ;change
-	rcall		lcd_clear
+	rcall		LCD_clear
+	rcall		LCD_home
 	rjmp		main
 
-	
-	
+
 
 

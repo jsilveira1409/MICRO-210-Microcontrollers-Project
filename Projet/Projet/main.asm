@@ -1,29 +1,49 @@
 .include "libPerso/per_macro.asm"
 .include "lib/definitions.asm"
 
+; =======================constants ===============================================
+.equ	dataSize = 100
+
 ; ======================= memory management ======================================
 .dseg
-		dataTemp : .byte 120
-		dataLight : .byte 120
-		dataHum : .byte 120
-.cseg
+		dataTemp : .byte 100
 ; ========================interrupt vector tables =================================
+.cseg
 .org 0
 		jmp			reset
 
 .org	OVF0addr
 		jmp		overflow0
-
 .org	0x30			;end of interrupt vector table
 
 ; =========interrupt service routine ==========
-	
+.org	0x31
 overflow0:
 		in		_sreg, SREG
-		rcall	temperature					;MARCHE
-//		sts		a0
-		rcall	humidity				;	BLOCK LE PROGRAM
-		rcall	light					;	BLOCK LE PROGRAM
+		ldi			b1, 0xCA
+		ldi			b0, 0xFE
+		rcall		record
+		
+		ldi		a2, 0xB1
+		ldi		a3, 0x7E
+		st		y, a2
+		std		y+1, a3
+
+		ld		a2, y
+		mov		b1, a2		
+		ldd		a2, y+1
+		mov		b0, a2
+		rcall	record
+		adiw	y, 2
+		/*rcall	temperature		
+		st		x+, a0
+		st		x+, a1
+		rcall	humidity	
+		st		y+, a0
+		st		y+, a1
+		rcall	light
+		st		z+, a0
+		st		z+, a1*/
 		out		SREG, _sreg
 		reti
 
@@ -34,39 +54,34 @@ reset:
 		;wdr										; reset watchdog timer
 		;ldi			r16, 1<<WDE+0b000			; enable watchdog
 		;out			WDTCR, r16
-		
 		OUTI		TIMSK, (1<<TOIE0)			;init du timer
 		OUTI		ASSR,  (1<<AS0)
-		OUTI		TCCR0,7
-		OUTI		ADCSR,(1<<ADEN) + 4 ;init du ADC pour LDR
+		OUTI		TCCR0,3
+		OUTI		ADCSR,(1<<ADEN) + 6 ;init du ADC pour LDR
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
 		;ldi			c0, 0
 		rcall		LCD_init
 		rcall		encoder_init
 		rcall		wire1_init
+		ldi			xl, low(0)			;init des pointeurs pour les bases de données
+		ldi			xh, high(0)
+		ldi			yl, low(dataTemp)
+		ldi			yl, high(dataTemp)	
 		ldi			a0, 0
-		rcall		LCD_clear
-		
 		sei									; set global interrupts
 		rjmp			main
 
 .include "lib/printf.asm"
 .include "lib/lcd.asm"
-;.include "lib/encoder.asm"
 .include "lib/menu.asm"	
-;.include "lib/eeprom.asm"
-;.include "lib/wire1.asm"
-
-
-
+.include "libPerso/per_eeprom.asm"
 .include "libPerso/per_encoder.asm"
-.include "libPerso/per_wire1.asm" ;change
+.include "libPerso/per_wire1.asm"		
 .include "libPerso/per_sensors.asm"
 
 main:	
 		;wdr
-		;CYCLIC			c0,0,2
 		CYCLIC			a0,0,2
 		PRINTF			LCD
 .db		CR, CR,FHEX,a,0							;deux retours à la ligne ? ->a indique l'adresse mémoire
@@ -103,7 +118,6 @@ getTemp:
 	rcall		temperature
 	rcall		LCD_home
 	PRINTF		LCD
-;.db	"tem ",FFRAC2+FSIGN,a,4,$42," C",CR,0
 .db	"temp  ",FFRAC2+FSIGN,b,4,$42," C",CR,0
 	rcall		encoder
 	brts		come_back
@@ -129,13 +143,11 @@ getLight:
 
 
 come_back:
-	;ldi			c0, 0
 	ldi			a0, 0
-	;mov			a0, b0 ;change
-	rcall		lcd_clear
+	rcall		LCD_clear
+	rcall		LCD_home
 	rjmp		main
 
-	
-	
+
 
 
