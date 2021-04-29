@@ -34,9 +34,10 @@ eeprom_load:
 	ret
 
 record:
-	mov			w,b0					; garder la valeur a0 avant de la perdre dans eeprom_store
-	mov			b0, b1					; transfer pour que eeprom_store prenne le MSB de la temperature
-	rcall		eeprom_store			; stockage du LSB de la temperature
+	mov			w,b0					; garder la valeur b0 avant de la perdre dans eeprom_store
+	mov			b0, b1					; transfer pour que eeprom_store prenne le MSB?? de la temperature
+	//mov			xl,	yl
+	rcall		eeprom_store			; stockage du LSB?? de la temperature
 	adiw		xl,1					; incrementation de l'adresse de la eeprom
 	mov			b0, w
 	rcall		eeprom_store			; stockage du MSB de la temperature

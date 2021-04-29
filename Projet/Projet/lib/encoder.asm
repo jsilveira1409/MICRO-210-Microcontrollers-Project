@@ -86,7 +86,7 @@ i_fall:
 i_rise:
 	ret
 
-.macro	CYCLIC	;reg,lo,hi
+.macro	CYCLIC	;reg,lo,hi (-> pas cyclic)
 	cpi	@0,@1-1 ;si la valeur de reg est -1 -> ldi reg, hi
 	brne	PC+2
 	ldi	@0,@2

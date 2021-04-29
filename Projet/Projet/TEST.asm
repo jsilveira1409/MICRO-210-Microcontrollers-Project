@@ -1,9 +1,15 @@
 .include "libPerso/per_macro.asm"
 .include "lib/definitions.asm"
 
+.equ   bufferLen = 90		;à modifier
+
 ; ======================= memory management ======================================
 .dseg
-		dataTemp : .byte 100
+.org	SRAM_START
+		buffer : .byte bufferLen
+		//dataTemp  : .byte bufferLen
+		//dataHum   : .byte bufferLen
+		//dataLight : .byte bufferLen
 .cseg
 ; ========================interrupt vector tables =================================
 .org 0
@@ -12,32 +18,31 @@
 .org	OVF0addr
 		jmp		overflow0
 
-.org	0x30			;end of interrupt vector table
+.org	0x30			;end of interrupt vector table ??
 
 ; =========interrupt service routine ==========
 .org	0x31
 overflow0:
 		in		_sreg, SREG
-		ldi		a2, 0xCA
-		ldi		a3, 0xFE
-		st		y+, a2
-		st		y+, a3
 
-		ld		a2, -y
-		mov		b0, a2		
-		ld		a2, -y
-		mov		b1, a2
-		adiw	y, 2
-		rcall	record
-		/*rcall	temperature		
-		st		x+, a0
-		st		x+, a1
-		rcall	humidity	
-		st		y+, a0
-		st		y+, a1
-		rcall	light
-		st		z+, a0
-		st		z+, a1*/
+		ldi		a3, 0xCA	;temp
+		ldi		a2, 0xFE
+		st		y+, a3		;store dans la SRAM
+		st		y+, a2
+		
+		ldi		a3, 0xAB	;hum
+		ldi		a2, 0xCD
+		st		y+, a3
+		st		y+, a2
+
+		ldi		a3, 0xB1	;light
+		ldi		a2, 0x7E
+		st		y+, a3
+		st		y+, a2
+		
+		cpi		yl, bufferLen
+		//breq	record_eeprom
+
 		out		SREG, _sreg
 		reti
 
@@ -50,7 +55,7 @@ reset:
 		;out			WDTCR, r16
 		OUTI		TIMSK, (1<<TOIE0)			;init du timer
 		OUTI		ASSR,  (1<<AS0)
-		OUTI		TCCR0,3
+		OUTI		TCCR0,6						;p.189 5->overflow toutes les secondes
 		OUTI		ADCSR,(1<<ADEN) + 6 ;init du ADC pour LDR
 		OUTI		ADMUX, 0						;pin 0 -> LDR
 		;OUTI		ADMUX, 1						;pin 1 -> humidity   VERIFIER QUE CA MARCHE COMME CA -- > JE PENSE PAS
@@ -63,9 +68,9 @@ reset:
 		ldi			xl, low(0)			;init des pointeurs pour les bases de données
 		ldi			xh, high(0)
 		ldi			yl, low(dataTemp)
-		ldi			yl, high(dataTemp)	
+		ldi			yh, high(dataTemp)	;yh !!
 		rcall		LCD_clear
-		sei									; set global interrupts
+		//sei									; set global interrupts
 		rjmp			main
 
 .include "lib/printf.asm"
@@ -85,6 +90,7 @@ main:
 		CYCLIC			a0,0,2
 		PRINTF			LCD
 .db		CR, CR,FHEX,a,0							;deux retours à la ligne ? ->a indique l'adresse mémoire
+//.db		FHEX,a,0							??
 		rcall			menui
 .db		"Temperature |Humidity    |Light       ",0		;au début du programme ? strmenu : .db "Temperature ..."	
 		WAIT_MS			1
@@ -145,12 +151,98 @@ getLight:
 
 come_back:
 	;ldi			c0, 0
-	ldi			a0, 0
+	//ldi			a0, 0	;plus besoin vu qu'on ne change pas cette valeur
 	;mov			a0, b0 ;change
 	rcall		LCD_clear
 	rcall		LCD_home
 	rjmp		main
 
+
+
+overflowtest:
+		in		_sreg, SREG
+		/*push	a3
+		push	a2
+		push	_u
+		push	b1
+		push	b0*/
+
+		ldi		a3, 0xCA	;temp
+		ldi		a2, 0xFE
+		st		y+, a3		;store dans la SRAM
+		st		y, a2		;pas de +y
+		clr		a2			;clear le registre pour contrôler si la valeur est bien stockée dans la SRAM
+		clr		a3			;clear le registre pour contrôler si la valeur est bien stockée dans la SRAM
+
+		subi	yl, 1		;revenir à l'adresse du MSB dans la SRAM
+		ld		_u, y+		;utiliser le scratch register pour les interruptions
+		mov		b1, _u
+		clr		_u			;clear
+		ld		_u, y		
+		mov		b0, _u
+		clr		_u			;clear
+		subi	yl, 1
+		rcall	record
+
+		ldi		a3, 0xAB	;hum
+		ldi		a2, 0xCD
+		//subi	yl, 1
+		adiw	yl, bufferLen
+		st		y+, a3
+		st		y, a2		;pas de +y
+		clr		a2			;clear le registre pour contrôler si la valeur est bien stockée dans la SRAM
+		clr		a3			;clear le registre pour contrôler si la valeur est bien stockée dans la SRAM
+
+		subi	yl, 1		;revenir à l'adresse du MSB dans la SRAM
+		//adiw	yl, bufferLen
+		ld		_u, y+		;utiliser le scratch register pour les interruptions
+		mov		b1, _u
+		clr		_u			;clear
+		ld		_u, y		
+		mov		b0, _u
+		clr		_u			;clear
+		subi	yl, 1
+		rcall	record
+
+		//subi	yl, 1
+		ldi		a3, 0xB1	;light
+		ldi		a2, 0x7E
+		adiw	yl, 2*bufferLen
+		st		y+, a3
+		st		y, a2		;pas de +y
+		clr		a2			;clear le registre pour contrôler si la valeur est bien stockée dans la SRAM
+		clr		a3			;clear le registre pour contrôler si la valeur est bien stockée dans la SRAM
+
+		subi	yl, 1		;revenir à l'adresse du MSB dans la SRAM
+		//adiw	yl, 2*bufferLen
+		ld		_u, y+		;utiliser le scratch register pour les interruptions
+		mov		b1, _u
+		clr		_u			;clear
+		ld		_u, y+		
+		mov		b0, _u
+		clr		_u			;clear
+		//subi	yl, 1
+		rcall	record
+		subi	yl, bufferLen
+		subi	yl, bufferLen
+
+		/*rcall	temperature		
+		st		x+, a0
+		st		x+, a1
+		rcall	humidity	
+		st		y+, a0
+		st		y+, a1
+		rcall	light
+		st		z+, a0
+		st		z+, a1*/
+
+		/*pop b0
+		pop	b1
+		pop _u
+		pop a2
+		pop a3*/
+		out		SREG, _sreg
+		reti
 
 
 
