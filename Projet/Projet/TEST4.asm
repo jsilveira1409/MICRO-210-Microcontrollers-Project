@@ -10,7 +10,7 @@
 
 .equ	bufferLen	= 12		;à modifier
 .equ	SRAM_flag	= 0
-.equ	EEPROM_flag	= 1
+//.equ	EEPROM_flag	= 1
 
 ; ======================= memory management ======================================
 .dseg
@@ -25,10 +25,10 @@
 .org	OVF0addr
 		jmp		overflow0
 
-.org	0x30			;end of interrupt vector table ??
+//.org	0x30			;end of interrupt vector table ??
 
 ; =========interrupt service routine ==========
-.org	0x31
+//.org	0x31
 overflow0:
 		in		_sreg, SREG
 		ori		b3, (1<<SRAM_flag)
@@ -55,7 +55,7 @@ reset:
 		ldi			yl, low(buffer)
 		ldi			yh, high(buffer)
 		rcall		LCD_clear
-		sei										; set global interrupts
+		//sei										; set global interrupts
 		rjmp		main
 
 .include "lib/printf.asm"
