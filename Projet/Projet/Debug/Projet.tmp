@@ -31,14 +31,14 @@
   <FILE>Projet.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <buffer><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>20</LINE></buffer>
-  <reset><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>42</LINE></reset>
-  <overflow0><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>34</LINE></overflow0>
+  <buffer><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>21</LINE></buffer>
+  <reset><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>52</LINE></reset>
+  <overflow0><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>38</LINE></overflow0>
   <LCD_init><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>47</LINE></LCD_init>
   <encoder_init><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm</FILE><LINE>14</LINE></encoder_init>
   <wire1_init><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm</FILE><LINE>49</LINE></wire1_init>
   <LCD_clear><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm</FILE><LINE>36</LINE></LCD_clear>
-  <main><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>79</LINE></main>
+  <main><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>94</LINE></main>
   <_printf><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm</FILE><LINE>138</LINE></_printf>
   <_printf_read><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm</FILE><LINE>143</LINE></_printf_read>
   <_printf_end><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm</FILE><LINE>153</LINE></_printf_end>
@@ -129,11 +129,11 @@
   <temperature><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm</FILE><LINE>6</LINE></temperature>
   <light><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm</FILE><LINE>28</LINE></light>
   <humidity><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm</FILE><LINE>36</LINE></humidity>
-  <mesurements_choice><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>95</LINE></mesurements_choice>
-  <store><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>142</LINE></store>
-  <getTemp><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>109</LINE></getTemp>
-  <getHum><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>118</LINE></getHum>
-  <getLight><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>127</LINE></getLight>
-  <come_back><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>137</LINE></come_back>
+  <mesurements_choice><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>110</LINE></mesurements_choice>
+  <store><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>167</LINE></store>
+  <getTemp><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>125</LINE></getTemp>
+  <getHum><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>136</LINE></getHum>
+  <getLight><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>147</LINE></getLight>
+  <come_back><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>162</LINE></come_back>
  </LABELS>
 </ASSEMBLER_INFO>

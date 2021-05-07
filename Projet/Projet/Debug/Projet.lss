@@ -1,26 +1,26 @@
 
-AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm Fri May 07 17:53:18 2021
+AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm Fri May 07 21:00:54 2021
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(8): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_macro.asm'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(9): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/definitions.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(63): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(64): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(65): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(66): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(70): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(71): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(72): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(78): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(79): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(80): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(81): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(85): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(86): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(87): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(8): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_macro.asm'
 C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(9): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/definitions.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(63): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(64): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(65): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(66): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(70): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(71): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(72): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(78): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(79): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(80): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(81): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(85): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(86): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(87): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
                                  
                                  /*
                                  
@@ -3097,8 +3097,9 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(72): Including 
                                  ; === definitions  ===
                                  .list
                                  
-                                 .equ	bufferLen		= 6			;à modifier
+                                 .equ	bufferLen		= 12			;à modifier
                                  .equ	SRAM_flag		= 0
+                                 //.equ	display_flag	= 1
                                  .equ	EEPROM_START	= 0	;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
                                  .equ	eepromLen		= 0x0E10
                                  //.equ	EEPROM_flag	= 1
@@ -3116,6 +3117,9 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(72): Including 
                                  .org	OVF0addr
 000020 940c 0022                 		jmp		overflow0
                                  
+                                 //.org	OVF3addr
+                                 		//jmp		overflow2
+                                 
                                  //.org	0x30			;end of interrupt vector table ??
                                  
                                  ; =========interrupt service routine ==========
@@ -3125,6 +3129,12 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(72): Including 
 000023 6091                      		ori		b3, (1<<SRAM_flag)
 000024 be1f                      		out		SREG, _sreg
 000025 9518                      		reti
+                                 
+                                 //overflow2:
+                                 		//in		_sreg, SREG
+                                 		//ori		b3, (1<<display_flag)
+                                 		//out		SREG, _sreg
+                                 		//reti
                                  
                                  ; ================== init / reset ===============================
                                  
@@ -3140,6 +3150,11 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(72): Including 
 00002d bf00                      		OUTI		ASSR,  (1<<AS0)
 00002e e005
 00002f bf03                      		OUTI		TCCR0,5						;p.189 6->overflow toutes les 2 secondes (5 -> toutes les secondes)
+                                 
+                                 		//OUTI		TIMSK, (1<<TOIE2)			;init du timer
+                                 		//OUTI		ASSR,  (1<<AS0)
+                                 		//OUTI		TCCR2, 2					;p.189 6->overflow toutes les
+                                 
 000030 e806
 000031 b906                      		OUTI		ADCSR,(1<<ADEN) + 6			;init du ADC pour LDR
 000032 e000
@@ -3914,7 +3929,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(72): Including 
 0001d4 dfe9                      	rcall		eeprom_store			; stockage du LSB?? de la temperature
                                  	//STEEPROM							; macro to store in EEPROM ??
 0001d5 9611                      	adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
-0001d6 30c6                      	cpi		yl, bufferLen
+0001d6 30cc                      	cpi		yl, bufferLen
 0001d7 f7d9                      	brne	loop_bis
                                  
 0001d8 31a0                      	cpi		xl, low(eepromLen)			;xl max
@@ -4288,7 +4303,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(72): Including 
 0002c9 dd76                      		PRINTF			LCD
 0002ca 0d0d
 0002cb 1294
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(82): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(97): warning: .cseg .db misalignment - padding zero byte
 0002cc 0000                      .db		CR, CR,FHEX,a,0							;deux retours à la ligne ? ->a indique l'adresse mémoire
 0002cd dee7                      		rcall			menui
 0002ce 6554
@@ -4310,7 +4325,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(82): warning: .
 0002de 2020
 0002df 2020
 0002e0 2020
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(84): warning: .cseg .db misalignment - padding zero byte
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(99): warning: .cseg .db misalignment - padding zero byte
 0002e1 0000                      .db		"Temperature |Humidity    |Light       ",0		;au début du programme ? strmenu : .db "Temperature ..."	
 0002e2 e001
 0002e3 2e30
@@ -4336,7 +4351,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(84): warning: .
                                  
                                  		//out			PORTB, b3
 0002f7 fd90                      		sbrc		b3, SRAM_flag
-0002f8 d040                      		rcall		store				;SRAM and EEPROM
+0002f8 d046                      		rcall		store				;SRAM and EEPROM
                                  
 0002f9 cfc5                      		rjmp			main
                                  
@@ -4346,12 +4361,13 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(84): warning: .
 0002fc f029                      		breq		getTemp
                                  
 0002fd 3021                      		cpi			a0,0x0001
-0002fe f0a1                      		breq		getHum
+0002fe f0b1                      		breq		getHum
                                  
 0002ff 3022                      		cpi			a0,0x0002
-000300 f119                      		breq		getLight
-                                 
-000301 cff8                      		rjmp		mesurements_choice ;boucle infinie si a0 != 0,1,2 
+000300 f139                      		breq		getLight
+                                 		
+                                 		//clr			a0					;sinon boucle infinie si a0 != 0,1,2 ?
+000301 cff8                      		rjmp		mesurements_choice  
                                  
                                  
                                  getTemp:
@@ -4370,76 +4386,85 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(84): warning: .
 00030e 4320
 00030f 000d                      .db	"temp  ",FFRAC2+FSIGN,b,4,$42," C",CR,0
 000310 ded5                      	rcall		encoder
-000311 f126                      	brts		come_back
-000312 cfef                      	rjmp		getTemp
+000311 f156                      	brts		come_back
+000312 fd90                      	sbrc		b3, SRAM_flag
+000313 d02b                      	rcall		store							;SRAM and EEPROM
+000314 cfed                      	rjmp		getTemp
                                  
                                  getHum:
-000313 df92                      	rcall		humidity
-000314 de57                      	rcall		LCD_home
-000315 e50e
-000316 2e40
-000317 e001
-000318 2e50
-000319 dd26                      	PRINTF		LCD
-00031a 7568
-00031b 206d
-00031c 2020
-00031d 168b
-00031e 4204
-00031f 2520
-000320 000d                      .db	"hum   ",FFRAC2+FSIGN,b,4,$42," %",CR,0
-000321 dec4                      	rcall		encoder
-000322 f09e                      	brts		come_back
-000323 cfef                      	rjmp		getHum
+000315 df90                      	rcall		humidity
+000316 de55                      	rcall		LCD_home
+000317 e50e
+000318 2e40
+000319 e001
+00031a 2e50
+00031b dd24                      	PRINTF		LCD
+00031c 7568
+00031d 206d
+00031e 2020
+00031f 168b
+000320 4204
+000321 2520
+000322 000d                      .db	"hum   ",FFRAC2+FSIGN,b,4,$42," %",CR,0
+000323 dec2                      	rcall		encoder
+000324 f0be                      	brts		come_back
+000325 fd90                      	sbrc		b3, SRAM_flag
+000326 d018                      	rcall		store							;SRAM and EEPROM
+000327 cfed                      	rjmp		getHum
                                  
                                  getLight:
-000324 df68                      	rcall		light
-000325 de46                      	rcall		LCD_home ;change
-000326 e50e
-000327 2e40
-000328 e001
-000329 2e50
-00032a dd15                      	PRINTF		LCD
-00032b 696c
-00032c 6867
-00032d 2074
-00032e 168b
-00032f 4204
-000330 6c20
-000331 0d6d
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(131): warning: .cseg .db misalignment - padding zero byte
-000332 0000                      .db	"light ",FFRAC2+FSIGN,b,4,$42," lm",CR,0
-000333 deb2                      	rcall		encoder
-000334 f00e                      	brts		come_back
-000335 cfee                      	rjmp		getLight
+                                 	//sbrs		b3, display_flag			;skip if display_flag is set
+                                 	//rjmp		PC-1						;jump back to previous address
+                                 	//andi		b3, ~(1<<display_flag)		;clear bit display_flag in b3 register
+000328 df64                      	rcall		light
+000329 de42                      	rcall		LCD_home						;change
+00032a e50e
+00032b 2e40
+00032c e001
+00032d 2e50
+00032e dd11                      	PRINTF		LCD
+00032f 696c
+000330 6867
+000331 2074
+000332 168b
+000333 4204
+000334 6c20
+000335 0d6d
+C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(154): warning: .cseg .db misalignment - padding zero byte
+000336 0000                      .db	"light ",FFRAC2+FSIGN,b,4,$42," lm",CR,0
+000337 deae                      	rcall		encoder
+000338 f01e                      	brts		come_back
+000339 fd90                      	sbrc		b3, SRAM_flag
+00033a d004                      	rcall		store							;SRAM and EEPROM
+00033b cfec                      	rjmp		getLight
                                  
                                  
                                  come_back:
-000336 de33                      	rcall		LCD_clear
-000337 de34                      	rcall		LCD_home
-000338 cf86                      	rjmp		main
+00033c de2d                      	rcall		LCD_clear
+00033d de2e                      	rcall		LCD_home
+00033e cf80                      	rjmp		main
                                  
                                  store:
-000339 df30                      		rcall		temperature
-00033a 9379
-00033b 9369                      		STVALSRAM							;store to SRAM
-                                 		
-00033c df69                      		rcall		humidity
-00033d 9379
-00033e 9369                      		STVALSRAM							;store to SRAM
-                                 
-00033f df4d                      		rcall		light
+00033f df2a                      		rcall		temperature
 000340 9379
 000341 9369                      		STVALSRAM							;store to SRAM
+                                 		
+000342 df63                      		rcall		humidity
+000343 9379
+000344 9369                      		STVALSRAM							;store to SRAM
                                  
-000342 7f9e                      		andi		b3, ~(1<<SRAM_flag)		;clear bit SRAM_flag in b3 register
+000345 df47                      		rcall		light
+000346 9379
+000347 9369                      		STVALSRAM							;store to SRAM
                                  
-000343 30c6                      		cpi			yl, bufferLen			;if yl at the end of the buffer then
-000344 f419                      		brne		PC+4					
-000345 e0c0                      		ldi			yl, 0
-000346 de8c                      		rcall		record					;store to EEPROM
-000347 e0c0                      		ldi			yl, 0
-000348 9508                      		ret
+000348 7f9e                      		andi		b3, ~(1<<SRAM_flag)		;clear bit SRAM_flag in b3 register
+                                 
+000349 30cc                      		cpi			yl, bufferLen			;if yl at the end of the buffer then
+00034a f419                      		brne		PC+4					
+00034b e0c0                      		ldi			yl, 0
+00034c de86                      		rcall		record					;store to EEPROM
+00034d e0c0                      		ldi			yl, 0
+00034e 9508                      		ret
                                  	
                                  
                                  
@@ -4465,7 +4490,7 @@ counted separately from r26..r31 here.
 x  :   6 y  :   7 z  :   0 r0 :  10 r1 :   2 r2 :   5 r3 :  30 r4 :   5 
 r5 :   5 r6 :   0 r7 :   0 r8 :   5 r9 :   5 r10:   5 r11:   6 r12:  11 
 r13:   0 r14:   0 r15:   0 r16: 170 r17:  13 r18:  43 r19:  15 r20:  15 
-r21:  15 r22:  32 r23:  43 r24:  11 r25:  19 r26:  10 r27:   9 r28:   5 
+r21:  15 r22:  32 r23:  43 r24:  11 r25:  22 r26:  10 r27:   9 r28:   5 
 r29:   1 r30:  18 r31:   9 
 Registers used: 29 out of 35 (82.9%)
 
@@ -4483,9 +4508,9 @@ fmuls :   0 fmulsu:   0 icall :   1 ijmp  :   2 in    :  14 inc   :   6
 jmp   :   2 ld    :   7 ldd   :   0 ldi   :  97 lds   :   4 lpm   :  21 
 lsl   :   2 lsr   :   4 mov   :  40 movw  :   0 mul   :   0 muls  :   0 
 mulsu :   0 neg   :   0 nop   :   6 or    :   0 ori   :   4 out   :  16 
-pop   :  36 push  :  33 rcall :  75 ret   :  37 reti  :   1 rjmp  :  54 
+pop   :  36 push  :  33 rcall :  78 ret   :  37 reti  :   1 rjmp  :  54 
 rol   :  11 ror   :  18 sbc   :   3 sbci  :   0 sbi   :  11 sbic  :   4 
-sbis  :   0 sbiw  :   0 sbr   :   1 sbrc  :  18 sbrs  :   4 sec   :   0 
+sbis  :   0 sbiw  :   0 sbr   :   1 sbrc  :  21 sbrs  :   4 sec   :   0 
 seh   :   0 sei   :   2 sen   :   0 ser   :   0 ses   :   0 set   :   2 
 sev   :   0 sez   :   1 sleep :   0 spm   :   0 st    :   6 std   :   0 
 sts   :   4 sub   :   3 subi  :   7 swap  :   4 tst   :  10 wdr   :   0 
@@ -4495,8 +4520,8 @@ Instructions used: 66 out of 114 (57.9%)
 "ATmega128" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000692   1532     90   1622  131072   1.2%
-[.dseg] 0x000100 0x000901      0      7      7    4096   0.2%
+[.cseg] 0x000000 0x00069e   1544     90   1634  131072   1.2%
+[.dseg] 0x000100 0x000901      0     13     13    4096   0.3%
 [.eseg] 0x000000 0x000000      0      0      0    4096   0.0%
 
 Assembly complete, 0 errors, 3 warnings

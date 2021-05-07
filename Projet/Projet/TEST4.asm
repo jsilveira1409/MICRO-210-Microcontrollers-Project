@@ -8,8 +8,9 @@
 .include "libPerso/per_macro.asm"
 .include "lib/definitions.asm"
 
-.equ	bufferLen		= 6			;à modifier
+.equ	bufferLen		= 12			;à modifier
 .equ	SRAM_flag		= 0
+//.equ	display_flag	= 1
 .equ	EEPROM_START	= 0	;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
 .equ	eepromLen		= 0x0E10
 //.equ	EEPROM_flag	= 1
@@ -27,6 +28,9 @@
 .org	OVF0addr
 		jmp		overflow0
 
+//.org	OVF3addr
+		//jmp		overflow2
+
 //.org	0x30			;end of interrupt vector table ??
 
 ; =========interrupt service routine ==========
@@ -37,6 +41,12 @@ overflow0:
 		out		SREG, _sreg
 		reti
 
+//overflow2:
+		//in		_sreg, SREG
+		//ori		b3, (1<<display_flag)
+		//out		SREG, _sreg
+		//reti
+
 ; ================== init / reset ===============================
 
 reset:
@@ -45,6 +55,11 @@ reset:
 		OUTI		TIMSK, (1<<TOIE0)			;init du timer
 		OUTI		ASSR,  (1<<AS0)
 		OUTI		TCCR0,5						;p.189 6->overflow toutes les 2 secondes (5 -> toutes les secondes)
+
+		//OUTI		TIMSK, (1<<TOIE2)			;init du timer
+		//OUTI		ASSR,  (1<<AS0)
+		//OUTI		TCCR2, 2					;p.189 6->overflow toutes les
+
 		OUTI		ADCSR,(1<<ADEN) + 6			;init du ADC pour LDR
 		OUTI		ADMUX, 0					;pin 0 -> LDR
 		rcall		LCD_init
@@ -102,8 +117,9 @@ mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affic
 
 		cpi			a0,0x0002
 		breq		getLight
-
-		rjmp		mesurements_choice ;boucle infinie si a0 != 0,1,2 
+		
+		//clr			a0					;sinon boucle infinie si a0 != 0,1,2 ?
+		rjmp		mesurements_choice  
 
 
 getTemp:
@@ -113,6 +129,8 @@ getTemp:
 .db	"temp  ",FFRAC2+FSIGN,b,4,$42," C",CR,0
 	rcall		encoder
 	brts		come_back
+	sbrc		b3, SRAM_flag
+	rcall		store							;SRAM and EEPROM
 	rjmp		getTemp
 
 getHum:
@@ -122,15 +140,22 @@ getHum:
 .db	"hum   ",FFRAC2+FSIGN,b,4,$42," %",CR,0
 	rcall		encoder
 	brts		come_back
+	sbrc		b3, SRAM_flag
+	rcall		store							;SRAM and EEPROM
 	rjmp		getHum
 
 getLight:
+	//sbrs		b3, display_flag			;skip if display_flag is set
+	//rjmp		PC-1						;jump back to previous address
+	//andi		b3, ~(1<<display_flag)		;clear bit display_flag in b3 register
 	rcall		light
-	rcall		LCD_home ;change
+	rcall		LCD_home						;change
 	PRINTF		LCD
 .db	"light ",FFRAC2+FSIGN,b,4,$42," lm",CR,0
 	rcall		encoder
 	brts		come_back
+	sbrc		b3, SRAM_flag
+	rcall		store							;SRAM and EEPROM
 	rjmp		getLight
 
 
