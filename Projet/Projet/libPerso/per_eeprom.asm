@@ -3,7 +3,8 @@
 
 eeprom_store:
 ; in:	xh:xl 	EEPROM address
-;	a0	EEPROM data byte to store
+;		b0	EEPROM data byte to store
+; out:	->EEPROM
 
 	sbic	EECR,EEWE	; skip if EEWE=0 (wait it EEWE=1)
 	rjmp	PC-1		; jump back to previous address
@@ -13,7 +14,23 @@ eeprom_store:
 	brie	eeprom_cli	; if I=1 then temporarily disable interrupts
 	sbi		EECR,EEMWE		; set EEPROM Master Write Enable
 	sbi		EECR,EEWE		; set EEPROM Write Enable
-	ret	
+	ret
+
+.macro	STEEPROM			;use a macro to speed up the storage process
+; in:	xh:xl 	EEPROM address
+;		b0	EEPROM data byte to store
+; out:	->EEPROM
+
+	sbic	EECR,EEWE	; skip if EEWE=0 (wait it EEWE=1)
+	rjmp	PC-1		; jump back to previous address
+	out		EEARL,xl		; load EEPROM address low	
+	out		EEARH,xh		; load EEPROM address high
+	out		EEDR,b0			; set EEPROM data register
+	brie	eeprom_cli	; if I=1 then temporarily disable interrupts
+	sbi		EECR,EEMWE		; set EEPROM Master Write Enable
+	sbi		EECR,EEWE		; set EEPROM Write Enable
+	.endmacro
+
 eeprom_cli:
 	cli					; disable interrupts
 	sbi	EECR,EEMWE		; set EEPROM Master Write Enable
@@ -34,13 +51,22 @@ eeprom_load:
 	ret
 
 record:
-	mov			w,b0					; garder la valeur b0 avant de la perdre dans eeprom_store
-	mov			b0, b1					; transfer pour que eeprom_store prenne le MSB?? de la temperature
-	//mov			xl,	yl
+loop_bis:
+	ld			b0, y+
 	rcall		eeprom_store			; stockage du LSB?? de la temperature
-	adiw		xl,1					; incrementation de l'adresse de la eeprom
-	mov			b0, w
-	rcall		eeprom_store			; stockage du MSB de la temperature
-	adiw		xl,1					; incrementation de l'adresse de la eeprom
+	//STEEPROM							; macro to store in EEPROM ??
+	adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
+	cpi		yl, bufferLen
+	brne	loop_bis
+
+	cpi		xl, low(eepromLen)			;xl max
+	brne	PC+5
+	cpi		xh, high(eepromLen)			;xh max
+	brne	PC+3
+	//ldi		xl, low(EEPROM_START)		;remise à "zéro" des pointeurs EEPROM
+	//ldi		xh, high(EEPROM_START)
+	ldi		xl, low(0)					;remise à zéro des pointeurs EEPROM
+	ldi		xh, high(0)
+
 	ret
 

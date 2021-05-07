@@ -8,8 +8,10 @@
 .include "libPerso/per_macro.asm"
 .include "lib/definitions.asm"
 
-.equ	bufferLen	= 12		;à modifier
-.equ	SRAM_flag	= 0
+.equ	bufferLen		= 6			;à modifier
+.equ	SRAM_flag		= 0
+.equ	EEPROM_START	= 0	;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
+.equ	eepromLen		= 0x0E10
 //.equ	EEPROM_flag	= 1
 
 ; ======================= memory management ======================================
@@ -42,7 +44,7 @@ reset:
 		//OUTI		DDRC, 0xff					;make portB (LEDs) output -> debugging
 		OUTI		TIMSK, (1<<TOIE0)			;init du timer
 		OUTI		ASSR,  (1<<AS0)
-		OUTI		TCCR0,5						;p.189 5->overflow toutes les secondes
+		OUTI		TCCR0,5						;p.189 6->overflow toutes les 2 secondes (5 -> toutes les secondes)
 		OUTI		ADCSR,(1<<ADEN) + 6			;init du ADC pour LDR
 		OUTI		ADMUX, 0					;pin 0 -> LDR
 		rcall		LCD_init
@@ -50,12 +52,12 @@ reset:
 		rcall		wire1_init
 		ldi			b3, 0						;b3 register for SRAM_flag -> on pourrait utiliser a1 aussi ?
 		ldi			a0, 0
-		ldi			xl, low(0)					;init des pointeurs pour les bases de données
-		ldi			xh, high(0)
+		ldi			xl, low(EEPROM_START)					;init des pointeurs pour les bases de données
+		ldi			xh, high(EEPROM_START)
 		ldi			yl, low(buffer)
 		ldi			yh, high(buffer)
 		rcall		LCD_clear
-		//sei										; set global interrupts
+		sei										; set global interrupts
 		rjmp		main
 
 .include "lib/printf.asm"
@@ -69,6 +71,11 @@ reset:
 .include "libPerso/per_wire1.asm"		
 .include "libPerso/per_sensors.asm"
 
+.macro	STVALSRAM		;store sensor value to SRAM
+	st		y+, b1
+	st		y+, b0
+	.endmacro
+
 main:	
 		CYCLIC			a0,0,2
 		PRINTF			LCD
@@ -81,7 +88,7 @@ main:
 
 		//out			PORTB, b3
 		sbrc		b3, SRAM_flag
-		rcall		store_SRAM		;and EEPROM
+		rcall		store				;SRAM and EEPROM
 
 		rjmp			main
 
@@ -132,40 +139,25 @@ come_back:
 	rcall		LCD_home
 	rjmp		main
 
-store_SRAM:
-		rcall	temperature
-		st		y+, b1		;store dans la SRAM
-		st		y+, b0
+store:
+		rcall		temperature
+		STVALSRAM							;store to SRAM
 		
-		rcall	humidity
-		st		y+, b1
-		st		y+, b0
+		rcall		humidity
+		STVALSRAM							;store to SRAM
 
-		rcall	light
-		st		y+, b1
-		st		y+, b0
+		rcall		light
+		STVALSRAM							;store to SRAM
 
-		andi	b3, ~(1<<SRAM_flag)
+		andi		b3, ~(1<<SRAM_flag)		;clear bit SRAM_flag in b3 register
 
-		cpi		yl, bufferLen			;si yl pointe vers l'adresse suivant la fin du buffer -> EEPROM
-		brne	PC+2
-		rcall	store_EEPROM	
-
+		cpi			yl, bufferLen			;if yl at the end of the buffer then
+		brne		PC+4					
+		ldi			yl, 0
+		rcall		record					;store to EEPROM
+		ldi			yl, 0
 		ret
-
-store_EEPROM:
-		ldi		yl, 0
-loop:
-		ld		_u, y+		;utiliser le scratch register pour les interruptions
-		mov		b1, _u
-		ld		_u, y+		
-		mov		b0, _u
-		rcall	record
-		cpi		yl, bufferLen
-		brne	loop
-
-		ldi		yl, 0
-		ret
+	
 
 
 

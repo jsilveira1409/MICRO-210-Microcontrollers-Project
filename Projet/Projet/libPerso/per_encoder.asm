@@ -5,6 +5,7 @@
 .equ	ENCOD	= PORTE
 
 .dseg
+.org	SRAM_START+SRAM_SIZE/2
 enc_old:.byte	1
 .cseg
 
