@@ -25,7 +25,8 @@ temperature:		;PORT B
 		mov			b0, b2
 		ret
 
-light:										;PORT F, pin 0	
+light:										;PORT F, pin 0
+		OUTI		ADMUX, 0
 		sbi			ADCSR,ADSC
 		WP1			ADCSR,ADSC
 		in			b0,ADCL
@@ -34,6 +35,7 @@ light:										;PORT F, pin 0
 		ret
 
 humidity:										;PORT F, pin 1
+		OUTI		ADMUX, 1
 		sbi			ADCSR,ADSC
 		WP1			ADCSR, ADSC
 		in			b0,ADCL

@@ -8,7 +8,7 @@
 .include "libPerso/per_macro.asm"
 .include "lib/definitions.asm"
 
-.equ	bufferLen		= 12			;à modifier
+.equ	bufferLen		= 6			;à modifier
 .equ	SRAM_flag		= 0
 //.equ	display_flag	= 1
 .equ	EEPROM_START	= 0	;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
@@ -61,7 +61,8 @@ reset:
 		//OUTI		TCCR2, 2					;p.189 6->overflow toutes les
 
 		OUTI		ADCSR,(1<<ADEN) + 6			;init du ADC pour LDR
-		OUTI		ADMUX, 0					;pin 0 -> LDR
+		//OUTI		ADMUX, 3					;pin 0 -> LDR ???
+		//OUTI		ADMUX, 1
 		rcall		LCD_init
 		rcall		encoder_init
 		rcall		wire1_init
@@ -101,9 +102,17 @@ main:
 		rcall			encoder
 		brts			mesurements_choice
 
+		cpi				yl, bufferLen			;if yl at the end of the buffer then
+		brne			PC+4					
+		ldi				yl, 0
+		rcall			record					;store to EEPROM
+		ldi				yl, 0
+
 		//out			PORTB, b3
 		sbrc		b3, SRAM_flag
-		rcall		store				;SRAM and EEPROM
+		rcall		store				;SRAM
+		//rcall		store				;SRAM and EEPROM
+
 
 		rjmp			main
 
@@ -176,11 +185,12 @@ store:
 
 		andi		b3, ~(1<<SRAM_flag)		;clear bit SRAM_flag in b3 register
 
-		cpi			yl, bufferLen			;if yl at the end of the buffer then
+		/*cpi			yl, bufferLen			;if yl at the end of the buffer then
 		brne		PC+4					
 		ldi			yl, 0
 		rcall		record					;store to EEPROM
-		ldi			yl, 0
+		ldi			yl, 0*/
+
 		ret
 	
 
