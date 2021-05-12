@@ -8,7 +8,7 @@
 .include "libPerso/per_macro.asm"
 .include "lib/definitions.asm"
 
-.equ	bufferLen		= 6			;à modifier
+.equ	bufferLen		= 12			;à modifier
 .equ	SRAM_flag		= 0
 //.equ	display_flag	= 1
 .equ	EEPROM_START	= 0	;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
@@ -102,16 +102,10 @@ main:
 		rcall			encoder
 		brts			mesurements_choice
 
-		cpi				yl, bufferLen			;if yl at the end of the buffer then
-		brne			PC+4					
-		ldi				yl, 0
-		rcall			record					;store to EEPROM
-		ldi				yl, 0
-
 		//out			PORTB, b3
 		sbrc		b3, SRAM_flag
-		rcall		store				;SRAM
-		//rcall		store				;SRAM and EEPROM
+		//rcall		store				;SRAM
+		rcall		store				;SRAM and EEPROM
 
 
 		rjmp			main
@@ -138,6 +132,7 @@ getTemp:
 .db	"temp  ",FFRAC2+FSIGN,b,4,$42," C",CR,0
 	rcall		encoder
 	brts		come_back
+
 	sbrc		b3, SRAM_flag
 	rcall		store							;SRAM and EEPROM
 	rjmp		getTemp
@@ -149,6 +144,7 @@ getHum:
 .db	"hum   ",FFRAC2+FSIGN,b,4,$42," %",CR,0
 	rcall		encoder
 	brts		come_back
+
 	sbrc		b3, SRAM_flag
 	rcall		store							;SRAM and EEPROM
 	rjmp		getHum
@@ -164,6 +160,7 @@ getLight:
 	rcall		encoder
 	brts		come_back
 	sbrc		b3, SRAM_flag
+
 	rcall		store							;SRAM and EEPROM
 	rjmp		getLight
 
@@ -185,11 +182,11 @@ store:
 
 		andi		b3, ~(1<<SRAM_flag)		;clear bit SRAM_flag in b3 register
 
-		/*cpi			yl, bufferLen			;if yl at the end of the buffer then
+		cpi			yl, bufferLen			;if yl at the end of the buffer then
 		brne		PC+4					
 		ldi			yl, 0
 		rcall		record					;store to EEPROM
-		ldi			yl, 0*/
+		ldi			yl, 0
 
 		ret
 	

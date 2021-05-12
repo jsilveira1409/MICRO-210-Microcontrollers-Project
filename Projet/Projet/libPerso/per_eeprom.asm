@@ -51,22 +51,25 @@ eeprom_load:
 	ret
 
 record:
+	ldi			yl, 0
 loop_bis:
 	ld			b0, y+
 	rcall		eeprom_store			; stockage du LSB?? de la temperature
 	//STEEPROM							; macro to store in EEPROM ??
 	adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
-	cpi		yl, bufferLen
-	brne	loop_bis
+	cpi			yl, bufferLen
+	brne		loop_bis
 
-	cpi		xl, low(eepromLen)			;xl max
-	brne	PC+5
-	cpi		xh, high(eepromLen)			;xh max
-	brne	PC+3
+	cpi			xl, low(eepromLen)			;xl max
+	brne		PC+5
+	cpi			xh, high(eepromLen)			;xh max
+	brne		PC+3
 	//ldi		xl, low(EEPROM_START)		;remise à "zéro" des pointeurs EEPROM
 	//ldi		xh, high(EEPROM_START)
-	ldi		xl, low(0)					;remise à zéro des pointeurs EEPROM
-	ldi		xh, high(0)
+	ldi			xl, low(0)					;remise à zéro des pointeurs EEPROM
+	ldi			xh, high(0)
+
+	ldi			yl, 0
 
 	ret
 

@@ -103,7 +103,7 @@
   <eeprom_cli><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm</FILE><LINE>34</LINE></eeprom_cli>
   <eeprom_load><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm</FILE><LINE>41</LINE></eeprom_load>
   <record><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm</FILE><LINE>53</LINE></record>
-  <loop_bis><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm</FILE><LINE>54</LINE></loop_bis>
+  <loop_bis><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm</FILE><LINE>55</LINE></loop_bis>
   <enc_old><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm</FILE><LINE>9</LINE></enc_old>
   <encoder><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm</FILE><LINE>23</LINE></encoder>
   <encoder_button><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm</FILE><LINE>81</LINE></encoder_button>
@@ -129,11 +129,11 @@
   <temperature><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm</FILE><LINE>6</LINE></temperature>
   <light><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm</FILE><LINE>28</LINE></light>
   <humidity><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm</FILE><LINE>37</LINE></humidity>
-  <mesurements_choice><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>119</LINE></mesurements_choice>
-  <store><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>176</LINE></store>
-  <getTemp><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>134</LINE></getTemp>
-  <getHum><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>145</LINE></getHum>
-  <getLight><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>156</LINE></getLight>
-  <come_back><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>171</LINE></come_back>
+  <mesurements_choice><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>113</LINE></mesurements_choice>
+  <store><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>173</LINE></store>
+  <getTemp><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>128</LINE></getTemp>
+  <getHum><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>140</LINE></getHum>
+  <getLight><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>152</LINE></getLight>
+  <come_back><FILE>C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm</FILE><LINE>168</LINE></come_back>
  </LABELS>
 </ASSEMBLER_INFO>
