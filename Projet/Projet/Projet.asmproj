@@ -15,7 +15,7 @@
     <Name>Projet</Name>
     <RootNamespace>Projet</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
-    <EntryFile>$(MSBuildProjectDirectory)\TEST4.asm</EntryFile>
+    <EntryFile>$(MSBuildProjectDirectory)\TESTuart.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
@@ -90,6 +90,9 @@
     <Compile Include="libPerso\per_sensors.asm">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="libPerso\per_uart.asm">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="libPerso\per_wire1.asm">
       <SubType>Code</SubType>
     </Compile>
@@ -148,6 +151,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TEST4.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TESTuart.asm">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
