@@ -66,6 +66,7 @@ loop_bis:
 	brne		PC+3
 	//ldi		xl, low(EEPROM_START)		;remise à "zéro" des pointeurs EEPROM
 	//ldi		xh, high(EEPROM_START)
+	rcall		sendToCloud				;limite de la memoire eeprom etablie par nous -> on envoie a larduino
 	ldi			xl, low(0)					;remise à zéro des pointeurs EEPROM
 	ldi			xh, high(0)
 

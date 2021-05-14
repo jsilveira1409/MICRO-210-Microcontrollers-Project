@@ -2,7 +2,7 @@
 ; purpose library angular encoder operation
 
 ; === definitions ===
-.equ	ENCOD	= PORTE
+.equ	ENCOD	= PORTB
 
 .dseg
 .org	SRAM_START+SRAM_SIZE/2

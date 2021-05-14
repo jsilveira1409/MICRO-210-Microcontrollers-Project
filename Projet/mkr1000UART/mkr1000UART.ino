@@ -1,21 +1,27 @@
-char data;
-bool state = true;
-
+int data;
 void setup(){
-  Serial1.begin(9600);
+  Serial.begin(9600);
   pinMode(9,OUTPUT);
 
   digitalWrite(9, HIGH);
-  delay(1000);
+  delay(500);
   digitalWrite(9, LOW);
-  
+  delay(500);
+  digitalWrite(9, HIGH);
+  delay(500);
+  digitalWrite(9, LOW);
+  delay(500); 
 }
-
+byte buf = 0;
 void loop(){
-  if (Serial1.available()>0) {
-      data=Serial1.read();
-      state !=state;
-      delay(300);
+  if(Serial.available()){
+  buf = Serial.read();
+  }else{
+    buf = 0;
   }
-  digitalWrite(9, state);
+  Serial.println(buf, DEC);
+  if(buf == 149){
+    digitalWrite(9, HIGH);
+  }
+  delay(1000);
 }
