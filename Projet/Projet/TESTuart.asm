@@ -7,6 +7,7 @@ reset:
 	LDSP	RAMEND		; load stack pointer SP
 	OUTI	DDRE,0b00000010	; make Tx (PE1) an output
 	sbi		PORTE,PE1	; set Tx to high	
+	ldi		a0, 0x08
 	rjmp	main
 
 
@@ -42,7 +43,8 @@ loop2:
 	brcc	loop2		; loop back if carry=0
 	ret
 
-main:	
+main:
+	ldi		a0, 0x00	
 	rcall	putc		; put a character back to the terminal 
 	WAIT_MS	1000
 	rjmp	main

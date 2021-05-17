@@ -12,16 +12,14 @@ void setup(){
   digitalWrite(9, LOW);
   delay(500); 
 }
-byte buf = 0;
+String buf;
+bool state = false;
+
 void loop(){
   if(Serial.available()){
-  buf = Serial.read();
-  }else{
-    buf = 0;
+    buf = Serial.readString();
+    Serial.print(buf);
+    Serial.println(state);
+   
   }
-  Serial.println(buf, DEC);
-  if(buf == 149){
-    digitalWrite(9, HIGH);
-  }
-  delay(1000);
 }

@@ -8,11 +8,11 @@
 .include "libPerso/per_macro.asm"
 .include "lib/definitions.asm"
 
-.equ	bufferLen		= 12			;à modifier
+.equ	bufferLen		= 10			;à modifier
 .equ	SRAM_flag		= 0
 
 .equ	EEPROM_START	= 0	;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
-.equ	eepromLen		= 0x0100
+.equ	eepromLen		= 0x0020
 //.equ	EEPROM_flag	= 1
 
 ; ======================= memory management ======================================
@@ -58,14 +58,14 @@ reset:
 		sbi		PORTE,PE1						; set Tx to high	
 		rcall		LCD_clear
 		sei										; set global interrupts
+		ldi			r17, 0x08
+		mov			d0, r17
 		rjmp		main
 
 .include "lib/printf.asm"
 .include "lib/lcd.asm"
 .include "lib/menu.asm"	
 .include "libPerso/per_eeprom.asm"
-
-
 
 .include "libPerso/per_encoder.asm"
 .include "libPerso/per_wire1.asm"		
@@ -77,7 +77,9 @@ reset:
 	st		y+, b0
 	.endmacro
 
-main:	
+main:
+		
+		rcall		putc
 		CYCLIC			a0,0,2
 		PRINTF			LCD
 .db		CR, CR,FHEX,a,0							;deux retours à la ligne ? ->a indique l'adresse mémoire
@@ -137,7 +139,6 @@ getLight:
 	rcall		encoder
 	brts		come_back
 	sbrc		b3, SRAM_flag
-
 	rcall		store							;SRAM and EEPROM
 	rjmp		getLight
 
@@ -150,36 +151,29 @@ come_back:
 store:
 		rcall		temperature
 		STVALSRAM							;store to SRAM
-		
 		rcall		humidity
 		STVALSRAM							;store to SRAM
-
 		rcall		light
 		STVALSRAM							;store to SRAM
-
 		andi		b3, ~(1<<SRAM_flag)		;clear bit SRAM_flag in b3 register
-
 		cpi			yl, bufferLen			;if yl at the end of the buffer then
-		brne		PC+4					
+		brne		PC+3					
 		ldi			yl, 0
 		rcall		record					;store to EEPROM
 		ldi			yl, 0
-
 		ret
 
-
-
 sendToCloud:
-	ldi		zl, low(2*EEPROM_START);set pointer to start of eeprom
+	/*ldi		zl, low(2*EEPROM_START);set pointer to start of eeprom
 	ldi		zl, high(2*EEPROM_START);set pointer to start of eeprom
 get:	
 	lpm
 	adiw	zl, 1
 	tst		r0					; test end of file
 	breq	end	
-	mov		a0, r0				; move value to a0
+	mov		a0, r0				; move value to a0*/
 	rcall	putc		        ; send value through uart to arduino
-end:
+//end:
 	ret				
 
 	
