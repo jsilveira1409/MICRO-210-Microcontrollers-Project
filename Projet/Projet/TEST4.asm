@@ -73,6 +73,9 @@ reset:
 		ldi			yl, low(buffer)
 		ldi			yh, high(buffer)
 		rcall		LCD_clear
+		//OUTI	DDRE,0b00000010	; make Tx (PE1) an output ;arduino
+		//sbi		PORTE,PE1	; set Tx to high			;arduino
+		//rcall		set_eeprom					;arduino
 		sei										; set global interrupts
 		rjmp		main
 
@@ -86,6 +89,7 @@ reset:
 .include "libPerso/per_encoder.asm"
 .include "libPerso/per_wire1.asm"		
 .include "libPerso/per_sensors.asm"
+.include "libPerso/TESTuart2.asm"
 
 .macro	STVALSRAM		;store sensor value to SRAM
 	st		y+, b1
@@ -94,10 +98,12 @@ reset:
 
 main:	
 		CYCLIC			a0,0,2
+		//CYCLIC			a0,0,3		;arduino
 		PRINTF			LCD
 .db		CR, CR,FHEX,a,0							;deux retours à la ligne ? ->a indique l'adresse mémoire
 		rcall			menui
-.db		"Temperature |Humidity    |Light       ",0		;au début du programme ? strmenu : .db "Temperature ..."	
+.db		"Temperature |Humidity    |Light       ",0		;au début du programme ? strmenu : .db "Temperature ..."
+//.db		"Temperature |Humidity    |Light       |Upload      ",0		;au début du programme ? strmenu : .db "Temperature ..." arduino	
 		WAIT_MS			1
 		rcall			encoder
 		brts			mesurements_choice
@@ -120,6 +126,9 @@ mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affic
 
 		cpi			a0,0x0002
 		breq		getLight
+
+		//cpi			a0,0x0003			;arduino
+		//breq		upload
 		
 		//clr			a0					;sinon boucle infinie si a0 != 0,1,2 ?
 		rjmp		mesurements_choice  
@@ -164,6 +173,37 @@ getLight:
 	rcall		store							;SRAM and EEPROM
 	rjmp		getLight
 
+/*upload:										;arduino
+	//cli					; disable interrupts pas besoin ?
+	rcall		LCD_home
+	PRINTF		LCD
+.db	"Uploading...",0
+	mov		w, xl		;store pointer value
+	mov		_w, xh
+
+	loop_upload:
+	adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
+	rcall eeprom_load
+	cpi		b0, 0xff					;ou 0x00 ?
+	breq	PC+2
+	rcall	putc						;send instruction b0 via uart
+	cpi			xl, w						;si le pointeur est égal à la valeur initiale on s'arrête
+	brne		PC+4
+	cpi			xh, _w						;si le pointeur est égal à la valeur initiale on s'arrête
+	brne		PC+2
+	rjmp		end
+
+	cpi			xl, low(eepromLen)			;xl max
+	brne		PC+4
+	cpi			xh, high(eepromLen)			;xh max
+	brne		PC+2
+	rjmp		end
+	rjmp		loop_upload
+	//sei					; enable interrupts pas besoin ??
+	end:
+	mov		xl, w			;restore pointer value
+	mov		xh, _w
+	rjmp		come_back*/
 
 come_back:
 	rcall		LCD_clear
@@ -189,6 +229,19 @@ store:
 		ldi			yl, 0
 
 		ret
+
+/*set_eeprom:				;arduino vu que les interruptions ne sont pas encore active pas besoin de les (dés)activer
+		ldi			b0, 0xff								;mettre 0x00 ? vu que avrisp-u met tout à ff ? remplir la eeprom
+		loop_set:
+					rcall		eeprom_store			; stockage du LSB?? de la temperature
+					adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
+					cpi			xl, low(eepromLen)			;xl max
+					brne		loop_set
+					cpi			xh, high(eepromLen)			;xh max
+					brne		loop_set										
+		ldi			xl, low(EEPROM_START)					;init des pointeurs pour les bases de données
+		ldi			xh, high(EEPROM_START)					;pour remettre le pointeur à 0 après avoir set la eeprom à 0xff
+		ret*/
 	
 
 

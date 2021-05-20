@@ -16,7 +16,7 @@ eeprom_store:
 	sbi		EECR,EEWE		; set EEPROM Write Enable
 	ret
 
-.macro	STEEPROM			;use a macro to speed up the storage process
+.macro	STEEPROM			;use a macro to speed up the storage process ? doesn't work
 ; in:	xh:xl 	EEPROM address
 ;		b0	EEPROM data byte to store
 ; out:	->EEPROM
@@ -40,7 +40,7 @@ eeprom_cli:
 
 eeprom_load:
 ; in:	xh:xl 	EEPROM address
-; out:	a0	EEPROM data byte to load
+; out:	a0->b0??	EEPROM data byte to load
 
 	sbic	EECR,EEWE	; skip if EEWE=0 (wait it EEWE=1)
 	rjmp	PC-1		; jump back to previous address
@@ -52,13 +52,13 @@ eeprom_load:
 
 record:
 	ldi			yl, 0
-loop_bis:
+loop_bis:								;juste loop ???
 	ld			b0, y+
 	rcall		eeprom_store			; stockage du LSB?? de la temperature
 	//STEEPROM							; macro to store in EEPROM ??
 	adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
 	cpi			yl, bufferLen
-	brne		loop_bis
+	brne		loop_bis				;juste loop ???
 
 	cpi			xl, low(eepromLen)			;xl max
 	brne		PC+5
@@ -66,7 +66,7 @@ loop_bis:
 	brne		PC+3
 	//ldi		xl, low(EEPROM_START)		;remise à "zéro" des pointeurs EEPROM
 	//ldi		xh, high(EEPROM_START)
-	rcall		sendToCloud				;limite de la memoire eeprom etablie par nous -> on envoie a larduino
+	//rcall		sendToCloud				;limite de la memoire eeprom etablie par nous -> on envoie a larduino
 	ldi			xl, low(0)					;remise à zéro des pointeurs EEPROM
 	ldi			xh, high(0)
 
