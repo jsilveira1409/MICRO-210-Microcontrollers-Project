@@ -96,6 +96,9 @@
     <Compile Include="libPerso\per_wire1.asm">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="libPerso\TESTuart2.asm">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="main2.asm">
       <SubType>Code</SubType>
     </Compile>
@@ -160,9 +163,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TESTuart.asm">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TESTuart2.asm">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
