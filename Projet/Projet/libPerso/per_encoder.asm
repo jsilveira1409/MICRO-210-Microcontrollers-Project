@@ -95,4 +95,6 @@ i_rise:
 	brne	PC+2
 	ldi	@0,@2
 .endmacro
+
+//encoder_perso:			;pour le bouton uniquement
 	
