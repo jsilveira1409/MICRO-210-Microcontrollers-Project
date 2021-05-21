@@ -1,27 +1,34 @@
 #include <SPI.h>
 #include <WiFi101.h>
 
-//char ssid[] = "public-epfl";
-char ssid[] = "iPhone 6";
-//char pass[] = "";
-char pass[] = "bertedwin";
-int status = WL_IDLE_STATUS;
+char ssid[] = "Jojo";
+char pass[] = "Smerdiakov";
 
+int status = WL_IDLE_STATUS;
+byte data[360];
 WiFiServer server(80);
+//IPAddress ip(192, 168, 0, 177);    
+
 
 void setup(){
   Serial1.begin(9600);
-  //Serial.begin(9600);
   pinMode(9,OUTPUT);
+  //WiFi.config(ip);
   while ( status != WL_CONNECTED) {
-    //Serial.print("Attempting to connect to WiFi network.");
     status = WiFi.begin(ssid, pass);
-    //delay(10000);
+    delay(10000);
   }
  server.begin();
  digitalWrite(9, HIGH);
  delay(500);
- //digitalWrite(9, LOW);
+ for(int i(0); i<360; ++i){
+  data[i] = 0;
+ }
+ digitalWrite(9, LOW);
+ delay(500);
+ 
+ digitalWrite(9, HIGH);
+ delay(500);
  printWiFiStatus();
 }
 String buf;
@@ -33,12 +40,7 @@ void loop(){
         String currentLine = "";        
       while (client.connected()) {            
         if (client.available()) {
-          //client.println("hello");
-          //delay(1000);          
-          buf = Serial1.readString();
-          //buf = Serial.readString();
-          //buf = "value";
-          //if (buf == "\n") {                 
+            Serial1.readBytes(data,360);
             if (currentLine.length() == 0){
               client.println("HTTP/1.1 200 OK");
               client.println("Content-type:text/html");
@@ -48,22 +50,18 @@ void loop(){
               client.println("<body>");
               //client.println("<h1>Edwin je t'aime</h1>");
               client.println("<h1>E+J = coeur</hl>");
-              client.print(buf);
+              for(int i(0); i<360; ++i)
+                client.println(data[i]);
               client.println("</body>");
               client.println("</html>");
               client.println();
               break;
-              }
-              else {
+            }else {
               currentLine = "";
             }
-          //}
-          //else if (buf != "\r") {   
-          //  currentLine += buf;    
-          //}
         }
       }
-      client.stop();
+      //client.stop();
   }
 }
 
