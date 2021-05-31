@@ -1,30 +1,30 @@
 
-AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm Fri May 21 10:01:47 2021
+AVRASM ver. 2.2.6  D:\Code\MCUs BA4\Projet\Projet\main_final.asm Mon May 31 02:47:12 2021
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(8): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_macro.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(9): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/definitions.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(83): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(84): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(85): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(86): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(90): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(91): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(92): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/TESTuart2.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(1): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_macro.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(2): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/definitions.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(54): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(55): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(56): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(58): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_eeprom.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(59): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_encoder.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(60): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_wire1.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(61): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_sensors.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(62): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_uart.asm'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(8): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_macro.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(9): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/definitions.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(83): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/printf.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(84): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/lcd.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(85): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\lib/menu.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(86): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_eeprom.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(90): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_encoder.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(91): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_wire1.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(92): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/per_sensors.asm'
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including file 'C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\libPerso/TESTuart2.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(1): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_macro.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(2): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/definitions.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(54): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/printf.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(55): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/lcd.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(56): Including file 'D:\Code\MCUs BA4\Projet\Projet\lib/menu.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(58): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_eeprom.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(59): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_encoder.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(60): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_wire1.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(61): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_sensors.asm'
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(62): Including file 'D:\Code\MCUs BA4\Projet\Projet\libPerso/per_uart.asm'
                                  
-                                 /*
+                                 .include "libPerso/per_macro.asm"
                                  
                                  ;***** Created: 2011-02-09 12:03 ******* Source: ATmega128.xml ***********
                                  ;*************************************************************************
@@ -1243,13 +1243,6 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
                                  
                                  ; ***** END OF FILE ******************************************************
                                  
-                                  * TEST4.asm
-                                  *
-                                  *  Created: 30.04.2021 21:15:18
-                                  *   Author: BG
-                                  */
-                                 
-                                 .include "libPerso/per_macro.asm"
                                  
                                  ; purpose library, general-purpose macros
                                  ; author (c) R.Holzer (adapted MICRO210/EE208 A.Schmid)
@@ -3098,46 +3091,32 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
                                  
                                  ; === definitions  ===
                                  .list
-                                 //.include "lib/printf.asm"
                                  
-                                 .equ	bufferLen		= 12			;à modifier
+                                 .equ	bufferLen		= 12			;à modifier, 12 octets-->4 seconds
                                  .equ	SRAM_flag		= 0
-                                 //.equ	display_flag	= 1
-                                 .equ	EEPROM_START	= 0	;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
+                                 .equ	EEPROM_START	= 0				;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
                                  .equ	eepromLen		= 0x00b4		;0x0E10 / 0x001E /0x0708 /0x0384 /0x00b4 /0x021C -> correspond à 3min avec 1mesure/2sec
-                                 //.equ	EEPROM_flag	= 1
-                                 
+                                 ;180 octet
                                  ; ======================= memory management ======================================
                                  .dseg
-                                 .org	SRAM_START
+                                 .org	SRAM_START						;debut du buffer dans la sram
 000100                           		buffer : .byte bufferLen
                                  
                                  .cseg
                                  ; ========================interrupt vector tables =================================
-                                 .org 0
+                                 .org 0									
 000000 940c 0026                 		jmp			reset
                                  
-                                 .org	OVF0addr
+                                 .org	OVF0addr						
 000020 940c 0022                 		jmp		overflow0
                                  
-                                 //.org	OVF3addr
-                                 		//jmp		overflow2
-                                 
-                                 //.org	0x30			;end of interrupt vector table ??
-                                 
                                  ; =========interrupt service routine ==========
-                                 //.org	0x31
-                                 overflow0:
-000022 b61f                      		in		_sreg, SREG
+                                 
+                                 overflow0:								;timer overflow pour activer le flag de stockage dans la SRAM, des valeurs 
+000022 b61f                      		in		_sreg, SREG				;des trois valeurs
 000023 6091                      		ori		b3, (1<<SRAM_flag)
 000024 be1f                      		out		SREG, _sreg
 000025 9518                      		reti
-                                 
-                                 //overflow2:
-                                 		//in		_sreg, SREG
-                                 		//ori		b3, (1<<display_flag)
-                                 		//out		SREG, _sreg
-                                 		//reti
                                  
                                  ; ================== init / reset ===============================
                                  
@@ -3146,37 +3125,29 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 000027 bf0d
 000028 e100
 000029 bf0e                      		LDSP		RAMEND						;load stack pointer (SP)
-                                 		//OUTI		DDRC, 0xff					;make portB (LEDs) output -> debugging
 00002a e001
-00002b bf07                      		OUTI		TIMSK, (1<<TOIE0)			;init du timer
+00002b bf07                      		OUTI		TIMSK, (1<<TOIE0)			;activation du timer
 00002c e008
-00002d bf00                      		OUTI		ASSR,  (1<<AS0)
+00002d bf00                      		OUTI		ASSR,  (1<<AS0)				
 00002e e006
-00002f bf03                      		OUTI		TCCR0,6					;p.189 6->overflow toutes les 2 secondes (5 -> toutes les secondes)
-                                 
-                                 		//OUTI		TIMSK, (1<<TOIE2)			;init du timer
-                                 		//OUTI		ASSR,  (1<<AS0)
-                                 		//OUTI		TCCR2, 2					;p.189 6->overflow toutes les
-                                 
+00002f bf03                      		OUTI		TCCR0,6						;overflow toutes les 2 secondes (5 -> toutes les secondes)
 000030 e806
 000031 b906                      		OUTI		ADCSR,(1<<ADEN) + 6			;init du ADC pour LDR
-                                 		//OUTI		ADMUX, 3					;pin 0 -> LDR ???
-                                 		//OUTI		ADMUX, 1
 000032 d14d                      		rcall		LCD_init
 000033 d1af                      		rcall		encoder_init
 000034 d1eb                      		rcall		wire1_init
-000035 e090                      		ldi			b3, 0						;b3 register for SRAM_flag -> on pourrait utiliser a1 aussi ?
-000036 e020                      		ldi			a0, 0
-000037 e0a0                      		ldi			xl, low(EEPROM_START)					;init des pointeurs pour les bases de données
+000035 e090                      		ldi			b3, 0						;b3 register for SRAM_flag
+000036 e020                      		ldi			a0, 0						
+000037 e0a0                      		ldi			xl, low(EEPROM_START)		;init des pointeurs pour les bases de données/buffer
 000038 e0b0                      		ldi			xh, high(EEPROM_START)
 000039 e0c0                      		ldi			yl, low(buffer)
 00003a e0d1                      		ldi			yh, high(buffer)
 00003b d130                      		rcall		LCD_clear
 00003c e002
-00003d b902                      		OUTI	DDRE,0b00000010	; make Tx (PE1) an output ;arduino
-00003e 9a19                      		sbi		PORTE,PE1	; set Tx to high			;arduino
-00003f d372                      		rcall		set_eeprom					;arduino
-000040 9478                      		sei										; set global interrupts
+00003d b902                      		OUTI		DDRE,0b00000010				;make Tx (PE1) an output (arduino communication)
+00003e 9a19                      		sbi			PORTE,PE1					;set Tx to high			 (arduino communication
+00003f d374                      		rcall		set_eeprom					;concerne arduino
+000040 9478                      		sei										;set global interrupts
 000041 c29d                      		rjmp		main
                                  
                                  .include "lib/printf.asm"
@@ -3877,8 +3848,9 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 0001bc 9631                      	adiw	zl,1			; increment pointer once more
 0001bd 95f6
 0001be 95e7                      	DIV2Z					; transform byte->word counter
-                                 .include "libPerso/per_eeprom.asm"
 0001bf 9409                      
+                                 .include "libPerso/per_eeprom.asm"				;libs du cours modifies par nous pour que les ports et 
+                                 
                                  ; purpose library, internal EEPROM
                                  
                                  eeprom_store:
@@ -3954,10 +3926,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
                                  
 0001e2 9508                      	ret
                                  
-                                 
-                                 
-                                 
-                                 .include "libPerso/per_encoder.asm"
+                                 .include "libPerso/per_encoder.asm"				;les registres ni coincident ni se superposent
                                  
                                  ; purpose library angular encoder operation
                                  
@@ -4010,12 +3979,12 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 0001fd fd14                      	sbrc	_w,ENCOD_A		;skip if bit ENCOD_A is clear in register _w
 0001fe c004                      	rjmp	a_rise
                                  a_fall:
-0001ff 9523                      	inc		a0					; if B=1 then increment
+0001ff 9523                      	inc	a0					; if B=1 then increment
 000200 ff15                      	sbrs	_w,ENCOD_B
 000201 5022                      	subi	a0,2			; if B=0 then decrement
 000202 c003                      	rjmp	i_up_done
                                  a_rise:
-000203 9523                      	inc		a0					; if B=0 then increment
+000203 9523                      	inc	a0					; if B=0 then increment
 000204 fd15                      	sbrc	_w,ENCOD_B
 000205 5022                      	subi	a0,2			; if B=1 then decrement
                                  i_up_done:
@@ -4026,7 +3995,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 000208 fd14                      	sbrc	_w,ENCOD_A
 000209 c004                      	rjmp	a_rise2
                                  a_fall2:
-00020a 9563                      	inc		b0					; if B=1 then increment
+00020a 9563                      	inc	b0					; if B=1 then increment
 00020b ff15                      	sbrs	_w,ENCOD_B
 00020c 5062                      	subi	b0,2			; if B=0 then decrement
 00020d c003                      	rjmp	i_down_done
@@ -4200,7 +4169,6 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
                                  	
                                  ; =======================subroutine=========================
                                  temperature:		;PORT B
-                                 		
 00026e dfb4                      		rcall		wire1_reset							;reset pulse
 00026f ec6c
 000270 dfde                      		CA			wire1_write, skipROM				;skip ROM identification
@@ -4231,21 +4199,15 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 000289 eb6e
 00028a dfc4                      		CA			wire1_write, readScratchpad
 00028b dfce                      		rcall		wire1_read							;read temperature LSB
-                                 		;;mov			b0,a0
 00028c 2f86                      		mov			b2,b0
-                                 		;mov			b2,a0
-                                 		;;mov			b2,b0
 00028d dfcc                      		rcall		wire1_read							;read temperature MSB
-00028e 2f76                      		mov		b1,b0
-                                 		;mov			b1, a0
-                                 		;;mov			b1, b0
-                                 		;mov		b0, b2
+00028e 2f76                      		mov			b1,b0
 00028f 2f68                      		mov			b0, b2
 000290 9508                      		ret
                                  
-                                 light:										;PORT F, pin 0
+                                 light:										;PORT F, pin 0, registre b1, b0
 000291 e000
-000292 b907                      		OUTI		ADMUX, 0
+000292 b907                      		OUTI		ADMUX, 0				;active le convertisseur sur le pin 0 
 000293 9a36                      		sbi			ADCSR,ADSC
 000294 9936
 000295 cffe                      		WP1			ADCSR,ADSC
@@ -4272,9 +4234,9 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 0002aa f781                      		WAIT_MS		100
 0002ab 9508                      		ret
                                  
-                                 humidity:										;PORT F, pin 1
+                                 humidity:									;PORT F, pin 1, registre b1, b0
 0002ac e001
-0002ad b907                      		OUTI		ADMUX, 1
+0002ad b907                      		OUTI		ADMUX, 1				;active le convertisseur sur le pin 1
 0002ae 9a36                      		sbi			ADCSR,ADSC
 0002af 9936
 0002b0 cffe                      		WP1			ADCSR, ADSC
@@ -4300,18 +4262,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 0002c4 950a
 0002c5 f781                      		WAIT_MS		100
 0002c6 9508                      		ret
-                                 .include "libPerso/TESTuart2.asm"
-                                 
-                                 /*.include "lib/macros.asm"		; include macro definitions
-                                 .include "lib/definitions.asm"	; include register/constant definitions*/
-                                 .equ	baud	= 9600
-                                 
-                                 /*reset:	
-                                 	LDSP	RAMEND		; load stack pointer SP
-                                 	OUTI	DDRE,0b00000010	; make Tx (PE1) an output
-                                 	sbi		PORTE,PE1	; set Tx to high	
-                                 	ldi		a0, 0x08
-                                 	rjmp	main*/
+                                 .include "libPerso/per_uart.asm"
                                  
                                  
                                  wait_bit:
@@ -4324,59 +4275,37 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 0002cd 950a
 0002ce f7d9                      	WAIT_C	(clock/baud)-18	; subtract overhead
 0002cf 9508                      	ret
-                                 /*wait_1bit5:
-                                 	WAIT_C	(3*clock/2/baud)-18
-                                 	ret*/
-                                 	
+                                 
                                  putc:	
 0002d0 9819                      	cbi		PORTE,PE1	; set start bit to 0
 0002d1 dff5                      	rcall	wait_bit	; wait 1-bit period (start bit)
-0002d2 9408                      	sec					; set carry
-0002d3 9567                      loop:	ror	b0		; shift LSB into carry
-                                 //loop:	ror	a0		; shift LSB into carry
+0002d2 9408                      	sec			; set carry
+                                 loop:	
+0002d3 94c7                      	ror		d0		; shift LSB into carry
 0002d4 f408
 0002d5 9a19
 0002d6 f008
-0002d7 9819                       	C2P	PORTE,PE1	; carry to port
+0002d7 9819                       	C2P		PORTE,PE1	; carry to port
 0002d8 dfee                       	rcall	wait_bit	; wait 1-bit period (data bit)
 0002d9 9488                      	clc			; clear carry
-0002da 2366                      	tst	b0		; test c for zero
-                                 	//tst	a0		; test c for zero
+0002da 20cc                      	tst		d0		; test c for zero
 0002db f7b9                      	brne	loop		; loop back if not zero
-0002dc 9a19                      	sbi	PORTE,PE1	; set stop bit to 1
+0002dc 9a19                      	sbi		PORTE,PE1	; set stop bit to 1
 0002dd dfe9                      	rcall	wait_bit	; wait 1-bit period (stop bit)
 0002de 9508                      	ret	
-                                 	
-                                 /*getc:	
-                                 	WP1	PINE,PE0	; wait if pin Rx=1
-                                 	rcall	wait_1bit5	; wait 1.5-bit period (start bit)
-                                 	ldi	a0,0x80		; preload c
-                                 loop2:	
-                                 	P2C	PINE,PE0	; port to carry
-                                 	ror	a0		; shift carry into MSB
-                                 	rcall	wait_bit	; wait 1-bit period (data bit)
-                                 	brcc	loop2		; loop back if carry=0
-                                 	ret*/
                                  
-                                 /*main:
-                                 	ldi		a0, 0x00	
-                                 	rcall	putc		; put a character back to the terminal 
-                                 	WAIT_MS	1000
-                                 	rjmp	main*/
-                                 
-                                 .macro	STVALSRAM		;store sensor value to SRAM
+                                 .macro	STVALSRAM								;store sensor value to SRAM
                                  	st		y+, b1
                                  	st		y+, b0
                                  	.endmacro
                                  
                                  main:	
-                                 		//CYCLIC			a0,0,2
 0002df 3f2f
 0002e0 f409
 0002e1 e020
 0002e2 3024
 0002e3 f409
-0002e4 e023                      		CYCLIC			a0,0,3		;arduino
+0002e4 e023                      		CYCLIC			a0,0,3					;limite a0 à 0-1-2-3 pour le menu(le menu n'est plus cyclic)
 0002e5 e600
 0002e6 2e40
 0002e7 e001
@@ -4384,10 +4313,9 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(93): Including 
 0002e9 dd58                      		PRINTF			LCD
 0002ea 0d0d
 0002eb 1294
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(104): warning: .cseg .db misalignment - padding zero byte
-0002ec 0000                      .db		CR, CR,FHEX,a,0							;deux retours à la ligne ? ->a indique l'adresse mémoire
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(72): warning: .cseg .db misalignment - padding zero byte
+0002ec 0000                      .db		CR, CR,FHEX,a,0							
 0002ed dec9                      		rcall			menui
-                                 //.db		"Temperature |Humidity    |Light       ",0		;au début du programme ? strmenu : .db "Temperature ..."
 0002ee 6554
 0002ef 706d
 0002f0 7265
@@ -4413,7 +4341,7 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(104): warning: 
 000304 2064
 000305 2020
 000306 2020
-000307 0020                      .db		"Temperature |Humidity    |Light       |Upload      ",0		;au début du programme ? strmenu : .db "Temperature ..." arduino	
+000307 0020                      .db		"Temperature |Humidity    |Light       |Upload      ",0	;choix dans le menu	
 000308 e001
 000309 2e30
 00030a e001
@@ -4433,18 +4361,13 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(104): warning: 
 000318 f791
 000319 950a
 00031a f781                      		WAIT_MS			1
-00031b dece                      		rcall			encoder
-00031c f01e                      		brts			mesurements_choice
+00031b dece                      		rcall			encoder					;verifie l'etat de l'encodeur angulaire pour les changements
+00031c f01e                      		brts			mesurements_choice		;si l'encodeur est appuyé, un choix a été fait
+00031d fd90                      		sbrc			b3, SRAM_flag			;flag pour stockage active et on stocke la valeur dans la sram
+00031e d085                      		rcall			store					;stocke dans la SRAM et verifie si elle est pleine 
+00031f cfbf                      		rjmp			main					;pour stocker dans l'eeprom
                                  
-                                 		//out			PORTB, b3
-00031d fd90                      		sbrc		b3, SRAM_flag
-                                 		//rcall		store				;SRAM
-00031e d083                      		rcall		store				;SRAM and EEPROM
-                                 
-                                 
-00031f cfbf                      		rjmp			main
-                                 
-                                 mesurements_choice:				; switch case selon le choix du menu (-> a0) pour l'affichage de la mesure 
+                                 mesurements_choice:					;switch case selon le choix du menu (-> a0) pour l'affichage de la mesure 
 000320 de4b                      		rcall		LCD_clear
 000321 3020                      		cpi			a0,0x0000
 000322 f039                      		breq		getTemp
@@ -4455,21 +4378,18 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(104): warning: 
 000325 3022                      		cpi			a0,0x0002
 000326 f161                      		breq		getLight
                                  
-000327 3023                      		cpi			a0,0x0003			;arduino
+000327 3023                      		cpi			a0,0x0003
 000328 f1f1                      		breq		upload
-                                 		
-                                 		//clr			a0					;sinon boucle infinie si a0 != 0,1,2 ?
 000329 cff6                      		rjmp		mesurements_choice  
                                  
-                                 
                                  getTemp:
-00032a df43                      	rcall		temperature
-00032b de42                      	rcall		LCD_home
+00032a df43                      		rcall		temperature			;lecture de la valeur et stockage dans (b1,b0) (MSB, LSB)
+00032b de42                      		rcall		LCD_home
 00032c e600
 00032d 2e40
 00032e e001
 00032f 2e50
-000330 dd11                      	PRINTF		LCD
+000330 dd11                      		PRINTF		LCD
 000331 6574
 000332 706d
 000333 2020
@@ -4477,21 +4397,20 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(104): warning: 
 000335 4204
 000336 4320
 000337 000d                      .db	"temp  ",FFRAC2+FSIGN,b,4,$42," C",CR,0
-000338 deb1                      	rcall		encoder
-000339 f0b6                      	brts		come_back
-                                 
-00033a fd90                      	sbrc		b3, SRAM_flag
-00033b d066                      	rcall		store							;SRAM and EEPROM
-00033c cfed                      	rjmp		getTemp
-                                 
+000338 deb1                      		rcall		encoder				;verifie l'etat de l'encodeur au cas ou il a été appuyé
+000339 f0b6                      		brts		come_back			;revient si c'est le cas
+00033a fd90                      		sbrc		b3, SRAM_flag		;flag pour stockage active et on stocke les 3 valeurs dans la sram
+00033b d068                      		rcall		store				;stocke dans la SRAM et verifie si elle est pleine 	
+00033c cfed                      		rjmp		getTemp
+                                 	
                                  getHum:
-00033d df6e                      	rcall		humidity
-00033e de2f                      	rcall		LCD_home
+00033d df6e                      		rcall		humidity			;lecture de la valeur et stockage dans (b1,b0) (MSB, LSB)	
+00033e de2f                      		rcall		LCD_home		
 00033f e600
 000340 2e40
 000341 e001
 000342 2e50
-000343 dcfe                      	PRINTF		LCD
+000343 dcfe                      		PRINTF		LCD
 000344 7568
 000345 206d
 000346 2020
@@ -4499,29 +4418,25 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(104): warning: 
 000348 4204
 000349 2520
 00034a 000d                      .db	"hum   ",FFRAC2+FSIGN,b,4,$42," %",CR,0
-00034b de9e                      	rcall		encoder
-00034c f01e                      	brts		come_back
-                                 
-00034d fd90                      	sbrc		b3, SRAM_flag
-00034e d053                      	rcall		store							;SRAM and EEPROM
-00034f cfed                      	rjmp		getHum
+00034b de9e                      		rcall		encoder				;verifie l'etat de l'encodeur au cas ou il a été appuyé
+00034c f01e                      		brts		come_back			;revient si c'est le cas
+00034d fd90                      		sbrc		b3, SRAM_flag		;flag pour stockage active et on stocke les 3 valeurs dans la sram
+00034e d055                      		rcall		store				;stocke dans la SRAM et verifie si elle est pleine 	
+00034f cfed                      		rjmp		getHum
                                  
                                  come_back:
-000350 de1b                      	rcall		LCD_clear
-000351 de1c                      	rcall		LCD_home
-000352 cf8c                      	rjmp		main
+000350 de1b                      		rcall		LCD_clear
+000351 de1c                      		rcall		LCD_home
+000352 cf8c                      		rjmp		main
                                  
                                  getLight:
-                                 	//sbrs		b3, display_flag			;skip if display_flag is set
-                                 	//rjmp		PC-1						;jump back to previous address
-                                 	//andi		b3, ~(1<<display_flag)		;clear bit display_flag in b3 register
-000353 df3d                      	rcall		light
-000354 de19                      	rcall		LCD_home						;change
+000353 df3d                      		rcall		light
+000354 de19                      		rcall		LCD_home						;change
 000355 e600
 000356 2e40
 000357 e001
 000358 2e50
-000359 dce8                      	PRINTF		LCD
+000359 dce8                      		PRINTF		LCD
 00035a 696c
 00035b 6867
 00035c 2074
@@ -4529,139 +4444,121 @@ C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(104): warning: 
 00035e 4204
 00035f 6c20
 000360 0d6d
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(174): warning: .cseg .db misalignment - padding zero byte
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(128): warning: .cseg .db misalignment - padding zero byte
 000361 0000                      .db	"light ",FFRAC2+FSIGN,b,4,$42," lm",CR,0
-000362 de87                      	rcall		encoder
-000363 f366                      	brts		come_back
-000364 fd90                      	sbrc		b3, SRAM_flag
+000362 de87                      		rcall		encoder
+000363 f366                      		brts		come_back
+000364 fd90                      		sbrc		b3, SRAM_flag
+                                 		
+000365 d03e                      		rcall		store							;SRAM and EEPROM
+000366 cfec                      		rjmp		getLight
                                  
-000365 d03c                      	rcall		store							;SRAM and EEPROM
-000366 cfec                      	rjmp		getLight
-                                 
-                                 upload:										;arduino
-                                 	//cli					; disable interrupts pas besoin ?
-000367 de06                      	rcall		LCD_home
-000368 e600
-000369 2e40
-00036a e001
-00036b 2e50
-00036c dcd5                      	PRINTF		LCD
-00036d 7055
-00036e 6f6c
-00036f 6461
-000370 6e69
-000371 2e67
-000372 2e2e
-C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm(186): warning: .cseg .db misalignment - padding zero byte
-000373 0000                      .db	"Uploading...",0
-                                 	/*rcall		encoder
-                                 	brts		come_back
-                                 	sbrc		b3, SRAM_flag
-                                 
-                                 	rcall		store							;SRAM and EEPROM*/
-                                 
-000374 ee08
-000375 2e30
-000376 e004
-000377 930f
-000378 923f
-000379 e300
-00037a 2e30
-00037b e006
-00037c 943a
-00037d f7f1
-00037e 943a
-00037f 950a
-000380 f7d9
-000381 903f
-000382 910f
-000383 943a
-000384 f791
-000385 950a
-000386 f781                      	WAIT_MS		1000
-                                 	
-000387 2f0a                      	mov		w, xl		;store pointer value
-000388 2f1b                      	mov		_w, xh
-                                 
+                                 upload:						;arduino
+000367 94f8                      		cli					;disable interrupts pour ne pas deranger l'upload
+000368 de05                      		rcall		LCD_home
+000369 e600
+00036a 2e40
+00036b e001
+00036c 2e50
+00036d dcd4                      		PRINTF		LCD
+00036e 7055
+00036f 6f6c
+000370 6461
+000371 6e69
+000372 2e67
+000373 2e2e
+D:\Code\MCUs BA4\Projet\Projet\main_final.asm(140): warning: .cseg .db misalignment - padding zero byte
+000374 0000                      .db	"Uploading...",0
+000375 ef04
+000376 2e30
+000377 e002
+000378 930f
+000379 923f
+00037a e300
+00037b 2e30
+00037c e006
+00037d 943a
+00037e f7f1
+00037f 943a
+000380 950a
+000381 f7d9
+000382 903f
+000383 910f
+000384 943a
+000385 f791
+000386 950a
+000387 f781                      		WAIT_MS		500
+000388 2f0a                      		mov		w, xl		;store pointer value
+000389 2f1b                      		mov		_w, xh
                                  	loop_upload:
-000389 9611                      	adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
-00038a de43                      	rcall		eeprom_load
-00038b 2f76                      	mov			b1, b0
-00038c de41                      	rcall		eeprom_load
+00038a 9611                      		adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
+00038b de42                      		rcall		eeprom_load
+00038c 2f76                      		mov			b1, b0
+00038d de40                      		rcall		eeprom_load
                                  
-00038d 3070                      	cpi			b1, 0x00					;ou 0x00 ?
-00038e f411                      	brne		PC+3
-00038f 3060                      	cpi			b0, 0x00					;ou 0x00 ?
-000390 f019                      	breq		PC+4
+00038e 3070                      		cpi			b1, 0x00					;ou 0x00 ?
+00038f f411                      		brne		PC+3
+000390 3060                      		cpi			b0, 0x00					;ou 0x00 ?
+000391 f019                      		breq		PC+4
                                  
-000391 df3e                      	rcall		putc						;send instruction b0 via uart
-000392 2f67                      	mov			b0, b1						;-> b0 b1 et non pas b1 b0 (endian)
-000393 df3c                      	rcall		putc
+000392 df3d                      		rcall		putc						;send instruction b0 via uart
+000393 2f67                      		mov			b0, b1						;-> b0 b1 et non pas b1 b0 (endian)
+000394 df3b                      		rcall		putc
                                  
-000394 17a0                      	cp			xl, w						;si le pointeur est égal à la valeur initiale on s'arrête
-000395 f419                      	brne		PC+4
-000396 17b1                      	cp			xh, _w						;si le pointeur est égal à la valeur initiale on s'arrête
-000397 f409                      	brne		PC+2
-000398 c006                      	rjmp		end
+000395 17a0                      		cp			xl, w						;si le pointeur est égal à la valeur initiale on s'arrête
+000396 f419                      		brne		PC+4
+000397 17b1                      		cp			xh, _w						;si le pointeur est égal à la valeur initiale on s'arrête
+000398 f409                      		brne		PC+2
+000399 c007                      		rjmp		end
                                  
-000399 3ba4                      	cpi			xl, low(eepromLen)			;xl max
-00039a f419                      	brne		PC+4
-00039b 30b0                      	cpi			xh, high(eepromLen)			;xh max
-00039c f409                      	brne		PC+2
-00039d c001                      	rjmp		end
-00039e cfea                      	rjmp		loop_upload
-                                 	//sei					; enable interrupts pas besoin ??
+00039a 3ba4                      		cpi			xl, low(eepromLen)			;xl max
+00039b f419                      		brne		PC+4
+00039c 30b0                      		cpi			xh, high(eepromLen)			;xh max
+00039d f409                      		brne		PC+2
+00039e c002                      		rjmp		end
+00039f cfea                      		rjmp		loop_upload
+0003a0 9478                      		sei							; enable interrupts pas besoin ??
                                  	end:
-00039f 2fa0                      	mov			xl, w			;restore pointer value
-0003a0 2fb1                      	mov			xh, _w
+0003a1 2fa0                      		mov			xl, w			; restore pointer value
+0003a2 2fb1                      		mov			xh, _w
                                  
-0003a1 cfae                      	rjmp		come_back
-                                 	//rjmp	upload
-                                 
-                                 /*come_back:
-                                 	rcall		LCD_clear
-                                 	rcall		LCD_home
-                                 	rjmp		main*/
+0003a3 cfac                      		rjmp		come_back
                                  
                                  store:
-0003a2 decb                      		rcall		temperature
-0003a3 9379
-0003a4 9369                      		STVALSRAM							;store to SRAM
+0003a4 dec9                      		rcall		temperature
+0003a5 9379
+0003a6 9369                      		STVALSRAM							;store to SRAM
                                  		
-0003a5 df06                      		rcall		humidity
-0003a6 9379
-0003a7 9369                      		STVALSRAM							;store to SRAM
+0003a7 df04                      		rcall		humidity
+0003a8 9379
+0003a9 9369                      		STVALSRAM							;store to SRAM
                                  
-0003a8 dee8                      		rcall		light
-0003a9 9379
-0003aa 9369                      		STVALSRAM							;store to SRAM
+0003aa dee6                      		rcall		light
+0003ab 9379
+0003ac 9369                      		STVALSRAM							;store to SRAM
                                  
-0003ab 7f9e                      		andi		b3, ~(1<<SRAM_flag)		;clear bit SRAM_flag in b3 register
+0003ad 7f9e                      		andi		b3, ~(1<<SRAM_flag)		;clear bit SRAM_flag in b3 register
                                  
-0003ac 30cc                      		cpi			yl, bufferLen			;if yl at the end of the buffer then
-0003ad f419                      		brne		PC+4					
-0003ae e0c0                      		ldi			yl, 0
-0003af de25                      		rcall		record					;store to EEPROM
+0003ae 30cc                      		cpi			yl, bufferLen			;if yl at the end of the buffer then
+0003af f419                      		brne		PC+4					
 0003b0 e0c0                      		ldi			yl, 0
+0003b1 de23                      		rcall		record					;store to EEPROM
+0003b2 e0c0                      		ldi			yl, 0
                                  
-0003b1 9508                      		ret
+0003b3 9508                      		ret
                                  
-                                 set_eeprom:				;arduino vu que les interruptions ne sont pas encore active pas besoin de les (dés)activer
-                                 		/*rcall		LCD_clear
-                                 		rcall		LCD_home						;change
-                                 		PRINTF		LCD
-                                 .db	"Initialising ..."*/
-0003b2 e060                      		ldi			b0, 0x00								;mettre 0x00 ? vu que avrisp-u met tout à ff ? remplir la eeprom
+                                 set_eeprom:										;arduino vu que les interruptions ne sont pas encore active pas besoin de les (dés)activer
+0003b4 e060                      		ldi			b0, 0x00								;mettre 0x00 ? vu que avrisp-u met tout à ff ? remplir la eeprom
                                  		loop_set:
-0003b3 de0c                      					rcall		eeprom_store			; stockage du LSB?? de la temperature
-0003b4 9611                      					adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
-0003b5 3ba4                      					cpi			xl, low(eepromLen)			;xl max
-0003b6 f7e1                      					brne		loop_set
-0003b7 30b0                      					cpi			xh, high(eepromLen)			;xh max
-0003b8 f7d1                      					brne		loop_set										
-0003b9 e0a0                      		ldi			xl, low(EEPROM_START)					;init des pointeurs pour les bases de données
-0003ba e0b0                      		ldi			xh, high(EEPROM_START)					;pour remettre le pointeur à 0 après avoir set la eeprom à 0xff
-0003bb 9508                      		ret
+0003b5 de0a                      					rcall		eeprom_store			; stockage du LSB?? de la temperature
+0003b6 9611                      					adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
+0003b7 3ba4                      					cpi			xl, low(eepromLen)			;xl max
+0003b8 f7e1                      					brne		loop_set
+0003b9 30b0                      					cpi			xh, high(eepromLen)			;xh max
+0003ba f7d1                      					brne		loop_set										
+0003bb e0a0                      		ldi			xl, low(EEPROM_START)					;init des pointeurs pour les bases de données
+0003bc e0b0                      		ldi			xh, high(EEPROM_START)					;pour remettre le pointeur à 0 après avoir set la eeprom à 0xff
+0003bd 9508                      		ret
                                  	
                                  
                                  
@@ -4685,9 +4582,9 @@ counted separately from r26..r31 here.
 
 "ATmega128" register use summary:
 x  :   6 y  :   7 z  :   0 r0 :  10 r1 :   2 r2 :   5 r3 :  40 r4 :   6 
-r5 :   6 r6 :   0 r7 :   0 r8 :   5 r9 :   5 r10:   5 r11:   6 r12:  11 
+r5 :   6 r6 :   0 r7 :   0 r8 :   5 r9 :   5 r10:   5 r11:   6 r12:  13 
 r13:   0 r14:   0 r15:   0 r16: 195 r17:  16 r18:  44 r19:  15 r20:  15 
-r21:  15 r22:  38 r23:  46 r24:  11 r25:  22 r26:  18 r27:  15 r28:   7 
+r21:  15 r22:  36 r23:  46 r24:  11 r25:  22 r26:  18 r27:  15 r28:   7 
 r29:   1 r30:  18 r31:   9 
 Registers used: 29 out of 35 (82.9%)
 
@@ -4698,7 +4595,7 @@ brcc  :   4 brcs  :   1 break :   0 breq  :  24 brge  :   0 brhc  :   0
 brhs  :   0 brid  :   0 brie  :   1 brlo  :   1 brlt  :   0 brmi  :   1 
 brne  :  51 brpl  :   1 brsh  :   1 brtc  :   5 brts  :   4 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   6 call  :   0 cbi   :   8 cbr   :   0 
-clc   :   2 clh   :   0 cli   :   1 cln   :   0 clr   :  10 cls   :   0 
+clc   :   2 clh   :   0 cli   :   2 cln   :   0 clr   :  10 cls   :   0 
 clt   :   2 clv   :   0 clz   :   3 com   :   8 cp    :   4 cpc   :   3 
 cpi   :  29 cpse  :   0 dec   :  39 elpm  :   0 eor   :   2 fmul  :   0 
 fmuls :   0 fmulsu:   0 icall :   1 ijmp  :   2 in    :  14 inc   :   6 
@@ -4708,7 +4605,7 @@ mulsu :   0 neg   :   0 nop   :   6 or    :   0 ori   :   4 out   :  18
 pop   :  38 push  :  35 rcall :  89 ret   :  40 reti  :   1 rjmp  :  58 
 rol   :  11 ror   :  19 sbc   :   3 sbci  :   0 sbi   :  14 sbic  :   4 
 sbis  :   0 sbiw  :   0 sbr   :   1 sbrc  :  21 sbrs  :   4 sec   :   1 
-seh   :   0 sei   :   2 sen   :   0 ser   :   0 ses   :   0 set   :   2 
+seh   :   0 sei   :   3 sen   :   0 ser   :   0 ses   :   0 set   :   2 
 sev   :   0 sez   :   1 sleep :   0 spm   :   0 st    :   6 std   :   0 
 sts   :   4 sub   :   3 subi  :   7 swap  :   4 tst   :  11 wdr   :   0 
 
@@ -4717,7 +4614,7 @@ Instructions used: 68 out of 114 (59.6%)
 "ATmega128" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000778   1736    116   1852  131072   1.4%
+[.cseg] 0x000000 0x00077c   1740    116   1856  131072   1.4%
 [.dseg] 0x000100 0x000901      0     13     13    4096   0.3%
 [.eseg] 0x000000 0x000000      0      0      0    4096   0.0%
 

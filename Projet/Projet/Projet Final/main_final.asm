@@ -141,11 +141,38 @@ upload:						;arduino
 		WAIT_MS		500
 		mov		w, xl		;store pointer value
 		mov		_w, xh
-		ldi			b0, 0xCA
+	loop_upload:
+		adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
+		rcall		eeprom_load
+		mov			b1, b0
+		rcall		eeprom_load
+
+		cpi			b1, 0x00					;ou 0x00 ?
+		brne		PC+3
+		cpi			b0, 0x00					;ou 0x00 ?
+		breq		PC+4
+
 		rcall		putc						;send instruction b0 via uart
+		mov			b0, b1						;-> b0 b1 et non pas b1 b0 (endian)
+		rcall		putc
+
+		cp			xl, w						;si le pointeur est égal à la valeur initiale on s'arrête
+		brne		PC+4
+		cp			xh, _w						;si le pointeur est égal à la valeur initiale on s'arrête
+		brne		PC+2
+		rjmp		end
+
+		cpi			xl, low(eepromLen)			;xl max
+		brne		PC+4
+		cpi			xh, high(eepromLen)			;xh max
+		brne		PC+2
+		rjmp		end
+		rjmp		loop_upload
 		sei							; enable interrupts pas besoin ??
+	end:
 		mov			xl, w			; restore pointer value
 		mov			xh, _w
+
 		rjmp		come_back
 
 store:

@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.6  C:\Users\Administrateur\Desktop\MCUs-BA4\Projet\Projet\TEST4.asm Fri May 21 10:01:47 2021
+AVRASM ver. 2.2.6  D:\Code\MCUs BA4\Projet\Projet\main_final.asm Mon May 31 02:47:12 2021
 
 
 EQU  SIGNATURE_000 0000001e
@@ -949,7 +949,7 @@ CSEG LCD_init     00000180
 CSEG encoder_init 000001e3
 CSEG wire1_init   00000220
 CSEG LCD_clear    0000016c
-CSEG set_eeprom   000003b2
+CSEG set_eeprom   000003b4
 CSEG main         000002df
 EQU  FDEC         000000c0
 EQU  FDEC2        000000d0
@@ -1079,24 +1079,24 @@ CSEG wire1_read   0000025a
 CSEG wire1_crc    00000263
 CSEG crc1         00000265
 CSEG temperature  0000026e
-CSEG WAIT_MS@WAIT_MS@4513 00000276
+CSEG WAIT_MS@WAIT_MS@4481 00000276
 CSEG light        00000291
-CSEG WAIT_MS@WAIT_MS@4577 0000029b
+CSEG WAIT_MS@WAIT_MS@4539 0000029b
 CSEG humidity     000002ac
-CSEG WAIT_MS@WAIT_MS@4617 000002b6
+CSEG WAIT_MS@WAIT_MS@4579 000002b6
 EQU  baud         00002580
 CSEG wait_bit     000002c7
 CSEG putc         000002d0
 CSEG loop         000002d3
-CSEG WAIT_MS@WAIT_MS@4740 0000030b
+CSEG WAIT_MS@WAIT_MS@4668 0000030b
 CSEG mesurements_choice 00000320
-CSEG store        000003a2
+CSEG store        000003a4
 CSEG getTemp      0000032a
 CSEG getHum       0000033d
 CSEG getLight     00000353
 CSEG upload       00000367
 CSEG come_back    00000350
-CSEG WAIT_MS@WAIT_MS@4876 00000377
-CSEG loop_upload  00000389
-CSEG end          0000039f
-CSEG loop_set     000003b3
+CSEG WAIT_MS@WAIT_MS@4785 00000378
+CSEG loop_upload  0000038a
+CSEG end          000003a1
+CSEG loop_set     000003b5

@@ -50,12 +50,12 @@ i_up:
 	sbrc	_w,ENCOD_A		;skip if bit ENCOD_A is clear in register _w
 	rjmp	a_rise
 a_fall:
-	inc		a0					; if B=1 then increment
+	inc	a0					; if B=1 then increment
 	sbrs	_w,ENCOD_B
 	subi	a0,2			; if B=0 then decrement
 	rjmp	i_up_done
 a_rise:
-	inc		a0					; if B=0 then increment
+	inc	a0					; if B=0 then increment
 	sbrc	_w,ENCOD_B
 	subi	a0,2			; if B=1 then decrement
 i_up_done:
@@ -66,7 +66,7 @@ i_down:
 	sbrc	_w,ENCOD_A
 	rjmp	a_rise2
 a_fall2:
-	inc		b0					; if B=1 then increment
+	inc	b0					; if B=1 then increment
 	sbrs	_w,ENCOD_B
 	subi	b0,2			; if B=0 then decrement
 	rjmp	i_down_done

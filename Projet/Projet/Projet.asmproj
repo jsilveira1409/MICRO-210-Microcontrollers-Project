@@ -15,7 +15,7 @@
     <Name>Projet</Name>
     <RootNamespace>Projet</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
-    <EntryFile>$(MSBuildProjectDirectory)\TEST4.asm</EntryFile>
+    <EntryFile>$(MSBuildProjectDirectory)\main_final.asm</EntryFile>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
@@ -102,6 +102,16 @@
     <Compile Include="main2.asm">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="main_final.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Projet%2520Final\main.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Projet%2520Final\main_final.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Projet%2520Final\main_final.asm" />
     <Compile Include="TEST.asm">
       <SubType>Code</SubType>
     </Compile>
@@ -169,6 +179,7 @@
   <ItemGroup>
     <Folder Include="lib" />
     <Folder Include="libPerso" />
+    <Folder Include="Projet Final" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Assembler.targets" />
 </Project>

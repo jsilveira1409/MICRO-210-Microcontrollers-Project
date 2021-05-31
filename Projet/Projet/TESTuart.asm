@@ -44,7 +44,7 @@ loop2:
 	ret
 
 main:
-	ldi		a0, 0x00	
+	ldi		a0, 0x01	
 	rcall	putc		; put a character back to the terminal 
-	WAIT_MS	1000
+	WAIT_MS	1
 	rjmp	main
