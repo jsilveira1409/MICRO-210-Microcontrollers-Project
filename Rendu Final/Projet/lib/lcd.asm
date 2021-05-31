@@ -1,7 +1,3 @@
-; file	lcd.asm   target ATmega128L-4MHz-STK300
-; purpose  LCD HD44780U library
-; ATmega 128 and Atmel Studio 7.0 compliant
-
 ; === definitions ===
 .equ	LCD_IR	= 0x8000	; address LCD instruction reg
 .equ	LCD_DR	= 0xc000	; address LCD data register
@@ -33,8 +29,8 @@ LCD_wr_dr:
 	sts	LCD_DR, a0		; store a0 in DR
 	ret	
 	
-LCD_clear:		JW	LCD_wr_ir, 0b00000001		; clear display
-LCD_home:		JW	LCD_wr_ir, 0b00000010		; return home
+LCD_clear:			JW	LCD_wr_ir, 0b00000001		; clear display
+LCD_home:			JW	LCD_wr_ir, 0b00000010		; return home
 LCD_cursor_left:	JW	LCD_wr_ir, 0b00010000	; move cursor to left
 LCD_cursor_right:	JW	LCD_wr_ir, 0b00010100	; move cursor to right
 LCD_display_left:	JW	LCD_wr_ir, 0b00011000	; shifts display to left

@@ -1,9 +1,3 @@
-; file	printf.asm   target ATmega128L-4MHz-STK300
-; purpose library, formatted output generation
-; author (c) R.Holzer (adapted MICRO210/EE208 A.Schmid)
-; v2019.02 20180821 AxS supports SRAM input from 0x0260
-;					through 0x02ff that should be reserved
-
 ; === description ===
 ; 
 ; The program "printf" interprets and prints formatted strings.

@@ -1,7 +1,4 @@
-; file	encoder.asm   target ATmega128L-4MHz-STK300
-; purpose library angular encoder operation
-
-; === definitions ===
+; file definitions ===
 .equ	ENCOD	= PORTB
 
 .dseg

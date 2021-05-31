@@ -1,11 +1,11 @@
 .include "libPerso/per_macro.asm"
 .include "lib/definitions.asm"
 
-.equ	bufferLen		= 12			;à modifier, 12 octets-->4 seconds
+.equ	bufferLen		= 12			
 .equ	SRAM_flag		= 0
-.equ	EEPROM_START	= 0				;0x0E0a pour tester si le pointeur revient au début à modifier -> 0
-.equ	eepromLen		= 0x00b4		;0x0E10 / 0x001E /0x0708 /0x0384 /0x00b4 /0x021C -> correspond à 3min avec 1mesure/2sec
-;180 octet
+.equ	EEPROM_START	= 0				
+.equ	eepromLen		= 0x00b4		
+
 ; ======================= memory management ======================================
 .dseg
 .org	SRAM_START						;debut du buffer dans la sram
@@ -46,7 +46,7 @@ reset:
 		ldi			yh, high(buffer)
 		rcall		LCD_clear
 		OUTI		DDRE,0b00000010				;make Tx (PE1) an output (arduino communication)
-		sbi			PORTE,PE1					;set Tx to high			 (arduino communication
+		sbi			PORTE,PE1					;set Tx to high			 (arduino communication)
 		rcall		set_eeprom					;concerne arduino
 		sei										;set global interrupts
 		rjmp		main
@@ -57,7 +57,7 @@ reset:
 
 .include "libPerso/per_eeprom.asm"				;libs du cours modifies par nous pour que les ports et 
 .include "libPerso/per_encoder.asm"				;les registres ni coincident ni se superposent
-.include "libPerso/per_wire1.asm"		
+.include "libPerso/per_wire1.asm"				;il y a aussi des librairies personnelles
 .include "libPerso/per_sensors.asm"
 .include "libPerso/per_uart.asm"
 
@@ -67,7 +67,7 @@ reset:
 	.endmacro
 
 main:	
-		LINEAR_MENU			a0,0,3					;limite a0 à 0-1-2-3 pour le menu(le menu n'est plus cyclic)
+		LINEAR_MENU			a0,0,3				;limite a0 à 0-1-2-3 pour le menu(le menu n'est plus cyclic)
 		PRINTF			LCD
 .db		CR, CR,FHEX,a,0							
 		rcall			menui
@@ -167,7 +167,7 @@ upload:						;arduino
 		brne		PC+2
 		rjmp		end
 		rjmp		loop_upload
-		sei							; enable interrupts pas besoin ??
+		sei							; stockage des valeurs fini, on peut remettre les interruptions
 	end:
 		mov			xl, w			; restore pointer value
 		mov			xh, _w
@@ -194,11 +194,11 @@ store:
 
 		ret
 
-set_eeprom:										;arduino vu que les interruptions ne sont pas encore active pas besoin de les (dés)activer
-		ldi			b0, 0x00								;mettre 0x00 ? vu que avrisp-u met tout à ff ? remplir la eeprom
+set_eeprom:									;arduino vu que les interruptions ne sont pas encore active pas besoin de les (dés)activer
+		ldi			b0, 0x00				;remplir la eeprom de zeros 
 		loop_set:
-					rcall		eeprom_store			; stockage du LSB?? de la temperature
-					adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
+					rcall		eeprom_store  
+					adiw		xl,1		  ; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
 					cpi			xl, low(eepromLen)			;xl max
 					brne		loop_set
 					cpi			xh, high(eepromLen)			;xh max

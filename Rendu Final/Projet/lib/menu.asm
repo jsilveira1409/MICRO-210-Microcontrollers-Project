@@ -1,6 +1,3 @@
-; file	menu.asm   target ATmega128L-4MHz-STK300
-; purpose library, menu usage
-
 menu:
 ; in	a0	menu item (0..n)
 ; in	->c0	menu item (0..n)

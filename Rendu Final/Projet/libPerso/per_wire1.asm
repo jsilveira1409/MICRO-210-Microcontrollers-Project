@@ -1,6 +1,3 @@
-; file	wire1.asm   target ATmega128L-4MHz-STK300		
-; purpose Dallas 1-wire(R) interface library
-
 ; === definitions ===
 .equ	DQ_port	= PORTD
 .equ	DQ_pin	= DQ
@@ -22,7 +19,7 @@
 
 ; === routines ===
 
-.macro	WIRE1	; t0,t1,t2
+.macro	WIRE1				; t0,t1,t2
 	sbi	DQ_port-1,DQ_pin	; pull DQ low (DDR=1 output)
 	ldi	w,(@0+1)/2	
 	rcall	wire1_wait		; wait low time (t0)
@@ -75,7 +72,7 @@ wire1_read:
 	ldi		b1,8
 	ror		b0
 	rcall	wire1_read1			; returns result in T
-	bld		b0,7					; move T to MSb
+	bld		b0,7				; move T to MSB
 	DJNZ	b1,wire1_read+2		; dec and jump if not zero
 	pop		b1	
 	ret

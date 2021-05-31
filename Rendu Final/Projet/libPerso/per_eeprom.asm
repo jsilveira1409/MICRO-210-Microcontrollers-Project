@@ -1,6 +1,3 @@
-; file	eeprom.asm   target ATmega128L-4MHz-STK300
-; purpose library, internal EEPROM
-
 eeprom_store:
 ; in:	xh:xl 	EEPROM address
 ;		b0	EEPROM data byte to store
@@ -16,7 +13,7 @@ eeprom_store:
 	sbi		EECR,EEWE		; set EEPROM Write Enable
 	ret
 
-.macro	STEEPROM			;use a macro to speed up the storage process ? doesn't work
+.macro	STEEPROM
 ; in:	xh:xl 	EEPROM address
 ;		b0	EEPROM data byte to store
 ; out:	->EEPROM
@@ -40,8 +37,6 @@ eeprom_cli:
 
 eeprom_load:
 ; in:	xh:xl 	EEPROM address
-; out:	a0->b0??	EEPROM data byte to load
-
 	sbic	EECR,EEWE	; skip if EEWE=0 (wait it EEWE=1)
 	rjmp	PC-1		; jump back to previous address
 	out		EEARL,xl	
@@ -54,10 +49,10 @@ record:
 	ldi			yl, 0
 loop_bis:								
 	ld			b0, y+
-	rcall		eeprom_store			; stockage du LSB?? de la temperature
+	rcall		eeprom_store			
 	adiw		xl,1					; incrementation de l'adresse de la eeprom (incrémentation de xl, xh -> word)
 	cpi			yl, bufferLen
-	brne		loop_bis				;juste loop ???
+	brne		loop_bis				
 
 	cpi			xl, low(eepromLen)			;xl max
 	brne		PC+5

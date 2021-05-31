@@ -1,8 +1,3 @@
-; file:	macros.asm   target ATmega128L-4MHz-STK300
-; purpose library, general-purpose macros
-; author (c) R.Holzer (adapted MICRO210/EE208 A.Schmid)
-; v2019.01 20180820 AxS
-
 ; ==============
 ; 	pointers
 ; ==============
@@ -18,7 +13,7 @@
 	.endmacro	
 .macro 		LDIZ	; sram
 	ldi		zl, low(@0)
-	ldi		zh,high(@0)
+	ldi		zh, high(@0)
 	
 	.endmacro
 .macro		LDZD	; sram, reg	; sram+reg -> Z
