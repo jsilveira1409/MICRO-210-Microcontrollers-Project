@@ -24,17 +24,17 @@ encoder:
 ; Z	Z=1 button down change
 
 	clt						; preclear T
-	in		_w,ENCOD-2			; read encoder port (_w=new)
+	in		_w,ENCOD-2		; read encoder port (_w=new)
 	
 	andi	_w,0b01110000	; mask encoder lines (A,B,I)
-	lds		_u,enc_old			; load prevous value (_u=old)
-	cp		_w,_u				; compare new<>old ?
+	lds		_u,enc_old		; load prevous value (_u=old)
+	cp		_w,_u			; compare new<>old ?
 	brne	PC+3
 	clz
 	ret						; if new=old then return (Z=0)
-	sts		enc_old,_w			; store encoder value for next time
+	sts		enc_old,_w		; store encoder value for next time
 
-	eor		_u,_w				; exclusive or detects transitions
+	eor		_u,_w			; exclusive or detects transitions
 	clz						; clear Z flag
 	sbrc	_u,ENCOD_I
 	rjmp	encoder_button	; transition on I (button)
@@ -44,15 +44,15 @@ encoder:
 	sbrs	_w,ENCOD_I		; is the button up or down ?
 	rjmp	i_down
 i_up:	
-	sbrc	_w,ENCOD_A		;skip if bit ENCOD_A is clear in register _w
+	sbrc	_w,ENCOD_A		; skip if bit ENCOD_A is clear in register _w
 	rjmp	a_rise
 a_fall:
-	inc		a0					; if B=1 then increment
+	inc		a0				; if B=1 then increment
 	sbrs	_w,ENCOD_B
 	subi	a0,2			; if B=0 then decrement
 	rjmp	i_up_done
 a_rise:
-	inc		a0					; if B=0 then increment
+	inc		a0				; if B=0 then increment
 	sbrc	_w,ENCOD_B
 	subi	a0,2			; if B=1 then decrement
 i_up_done:
@@ -63,12 +63,12 @@ i_down:
 	sbrc	_w,ENCOD_A
 	rjmp	a_rise2
 a_fall2:
-	inc		b0					; if B=1 then increment
+	inc		b0				; if B=1 then increment
 	sbrs	_w,ENCOD_B
 	subi	b0,2			; if B=0 then decrement
 	rjmp	i_down_done
 a_rise2:
-	inc		b0					; if B=0 then increment
+	inc		b0				; if B=0 then increment
 	sbrc	_w,ENCOD_B
 	subi	b0,2			; if B=1 then decrement
 i_down_done:
@@ -84,11 +84,11 @@ i_fall:
 i_rise:
 	ret
 
-.macro	LINEAR_MENU				;reg,lo,hi
-	cpi		@0,@1-1				;si la valeur de reg est -1 -> ldi reg, hi
+.macro	LINEAR_MENU			; reg,lo,hi
+	cpi		@0,@1-1			; si la valeur de reg est lo-1 -> ldi reg, lo
 	brne	PC+2
 	ldi		@0,@1
-	cpi		@0,@2+1				;si la valeur de reg est 3 -> ldi reg, lo
+	cpi		@0,@2+1			; si la valeur de reg est hi+1 -> ldi reg, hi
 	brne	PC+2
 	ldi		@0,@2
 .endmacro
